@@ -9,7 +9,7 @@ const projects = [
   {
     title: "Lazeu",
     description:
-      "A full-stack study companion web app that lets users track study sessions and manage tasks, built with React on the frontend and Supabase on the backend. The idea came from being annoyed at how studying tools usually work: either a bare-bones flashcard app with zero social features, or something bloated that tries to do too much.",
+      "A full-stack study companion web app that lets users track study sessions and manage tasks, built with React on the frontend and Supabase on the backend. The idea came from being annoyed at how studying tools usually work: either a bare-bones flashcard app with zero social features, or something bloated that tries to do too much. added Gemini AI chat bot",
     image: "/green.png",
     tags: [
       "React",
