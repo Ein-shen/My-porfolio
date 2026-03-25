@@ -28,7 +28,7 @@ const projects = [
     description:
       "Built a Management System of how to handle tournaments like Open Play, Single Elimination, Quadro Elimination.",
     image: "/pik.png",
-    tags: ["PostgresSql", "Git", "Html", "Css", "Docker", "React", "Express", "Node.js", ],
+    tags: ["PostgreSQL", "Git", "Html", "Css", "Docker", "React", "Express", "Node.js", ],
     github: "https://github.com/Ein-shen/Pikol",
   },
   {
