@@ -69,7 +69,7 @@ export const Experience = () => {
       <div className="container relative z-10 mx-auto animate-fade-in px-4 py-10 sm:px-6 md:px-12">
         {/* Experience */}
         <div className="mx-auto w-full max-w-[800px]">
-          <div className="mb-8 sm:mb-10">
+          <div className="mb-10 sm:mb-16">
             <h2
               id="experience-heading"
               className="theme-text pt-1 font-mono text-xl font-medium tracking-tight"
@@ -81,12 +81,13 @@ export const Experience = () => {
           <div className="relative">
             {experiences.map((exp) => (
               <article key={`${exp.company}-${exp.period}`} className="pb-10">
-                <div className="flex flex-col gap-3 rounded-2xl transition-all duration-500 sm:flex-row sm:items-start sm:gap-x-8 lg:gap-x-16 xl:gap-x-24">
-                  <span className="theme-muted shrink-0 whitespace-nowrap text-muted-foreground font-mono text-xs font-medium sm:text-sm">
+                {/* Fixed 6rem date column keeps content aligned with other sections */}
+                <div className="grid grid-cols-[5.5rem_minmax(0,1fr)] items-start gap-x-4 sm:grid-cols-[6rem_minmax(0,1fr)] sm:gap-x-8 lg:gap-x-20 xl:gap-x-40">
+                  <span className="theme-muted text-muted-foreground font-mono text-xs font-medium sm:text-sm">
                     {exp.period}
                   </span>
 
-                  <div className="flex w-full min-w-0 flex-col">
+                  <div className="flex min-w-0 flex-col">
                     <h3 className="theme-text text-lg sm:text-xl font-mono break-words">
                       {exp.role}
                     </h3>
