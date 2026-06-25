@@ -40,31 +40,28 @@ export const Certificates = () => {
                 <div className="mx-auto w-full max-w-[800px]">
 
                     {/* Header */}
-                    <div className="mb-8 sm:mb-16">
-
-                        <div className='flex items-center justify-between mb-4'>
-                            <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 ">
+                    <div className="mb-10 sm:mb-16 flex items-baseline justify-between">
+                        <h1 className="font-mono text-xl font-medium tracking-tight pt-1">
                             Certificate
-                            </h1>
-                            <Link
-                                to="/toplok"
-                                className="ml-auto text-sm font-mono text-muted-foreground hover:text-foreground rounded-lg h-11 cursor-pointer flex items-center gap-1"
-                                >
-                                view all<span className="text-[15px]">↗</span>
-                            </Link>
-                        </div>
-
+                        </h1>
+                        <Link
+                            to="/toplok"
+                            className="ml-auto -my-3 py-3 text-sm font-mono text-muted-foreground hover:text-foreground rounded-lg cursor-pointer flex items-baseline gap-1"
+                        >
+                            view all<span aria-hidden="true" className="text-[15px] leading-none">↗</span>
+                        </Link>
                     </div>
 
                     <div className="relative">
                         {Certificate.map((cert, idx) => (
                             <div key={idx} className="pb-10">
-                               <div className="flex flex-col gap-3 pb-4 rounded-2xl transition-all duration-500 sm:flex-row sm:items-start sm:gap-x-8 lg:gap-x-20 xl:gap-x-40">
-                                    <span className="theme-muted shrink-0 text-muted-foreground font-mono text-xs font-medium sm:text-sm">
+                                {/* Fixed 6rem date column keeps content aligned with other sections */}
+                                <div className="grid grid-cols-[5.5rem_minmax(0,1fr)] items-start gap-x-4 sm:grid-cols-[6rem_minmax(0,1fr)] sm:gap-x-8 lg:gap-x-20 xl:gap-x-40">
+                                    <span className="theme-muted text-muted-foreground font-mono text-xs font-medium sm:text-sm">
                                         {cert.period}
                                     </span>
 
-                                    <div className="flex flex-col pb-4 w-full min-w-0">
+                                    <div className="flex min-w-0 flex-col">
                                         <h3 className="text-base md:text-lg font-mono break-words">
                                             {cert.title}
                                         </h3>
