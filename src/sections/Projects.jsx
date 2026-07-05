@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { TechIcon } from "../layout/Techicon";
@@ -176,14 +175,19 @@ export const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`View live ${project.title} project`}
-                        className="group/live inline-flex items-center gap-1 rounded-md  px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
+                        className="group/live inline-flex items-center gap-1 rounded-md   px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
                       >
                         Deployment
                         <span
                           aria-hidden="true"
-                          className="h-2 w-2 rounded-full   bg-green-300 transition-colors group-hover/live:border-green-500 group-hover/live:bg-green-500"
+                          className="h-2 w-2 rounded-full border border-green-700 bg-green-300 transition-colors group-hover/live:border-green-500 group-hover/live:bg-green-500"
                         />
-                        <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover/live:-translate-y-0.5 group-hover/live:translate-x-0.5" />
+                        <span
+                          aria-hidden="true"
+                          className="inline-block text-[15px] transition-transform group-hover/live:-translate-y-0.5 group-hover/live:translate-x-0.5"
+                        >
+                          ↗
+                        </span>
                       </a>
                     )}
 
@@ -192,10 +196,15 @@ export const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`View ${project.title} on GitHub`}
-                      className="group/gh inline-flex items-center gap-1 rounded-md  px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
+                      className="group/gh inline-flex items-center gap-1 rounded-md   px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
                     >
                       GitHub
-                      <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover/gh:-translate-y-0.5 group-hover/gh:translate-x-0.5" />
+                      <span
+                        aria-hidden="true"
+                        className="inline-block text-[15px] transition-transform group-hover/gh:-translate-y-0.5 group-hover/gh:translate-x-0.5"
+                      >
+                        ↗
+                      </span>
                     </a>
                   </div>
                 </div>
