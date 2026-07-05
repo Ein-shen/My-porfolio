@@ -39,7 +39,7 @@ export const Gallery = () => {
                 to="/view_gallery"
                 className="ml-auto text-sm font-mono text-muted-foreground hover:text-foreground rounded-lg h-11 cursor-pointer flex items-center gap-1"
               >
-                view all<span className="text-[10px]">↗</span>
+                view all<span className="text-[15px]">↗</span>
               </Link>
           </div>
 
