@@ -178,10 +178,7 @@ export const Projects = () => {
                         className="group/live inline-flex items-center gap-1 rounded-md px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
                       >
                         Deployment
-                        <span
-                          aria-hidden="true"
-                          className="h-2 w-2 rounded-full border border-green-700 bg-green-300 transition-colors group-hover/live:border-green-500 group-hover/live:bg-green-500"
-                        />
+                         
                         <span
                           aria-hidden="true"
                           className="inline-block text-[15px] transition-transform group-hover/live:-translate-y-0.5 group-hover/live:translate-x-0.5"
