@@ -165,7 +165,48 @@ const ProjectCard = ({ project, idx }) => {
 
       {/* Details */}
       <div className="flex flex-col gap-4 p-6">
-        <h2 className="theme-text text-xl font-semibold">{project.title}</h2>
+        <div className="flex items-center justify-between gap-4">
+          <h2 className="theme-text text-xl font-semibold">
+            {project.title}
+          </h2>
+
+          {/* Live and GitHub links */}
+          <div className="flex shrink-0 items-center gap-3">
+            {project.live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View live ${project.title} project`}
+                className="group/live inline-flex items-center gap-1 rounded-md border border-border px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
+              >
+                Deployment
+                <span className="h-2 w-2 rounded-full border border-green-700 bg-green-300 transition-colors group-hover/live:border-green-500 group-hover/live:bg-green-500" />
+                <span
+                  aria-hidden="true"
+                  className="inline-block text-[15px] transition-transform group-hover/live:-translate-y-0.5 group-hover/live:translate-x-0.5"
+                >
+                  ↗
+                </span>
+              </a>
+            )}
+
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="theme-muted inline-flex items-center gap-1 font-mono text-xs transition-opacity hover:opacity-70"
+            >
+              GitHub
+              <span
+                aria-hidden="true"
+                className="inline-block text-[15px] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              >
+                ↗
+              </span>
+            </a>
+          </div>
+        </div>
 
         {/* Description */}
         <div>
@@ -219,47 +260,6 @@ const ProjectCard = ({ project, idx }) => {
             </li>
           )}
         </ul>
-
-        {/* Deployment and GitHub buttons */}
-        <div className="flex items-center justify-end gap-3">
-          {project.live && (
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`View live ${project.title} project`}
-              className="group/live inline-flex items-center gap-1 rounded-md  px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
-            >
-              Deployment
-              <span
-                aria-hidden="true"
-                className="h-2 w-2 rounded-full border border-green-700 bg-green-300 transition-colors group-hover/live:border-green-500 group-hover/live:bg-green-500"
-              />
-              <span
-                aria-hidden="true"
-                className="inline-block text-[15px] transition-transform group-hover/live:-translate-y-0.5 group-hover/live:translate-x-0.5"
-              >
-                ↗
-              </span>
-            </a>
-          )}
-
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`View ${project.title} on GitHub`}
-            className="group/gh inline-flex items-center gap-1 rounded-md   px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
-          >
-            GitHub
-            <span
-              aria-hidden="true"
-              className="inline-block text-[15px] transition-transform group-hover/gh:-translate-y-0.5 group-hover/gh:translate-x-0.5"
-            >
-              ↗
-            </span>
-          </a>
-        </div>
       </div>
     </article>
   );
