@@ -168,14 +168,14 @@ export const Projects = () => {
                   </ul>
 
                   {/* Deployment and GitHub buttons */}
-                  <div className="flex items-center justify-end gap-3">
+                  <div className="flex items-center justify-start gap-3">
                     {project.live && (
                       <a
                         href={project.live}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`View live ${project.title} project`}
-                        className="group/live inline-flex items-center gap-1 rounded-md   px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
+                        className="group/live inline-flex items-center gap-1 rounded-md px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
                       >
                         Deployment
                         <span
@@ -196,7 +196,7 @@ export const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`View ${project.title} on GitHub`}
-                      className="group/gh inline-flex items-center gap-1 rounded-md   px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
+                      className="group/gh inline-flex items-center gap-1 rounded-md px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
                     >
                       GitHub
                       <span
