@@ -41,7 +41,7 @@ export const Hero = () => {
                                  Junior Full-Stack Developer | React.js | Node.js | PostgreSQL
                             </h2>
                             <p>
-                                I build full-stack web applications from responsive user interfaces to APIs, databases, and deployment. I enjoy turning ideas into practical products, solving problems through code, and continuously learning new technologies.
+                                I build Full-stack web applications from responsive user interfaces to APIs, databases, and deployment. I enjoy turning ideas into practical products, solving problems through code, and continuously learning new technologies.
                             </p>
                             <p>
                                 I'm currently looking for an opportunity to contribute to a development team, build meaningful software, and grow as a Full-Stack Developer.
