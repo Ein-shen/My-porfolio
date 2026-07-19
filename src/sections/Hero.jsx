@@ -27,7 +27,7 @@ export const Hero = () => {
 
                         <h1 className="font-mono text-4xl lg:text-5xl font-medium tracking-tight leading-none flex items-center justify-center lg:justify-start gap-2 lg:-mt-3">
                             <span>Shen Sarsale</span>
-                            <MdVerified size={16} className="text-[#1D9BF0] shrink-0" />
+                            <MdVerified size={14} className="text-[#1D9BF0] shrink-0" />
                         </h1>
                                                                     
                        
