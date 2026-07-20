@@ -162,8 +162,8 @@ export const Hero = () => {
                             </div>
                             {/* stats badge */}
                             <div className='absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500'>
-                                <div className='font-bold text-2xl text-primary'> 2years</div>
-                                <div className='text-xs text-muted-foreground'> years experience</div>
+                                <div className='font-bold text-2xl text-primary'> Hello World! </div>
+                                <div className='text-xl text-muted-foreground'> I'm Shen</div>
                             </div>
                         </div>
                     </div>
@@ -171,10 +171,10 @@ export const Hero = () => {
             </div>
 
             {/* Skill section */}
-            <div className='mt-20 animate-fade-in animation-delay-500'>
-                <p className='font-bold text-xl'>Technologies I work with</p>
+            <div className='mt-20 animate-fade-in animation-delay-500  '>
+                <p className='font-bold text-xl pb-5'>Tech stack</p>
                 <div className='relative overflow-hidden'>
-                    <div className='flex animate-marquee'>
+                    <div className='flex animate-marquee pb-10 '>
                         {[...skills, ...skills].map((skill, idx) => (
                             <div key={idx} className='flex-shrink-0 px-8 py-4'>
                                 <span className='text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors cursor-pointer'>
@@ -190,8 +190,9 @@ export const Hero = () => {
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in">
             <a 
                 href="#about"
-                className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary"
-            >
+                className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary">
+
+
                 <span className="text-xs uppercase tracking-wider">Scroll</span>
                 <ChevronDown className="w-6 h-6 animate-bounce" />
             </a>
