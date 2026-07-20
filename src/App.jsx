@@ -3,8 +3,9 @@ import { Contact } from "./sections/Contact"
 import { Experience } from "./sections/Experiece"
 import { Hero } from "./sections/Hero"
 import { Projects } from "./sections/Projects"
-import { Testimonials } from "./sections/Testimonials"
 import { Navbar } from "./layout/Navbar"
+import { Education } from "./sections/Education"
+import { Certificates } from "./sections/Certificates"
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Projects />
         <Experience />
         <Contact />
-        <Testimonials />
+        <Education />
+        <Certificates />
         <About />
       </main>
     </div>
