@@ -55,18 +55,13 @@ export const About = () => {
                     {/* left column */}
                     <div className="space-y-8">
                         <div className="animate-fade-in">
-                        <span className="text-secondary-foreground text-sm fonr-meduim tracking-winder uppercase"
-                        > 
-                        About me
-                        </span>
+                        
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-                        Building the Future,
+                    <h2 className="text-lg md:text-xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
+                        About me
 
-                        <span className="font-serif italic font-normal text-white">
-                            {" "}
-                            one component at a time.</span>
+                       
                       </h2>
 
                       <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
@@ -83,11 +78,7 @@ export const About = () => {
                             </p>
                       </div>
 
-                      <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
-                        <p className="text-lg font-medium italic text-foreground">
-                                My mission is to build software that's not just functional, but genuinely helpful — solving real problems for real people through clean code and thoughtful design.
-                        </p>
-                      </div>  
+                      
                     </div>
 
                     {/* Right Highlights */}

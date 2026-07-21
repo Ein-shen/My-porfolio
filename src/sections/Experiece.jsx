@@ -30,26 +30,17 @@ export const Experience = () => {
                 blur-3xl -translate-y-1/2"
             />
 
-            <div className="container mz-auto px-6 relative z-10">
+            <div className="container m-auto px-6 relative z-10">
 
 
                 {/* section header */}
                 <div className="max-w-3xl mb-16"> 
-                    <span className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-                         Career journey
-                         </span>
-                    <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground"
+                    
+                    <h2 className="text-lg md:text-xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground"
                         >
-                        Experience that <span className="font-serif italic font-normal text-white">
-                            {" "}
-                            speaks volume</span>
+                        Experience 
                     </h2>
 
-                    <p 
-                        className="text-muted-foreground animate-fade-in animation-delay-200"
-                    >
-                        Hi, I'm an aspiring Software Engineer with a passion for building clean, functional, and user-friendly digital experiences. I enjoy turning ideas into real products, whether that means designing an interface, writing backend logic, or optimizing how data flows through an application.
-                    </p>
                 </div>
 
                 {/* Timeline */}
@@ -60,32 +51,33 @@ export const Experience = () => {
                 {/* experience items */}
                 <div className="space-y-12">
                     {experiences.map((exp, idx) => (
-                        <div key={idx} className=" relative grid md:grid-cols-2 gap-8 animate-fade-in"
+                        <div key={idx} className="  gap-8 animate-fade-in"
                             style={{animationDelay: `${(idx + 1) * 100}ms `}}
                             >
-                            {/* This is the timeline Dot */}
-                            <div className="absolute left-0 md:left-1/2 top-0 w-3 h-3 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10"> 
-                            {exp.current && <span  className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75"/>}
-                            </div>
+                            
 
                             {/* content */}
-                            <div className={`pl-8 md:pl-0 ${idx % 2 === 0 ? "md:pr-16 md:text-right" : "md:col-start-2 md:pl-16"}`}>
+                            
                                 <div className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 trasition-all duration-500`}>
                                     <span className="text-sm text-primary font-medium">{exp.period}</span>
                                     <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
                                     <p className="text-muted-foreground">{exp.company}</p>
                                     <p className="text-sm text-muted-foreground mt-4">{exp.description}</p>
-                                    <div className={`flex flex-wrap gap-2 mt-4 ${idx % 2 === 0 ? "md:justify-end" : ""}`}>
-                                        {exp.technology.map((tech, indxtech) => (
-                                            <span key={indxtech} className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground"
-                                            >
-                                            {tech}
-                                            </span>
-                                        ))}
+                                    
+                                        <div className="flex flex-wrap gap-2 pt-4">
+                                            {exp.technology.map((tech, indxtech) => (
+                                                <span 
+                                                    key={indxtech} 
+                                                    className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground"
+                                                >
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                 
+                       
                     ))}
                 </div>
                 </div>

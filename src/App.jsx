@@ -13,7 +13,6 @@ function App() {
       {/* <Nav /> */}
       <Navbar />
       <main>
-
         <Hero />
         <Projects />
         <Experience />

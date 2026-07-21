@@ -59,17 +59,11 @@ export const Projects = () => {
 
             {/* section header */}
             <div className="text-center mx-auto max-w3xl mb-16">
-                <span className="text-secondary-foreground text-sm font-medium tracking-winder uppercase animate-fade-in">Featured Work</span>
-                <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-                    Projects that
-                    <span className="font-serif italic font-normal text-white">
-                        {" "}
-                        Make an Impact.
-                    </span>
+                
+                <h2 className="text-xl md:text-lg font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+                   
                 </h2>
-                <p className="text-muted-foreground animate-fade-in animation-delay-200">
-                    A selection of recent project i did.
-                </p>
+
             </div>
 
             {/* Project grid */}
