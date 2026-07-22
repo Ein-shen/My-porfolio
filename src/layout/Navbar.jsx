@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react"
 import { RiFacebookFill } from "react-icons/ri"
 
 const navLinks = [
-    { href: "#about", label: "About" },
+    
     { href: "#projects", label: "Projects" },
     { href: "#experience", label: "Experience" },
     { href: "#education", label: "Education" },
@@ -27,15 +27,19 @@ export const Navbar = () => {
     }, [])
 
     return (
-        <header className={`fixed top-0 left-0 right-0  transition-all duration-500 z-50 ${isScrolled ? "glass-strong p-3" : "bg-transparent py-5 "}`}>
-            <nav className="container mx-auto px-6 flex items-center justify-between  ">
-                <a href="#" className="text-xl font-mono tracking-tight hover:text-primary ">
-                    SA<span>.</span>
+        <header
+            className={`px-10 md:px-40 fixed top-0 left-0 right-0 transition-[background-color,backdrop-filter,padding] duration-500 z-50 ${
+                isScrolled ? "bg-[#0f1418]/80 backdrop-blur-md py-3"  : "bg-transparent py-3"
+            }`}
+            >
+            <nav className="container mx-auto px-8 flex items-center justify-between">
+                <a href="#" className="text-md font-mono tracking-tight text-muted-foreground hover:text-primary-foreground animate-fade-in">
+                Shen Sarsale
                 </a>
 
                 {/* Desktop Nav */}
-                <div  className=" hidden md:flex items-center gap-1 ">
-                    <div className="glass rounded-full px-2 py-1 flex items-center gap-1 ">
+                <div  className=" hidden lg:flex items-center gap-1 ">
+                    <div className=" -muted-foreground rounded-xl px-2 py-1 flex items-center gap-1 ">
                         {navLinks.map((link, index) => (
                             <a 
                             href={link.href} 
@@ -54,7 +58,7 @@ export const Navbar = () => {
 
                     {/* Mobile menu button */}
                     <button 
-                        className="md:hidden p-2  text-foreground cursor-pointer animate-fade-in"
+                        className="lg:hidden p-2  text-foreground cursor-pointer animate-fade-in"
                         onClick={() => setIsMobileMenuOpen((prev) => !prev)}
                         
                         >
@@ -62,7 +66,7 @@ export const Navbar = () => {
                         
                     </button>
             </nav>
-            { isMobileMenuOpen && (<div className="md:hidden glass-strong ">
+            { isMobileMenuOpen && (<div className="lg:hidden glass-strong ">
 
                 <div className="cointainer mx-auto px-6 py-6 flex flex-col gap-4  ">
                     {navLinks.map((link, index) => (
