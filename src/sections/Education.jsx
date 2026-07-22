@@ -24,7 +24,7 @@ export const Education = () => {
                     <div className="relative">
                         {Educ.map((edu, idx) => (
                             <div key={idx} className="pb-10">
-                                <div className="flex flex-row items-start gap-4  p-6 rounded-2xl border border-white/10 hover:border-muted-foreground transition-all duration-500">
+                                <div className="flex flex-row items-start gap-4  p-6 rounded-2xl transition-all duration-500">
                                     <span className="text-sm text-muted-foreground font-mono font-medium shrink-0">
                                         {edu.period}
                                     </span>

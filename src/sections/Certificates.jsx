@@ -1,3 +1,7 @@
+
+import { Link } from "react-router-dom"
+import { Toplok } from "../away/Toplok"
+
 const Certificate = [
     {
         image: "/cs.png",
@@ -22,15 +26,25 @@ export const Certificates = () => {
 
                     {/* Header */}
                     <div className="mb-16">
-                        <h2 className="text-lg md:text-xl font-mono mt-4 mb-6 animate-fade-in animation-delay-100 text-primary-foreground">
-                            Certificates
-                        </h2>
+                        
+                        <div className='flex items-center justify-between mb-4'>
+                            <h2 className="text-lg md:text-xl font-mono mt-4 mb-6 animate-fade-in animation-delay-100 text-primary-foreground">
+                                Certificates
+                            </h2>
+                             <Link
+                                to="/toplok"
+                                className='font-mono font-lg  text-muted-foreground hover:text-primary-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center justify-center gap-1'
+                                >
+                                view all<span className="text-[20px]">↗</span>
+                            </Link>
+                        </div>
+                        
                     </div>
 
                     <div className="relative">
                         {Certificate.map((cert, idx) => (
                             <div key={idx} className="pb-10">
-                                <div className="flex flex-row items-start gap-4 p-6 rounded-2xl border border-white/10 hover:border-muted-foreground transition-all duration-500">
+                                <div className="flex flex-row items-start gap-4 p-6 rounded-2xl  transition-all duration-500">
                                     <span className="text-sm text-muted-foreground font-mono font-medium shrink-0">
                                         {cert.period}
                                     </span>
@@ -55,6 +69,32 @@ export const Certificates = () => {
                         ))}
                     </div>
 
+                </div>
+
+
+                {/* Github con */}
+
+
+                <div className="max-w-[800px] mx-auto pt-12">
+                    <div className="flex flex-col items-start justify-between mb-4 cursor-pointer"
+                    >
+                        
+
+                        <h2 className="text-md md:text-xl font-mono mt-4 mb-6 animate-fade-in animation-delay-100 text-primary-foreground">
+                            1,657 contributions Last year
+                        </h2>
+                        <a
+                            href="https://github.com/Ein-shen?tab=overview&from=2026-07-01&to=2026-07-22"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="5.png"
+                                alt="Ein-shen's GitHub stats"
+                                className="rounded-lg w-full"
+                            />
+                        </a>
+                    </div>
                 </div>
             </div>
 

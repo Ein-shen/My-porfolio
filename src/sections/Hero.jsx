@@ -1,16 +1,18 @@
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
 import { PixelSwapImage } from "../components/PixelSwapImage"
-
-
-
+import { Cv } from "../away/Cv"
+import { Link } from 'react-router-dom'
 
 
 
 export const Hero = () => {
+
+   
+
     return (
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-background pt-24">
 
-            <div className="container mx-auto px-6 md:px-12 py-10 relative z-10">
+            <div className="container mx-auto pt-6 md:px-12 py-10 relative z-10">
                 <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-[288px_minmax(0,480px)] gap-8 lg:justify-center mx-auto w-fit max-w-full">
 
                     {/* Left: photo */}
@@ -42,18 +44,32 @@ export const Hero = () => {
                         </div>
 
                         <div className="flex items-center justify-center lg:justify-start gap-6 text-xs font-mono text-muted-foreground pt-2">
-                            <a href="#" className="hover:text-foreground transition-colors flex items-center gap-1">
+                            <a href="https://github.com/Ein-shen" className="hover:text-foreground transition-colors flex items-center gap-1">
                                 github <span className="text-[10px]">↗</span>
                             </a>
                             <a href="#" className="hover:text-foreground transition-colors flex items-center gap-1">
                                 linkedin <span className="text-[10px]">↗</span>
                             </a>
-                            <a href="#" className="hover:text-foreground transition-colors flex items-center gap-1">
+                            <a href="https://www.instagram.com/shinxtony/" className="hover:text-foreground transition-colors flex items-center gap-1">
                                 instagram <span className="text-[10px]">↗</span>
                             </a>
-                            <a href="mailto:you@email.com" className="hover:text-foreground transition-colors">
+                            <a href="shensarsale25@gmail.com" className="hover:text-foreground transition-colors">
                                 email
                             </a>
+                        </div>
+                    </div>
+
+
+                    {/* Cv */}
+
+                    <div>
+                        <div className='flex items-center justify-center'>
+                            <Link
+                                to="/cv"
+                                className='font-mono font-lg border border-white/10 text-muted-foreground hover:text-primary-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center justify-center gap-1'
+                                >
+                                View CV <span className="text-[20px]">↗</span>
+                            </Link>
                         </div>
                     </div>
 

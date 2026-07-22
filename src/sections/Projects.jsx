@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react"
 import { FaGithub } from "react-icons/fa"
+import { Link } from 'react-router-dom'
+import { View_projects } from "../away/View_projects"
 
 const projects = [
     { title: "Past-life-generator", description: "AHHAAHAHAHAHHA", image: "sv.jpg", tags: ["Python"], links: "#", github: "#" },
@@ -9,6 +11,10 @@ const projects = [
 ]
 
 export const Projects = () => {
+
+
+   
+
     return (
         <section id="projects" className="py-2 relative overflow-hidden">
 
@@ -17,9 +23,18 @@ export const Projects = () => {
 
                     {/* section header */}
                     <div className="mb-16">
-                        <h2 className="text-xl lg:text-lg font-bold font-mono mt-4 mb-6 animate-fade-in animation-delay-100 text-primary-foreground">
-                            Projects
-                        </h2>
+                        <div className='flex items-center justify-between mb-4'>
+                            <h2 className="text-lg md:text-xl font-mono mt-4 mb-6 animate-fade-in animation-delay-100 text-primary-foreground">
+                                Project
+                            </h2>
+
+                            <Link
+                                to="/view_projects"
+                                className='font-mono font-lg  text-muted-foreground hover:text-primary-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center justify-center gap-1'
+                                >
+                                view all<span className="text-[20px]">↗</span>
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Project grid */}
@@ -59,7 +74,7 @@ export const Projects = () => {
                                         {project.tags.map((tag, tagIdx) => (
                                             <span
                                                 key={tagIdx}
-                                                className="font-mono px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary-foreground/50 hover:text-primary-foreground transition-all duration-300"
+                                                className="font-mono px-4 py-1.5 rounded-lg text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary-foreground/50 hover:text-primary-foreground transition-all duration-300"
                                             >
                                                 {tag}
                                             </span>
