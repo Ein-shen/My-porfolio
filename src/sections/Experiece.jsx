@@ -36,7 +36,7 @@ export const Experience = () => {
                 {/* section header */}
                 <div className="max-w-3xl mb-16"> 
                     
-                    <h2 className="text-lg md:text-xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground"
+                    <h2 className="text-lg md:text-xl  mt-4 mb-6 animate-fade-in animation-delay-100 text-primary-foreground font-mono"
                         >
                         Experience 
                     </h2>
@@ -58,8 +58,8 @@ export const Experience = () => {
 
                             {/* content */}
                             
-                                <div className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 trasition-all duration-500`}>
-                                    <span className="text-sm text-primary font-medium">{exp.period}</span>
+                                <div className={`glass p-6 rounded-2xl border border-muted-foreground hover:border-primary-foreground trasition-all duration-500`}>
+                                    <span className="text-sm text-muted-foreground font-mono font-medium">{exp.period}</span>
                                     <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
                                     <p className="text-muted-foreground">{exp.company}</p>
                                     <p className="text-sm text-muted-foreground mt-4">{exp.description}</p>
@@ -68,7 +68,7 @@ export const Experience = () => {
                                             {exp.technology.map((tech, indxtech) => (
                                                 <span 
                                                     key={indxtech} 
-                                                    className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground"
+                                                    className="px-3 py-1 bg-surface text-xs font-mono rounded-full text-muted-foreground"
                                                 >
                                                     {tech}
                                                 </span>

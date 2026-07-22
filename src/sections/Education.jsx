@@ -23,7 +23,7 @@ export const Education = () => {
                 {/* Header */}
                 <div className="max-w-3xl mb-16">
 
-                    <h2 className="text-lg md:text-xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground"> Education</h2>
+                    <h2 className="text-lg md:text-xl  mt-4 mb-6 animate-fade-in animation-delay-100 text-primary-foreground font-mono"> Education</h2>
 
                 </div>
 
@@ -35,8 +35,8 @@ export const Education = () => {
                     {Educ.map((edu, idx) => (
                         <div key={idx} className="pb-10">
                           
-                            <div className={`flex flex-row items-start gap-4 glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 trasition-all duration-500`}>
-                                <span className="text-sm text-primary font-medium  shrink-0">
+                            <div className={`flex flex-row items-start gap-4 glass p-6 rounded-2xl border border-muted-foreground hover:border-primary-foreground trasition-all duration-500`}>
+                                <span className="text-sm text-muted-foreground font-mono font-medium  shrink-0">
                                     {edu.period}
                                 </span>
 

@@ -53,15 +53,15 @@ export const Projects = () => {
         <section id="projects"className="py-2 relative overflow-hidden">
 
             {/* bg glow */}
-            <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+            <div className="absolute top-1/4 right-0 w-96 h-52 bg-primary/5 rounded-full blur-3xl" />
             <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlights/5 rounded-full blur-3xl" />
             <div className="container mx-auto px-6 relative z-10"> 
 
             {/* section header */}
-            <div className="text-center mx-auto max-w3xl mb-16">
+            <div className=" mx-auto max-w3xl mb-16">
                 
-                <h2 className="text-xl md:text-lg font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-                   
+                <h2 className="text-xl md:text-lg font-bold font-mono mt-4 mb-6 animate-fade-in animation-delay-100 text-primary-foreground">
+                   Projects
                 </h2>
 
             </div>
@@ -93,14 +93,14 @@ export const Projects = () => {
 
                             <a 
                             href={project.link}
-                            className="p- rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                            className="p- rounded-full glass hover:bg-muted-foreground  hover:text-primary-foreground transition-all"
                             >
                                 <ArrowRight className="w-5 h-5"/>
                             </a>
 
                             <a
                             href={project.github}
-                            className="p- rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                            className="p- rounded-full glass hover:bg-muted-foreground hover:text-primary-foreground transition-all"
                             >
                                 <FaGithub className="w-5 h-5"/>
                             </a>
@@ -113,21 +113,21 @@ export const Projects = () => {
 
                         <div className="p-6 space-y-4 ">
                             <div className="flex items-start justify-between"> 
-                                <h3 className="text-xl font-semibold group-hover:text-primary transition-colors"> {project.title}</h3>
+                                <h3 className=" text-muted-foreground text-xl font-semibold group-hover:text-primary-foreground transition-colors "> {project.title}</h3>
                                 <ArrowRight
                                     className="w-5 h-5
-                                    text-muted-foreground group-hover:text-primary
+                                    text-muted-foreground group-hover:text-primary-foreground
                                     group-hover:translate-x-1
                                     group-hover:-translate-y-1 transition-all"
                                 />
                             </div>
-                            <p className="text-muted-foreground text-sm"> {project.description}</p>
+                            <p className="text-muted-foreground text-xs"> {project.description}</p>
                             
                                 <div className="flex flex-wrap gap-2"> 
                                     {project.tags.map((tag, tagIdx) => (
                                     <span 
                                         key={tagIdx}
-                                        className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300">
+                                        className=" font-mono px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary-foreground/50 hover:text-primary-foreground transition-all duration-300">
                                         {tag}
                                         </span>
                                 ))}

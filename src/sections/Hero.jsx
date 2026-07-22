@@ -19,7 +19,7 @@ export const Hero = () => {
 
                     {/* Right: name + bio */}
                     <div className="space-y-6 text-center md:text-left">
-                        <h1 className="font-mono text-5xl md:text-6xl font-medium tracking-tight">
+                        <h1 className="font-mono text-4xl md:text-5xl font-medium tracking-tight pt-1">
                             Shen Sarsale
                         </h1>
 
@@ -37,16 +37,16 @@ export const Hero = () => {
                         </div>
 
                         <div className="flex items-center justify-center md:justify-start gap-6 text-xs font-mono text-muted-foreground pt-2">
-                            <a href="#" className="hover:text-foreground transition-colors flex items-center gap-1">
-                                github <span className="text-[20px]">↗</span>
+                            <a href="#" className="hover:text-foreground transition-colors flex items-center gap-1 ">
+                                github <span className="text-[10px]">↗</span>
                             </a>
                             <a href="#" className="hover:text-foreground transition-colors flex items-center gap-1">
-                                linkedin <span className="text-[20px]">↗</span>
+                                linkedin <span className="text-[10px]">↗</span>
                             </a>
-                            <a href="#" className="hover:text-foreground transition-colors flex items-center gap-1">
-                                instagram <span className="text-[20px]">↗</span>
+                            <a href="#" className="hover:text-foreground transition-colors  flex items-center gap-1">
+                                instagram <span className="text-[10px]">↗</span>
                             </a>
-                            <a href="mailto:you@email.com" className="hover:text-foreground transition-colors">
+                            <a href="mailto:you@email.com" className="hover:text-foreground  transition-colors ">
                                 email
                             </a>
                         </div>

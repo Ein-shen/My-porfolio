@@ -58,7 +58,7 @@ export const About = () => {
                         
                     </div>
 
-                    <h2 className="text-lg md:text-xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
+                    <h2 className="text-lg md:text-xl font-mono leading-tight animate-fade-in animation-delay-100 text-primary-foreground">
                         About me
 
                        

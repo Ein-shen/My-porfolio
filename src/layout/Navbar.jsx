@@ -29,8 +29,8 @@ export const Navbar = () => {
     return (
         <header className={`fixed top-0 left-0 right-0  transition-all duration-500 z-50 ${isScrolled ? "glass-strong p-3" : "bg-transparent py-5 "}`}>
             <nav className="container mx-auto px-6 flex items-center justify-between  ">
-                <a href="#" className="text-xl font-bold tracking-tight hover:text-primary">
-                    PM<span>.</span>
+                <a href="#" className="text-xl font-mono tracking-tight hover:text-primary ">
+                    SA<span>.</span>
                 </a>
 
                 {/* Desktop Nav */}
@@ -40,7 +40,7 @@ export const Navbar = () => {
                             <a 
                             href={link.href} 
                             key={index} 
-                            className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface" 
+                            className=" font-mono px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface" 
                             >
                                 {link.label}
                             </a>
