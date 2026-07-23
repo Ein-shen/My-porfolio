@@ -15,12 +15,13 @@ import { Routes, Route } from 'react-router-dom'
 function App() {
   return (
      <div className="min-h-screen overflow-hidden px-10 md:px-40">
-      
+      <Navbar />
       <main>
         <Routes>
+          
           <Route path="/" element={
             <>
-              <Navbar />
+              
               <Hero />
               <Projects />
               <Experience />
