@@ -5,15 +5,21 @@ import { Toplok } from "../away/Toplok"
 const Certificate = [
     {
         image: "/cs.png",
-        period: "July 2026",
+        period: "Jul-2026",
         title: "CS50x: Introduction to Computer Science",
         where: "CS50 Harvard",
     },
     {
         image: "/py.png",
-        period: "September 2025",
-        title: "CS50'S Introduction to Programming with Python",
+        period: "Sep-2025",
+        title: "CS50's Introduction to Programming with Python",
         where: "CS50 Harvard",
+    },
+    {
+        image: "/cy.jpg",
+        period: "Oct-2025",
+        title: "Cyber x",
+        where: "Regional Contest 3rd placer",
     },
 ]
 

@@ -1,31 +1,63 @@
 @import "tailwindcss";
 
+
 @theme {
   --color-background: #0f1418;
   --color-foreground: #f0f2f5;
-
   --color-card: #141a1f;
-
   --color-primary: #20b2a6;
   --color-primary-foreground: #ffffff;
-
   --color-secondary: #1f2830;
   --color-secondary-foreground: #20b2a6;
-
   --color-muted: #252e37;
   --color-muted-foreground: #7a8491;
-
   --color-border: #242b32;
-
   --radius: 0.75rem;
-
   --color-highlight: #f5a623;
   --color-surface: #1a2329;
+}
+
+/* Light mode overrides — greyish-white monochrome */
+:root.light {
+  --color-background: #eeeeee;
+  --color-foreground: #1a1a1a;
+  --color-card: #e4e4e4;
+  --color-primary: #20b2a6;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #dcdcdc;
+  --color-secondary-foreground: #14776e;
+  --color-muted: #d5d5d5;
+  --color-muted-foreground: #5c5c5c;
+  --color-border: #c7c7c7;
+  --color-highlight: #f5a623;
+  --color-surface: #e6e6e6;
+}
+
+/* View Transition */
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+  }
+
+  *,
+  *::before,
+  *::as {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, fill 0.5s ease, stroke 0.5s ease;
   }
 
   body {
@@ -47,11 +79,6 @@
     border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
   }
 
-
-  
-
-
-
   .glass-strong {
     background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
     backdrop-filter: blur(24px);
@@ -68,9 +95,6 @@
       color-mix(in srgb, var(--color-primary) 20%, transparent),
       inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
   }
-
-  
-   
 }
 
 
@@ -139,7 +163,6 @@
   animation: marquee 30s linear infinite;
 }
 
-
 .animation-delay-100 {
   animation-delay: 100ms;
 }
@@ -148,13 +171,11 @@
   animation: float 4s ease-in-out infinite;
 }
 
-
-  .animation-delay-200 {
+.animation-delay-200 {
   animation-delay: 200ms;
 }
 
-
-  .animation-delay-300 {
+.animation-delay-300 {
   animation-delay: 300ms;
 }
 
@@ -192,7 +213,6 @@
   backdrop-filter: blur(16px);
   box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
 }
-
 
 .timeline-glow {
   box-shadow: 0 0 40px
