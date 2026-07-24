@@ -31,18 +31,23 @@ export const Navbar = () => {
   const handleNavClick = (id) => {
     setIsMobileMenuOpen(false);
 
+    const scrollToSection = () => {
+      const section = document.getElementById(id);
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    };
+
     if (location.pathname !== "/") {
       navigate("/");
 
-      setTimeout(() => {
-        document.getElementById(id)?.scrollIntoView({
-          behavior: "smooth",
-        });
-      }, 100);
+      setTimeout(scrollToSection, 300);
     } else {
-      document.getElementById(id)?.scrollIntoView({
-        behavior: "smooth",
-      });
+      scrollToSection();
     }
   };
 
@@ -55,8 +60,9 @@ export const Navbar = () => {
       }`}
     >
       <nav className="container mx-auto flex items-center justify-between px-8">
+        {/* Logo */}
         <button
-          onClick={() => navigate("/")}
+          onClick={() => handleNavClick("hero")}
           className="text-md font-mono tracking-tight text-muted-foreground hover:text-primary-foreground animate-fade-in"
         >
           Shen Sarsale

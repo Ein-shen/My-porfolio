@@ -26,6 +26,7 @@ function App() {
                 <Certificates />
               </>
             } />
+            
             <Route path="/cv" element={<Cv />} />
             <Route path="/view_projects" element={<View_projects />} />
             <Route path="/toplok" element={<Toplok />} />
