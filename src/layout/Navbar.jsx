@@ -59,23 +59,23 @@ export const Navbar = () => {
           : "bg-transparent py-3"
       }`}
     >
-      <nav className="container mx-auto flex items-center justify-between px-8">
+      <nav className="container mx-auto flex items-center justify-between px-8 ">
         {/* Logo */}
         <button
           onClick={() => handleNavClick("hero")}
-          className="text-md font-mono tracking-tight text-muted-foreground hover:text-primary-foreground animate-fade-in"
+          className="text-md font-mono tracking-tight text-muted-foreground hover:text-primary-foreground "
         >
           Shen Sarsale
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-1">
+        <div className="hidden lg:flex items-center gap-1 ">
           <div className="rounded-xl px-2 py-1 flex items-center gap-1">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className="font-mono px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
+                className="font-mono px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface animate-fade-in animation-delay-100"
               >
                 {link.label}
               </button>
@@ -87,7 +87,7 @@ export const Navbar = () => {
 
             <button
               onClick={toggleTheme}
-              className="cursor-pointer text-xs font-mono text-muted-foreground hover:text-foreground transition-colors duration-300"
+              className="cursor-pointer text-xs font-mono text-muted-foreground hover:text-foreground transition-colors duration-300 animate-fade-in animation-delay-100"
             >
               {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
             </button>

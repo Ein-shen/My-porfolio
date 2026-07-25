@@ -152,7 +152,10 @@
 }
 
 .animate-fade-in {
-  animation: fade-in 0.8s ease-out both;
+  animation-name: fade-in;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
 }
 
 .animate-float {
@@ -193,6 +196,15 @@
 
 .animation-delay-800 {
   animation-delay: 800ms;
+}
+
+.animation-delay-900 {
+  animation-delay: 900ms;
+}
+
+
+.animation-delay-1000 {
+  animation-delay: 1000ms;
 }
 
 @keyframes animated-border {

@@ -7,11 +7,6 @@ import { Link } from 'react-router-dom'
 
 export const Hero = () => {
 
-
-    
-
-   
-
     return (
         <section 
             id="hero"
@@ -22,7 +17,7 @@ export const Hero = () => {
                 <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-[288px_minmax(0,480px)] gap-8 lg:justify-center mx-auto w-fit max-w-full">
 
                     {/* Left: photo */}
-                    <div className="relative mx-auto lg:mx-0 w-[288px] cursor-pointer">
+                    <div className="relative mx-auto lg:mx-0 w-[288px] cursor-pointer  animate-fade-in animation-delay-200 duration-500">
                         <PixelSwapImage
                             imageA="/z.jpg"
                             imageB="/y.jpg"
@@ -32,24 +27,24 @@ export const Hero = () => {
 
                     {/* Right: name + bio */}
                     <div className="space-y-6 text-center lg:text-left">
-                        <h1 className="font-mono text-4xl lg:text-5xl font-medium tracking-tight pt-1">
+                        <h1 className="font-mono text-4xl lg:text-5xl font-medium tracking-tight pt-1 animate-fade-in animation-delay-400">
                             Shen Sarsale
                         </h1>
 
-                        <div className="space-y-4 text-muted-foreground max-w-md">
-                            <p>
+                        <div className="space-y-4 text-muted-foreground max-w-md ">
+                            <p className='animate-fade-in animation-delay-600'>
                                 I'm an aspiring Data Scientist and Software Engineer with a passion for
                                 building clean digital experiences and exploring what data can tell us.
                                 I'm currently growing my skills through real projects, and looking for
                                 opportunities to contribute to a team and keep learning.
                             </p>
-                            <p>
+                            <p className='animate-fade-in animation-delay-800'>
                                 I love turning rough ideas into things people actually use — designing
                                 interfaces and learning new tools along the way.
                             </p>
                         </div>
 
-                        <div className="flex items-center justify-center lg:justify-start gap-6 text-xs font-mono text-muted-foreground pt-2">
+                        <div className="flex items-center justify-center lg:justify-start gap-6 text-xs font-mono text-muted-foreground pt-2 animate-fade-in animation-delay-900 ">
                             <a href="https://github.com/Ein-shen" className="hover:text-foreground transition-colors flex items-center gap-1">
                                 github <span className="text-[10px]">↗</span>
                             </a>
@@ -72,7 +67,7 @@ export const Hero = () => {
                         <div className='flex items-center justify-center'>
                             <Link
                                 to="/cv"
-                                className='font-mono font-lg border border-white/10 text-muted-foreground hover:text-primary-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center justify-center gap-1'
+                                className='font-mono font-lg border border-white/10 text-muted-foreground hover:text-primary-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center justify-center gap-1 animate-fade-in animation-delay-1000'
                                 >
                                 View CV <span className="text-[20px]">↗</span>
                             </Link>
