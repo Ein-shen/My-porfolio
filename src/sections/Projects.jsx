@@ -24,9 +24,9 @@ export const Projects = () => {
                     {/* section header */}
                     <div className="mb-16">
                         <div className='flex items-center justify-between mb-4'>
-                            <h2 className="text-lg md:text-xl font-mono mt-4 mb-6 animate-fade-in animation-delay-100 text-foreground">
-                                Project
-                            </h2>
+                           <h1 className="font-mono text-xl lg:text-xl font-medium tracking-tight pt-1 animate-fade-in animation-delay-400">
+                               Projects
+                            </h1>
 
                             <Link
                                 to="/view_projects"

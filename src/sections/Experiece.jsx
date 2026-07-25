@@ -35,10 +35,9 @@ export const Experience = () => {
                 {/* section header */}
                 <div className="max-w-3xl mb-16"> 
                     
-                    <h2 className="text-lg md:text-xl  mt-4 mb-6 animate-fade-in animation-delay-100 text-primary-foreground font-mono"
-                        >
-                        Experience 
-                    </h2>
+                    <h1 className="font-mono text-xl lg:text-xl font-medium tracking-tight pt-1 animate-fade-in animation-delay-400">
+                            Experience
+                    </h1>
 
                 </div>
 

@@ -16,9 +16,9 @@ export const Education = () => {
 
                     {/* Header */}
                     <div className="mb-16">
-                        <h2 className="text-lg md:text-xl mt-4 mb-6 animate-fade-in animation-delay-100 text-primary-foreground font-mono">
+                        <h1 className="font-mono text-xl lg:text-xl font-medium tracking-tight pt-1 animate-fade-in animation-delay-400">
                             Education
-                        </h2>
+                        </h1>
                     </div>
 
                     <div className="relative">
