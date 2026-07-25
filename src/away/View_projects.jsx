@@ -20,12 +20,12 @@ export const View_projects = () => {
                                       e.preventDefault()
                                       navigate(-1)
                                     }}>
-                                  <ArrowLeft size={24} />
+                                  <ArrowLeft size={24}  className='animate-fade-in animation-delay-400'/>
                               </Link>
     
-                              <h2 className="text-lg md:text-xl font-mono mt-4 mb-6 animate-fade-in animation-delay-100 text-primary-foreground text-center">
-                                  Projects
-                              </h2>
+                              <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 animate-fade-in animation-delay-400 text-center">
+                                Projects
+                            </h1>
     
                               <div className="w-6" /> {/* spacer matching ArrowLeft size={24} */}
                           </div>

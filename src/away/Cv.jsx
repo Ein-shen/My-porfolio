@@ -13,12 +13,12 @@ export const Cv = () => {
         <div className="mb-16">
           <div className='grid grid-cols-[auto_1fr_auto] items-center mb-4'>
             <button onClick={() => navigate(-1)} aria-label="Go back">
-              <ArrowLeft size={24} />
+              <ArrowLeft size={24} className='animate-fade-in animation-delay-400'/>
             </button>
 
-            <h2 className="text-lg md:text-xl font-mono mt-4 mb-6 animate-fade-in animation-delay-100 text-primary-foreground text-center">
+            <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 animate-fade-in animation-delay-400 text-center">
               Cv
-            </h2>
+            </h1>
 
             <div className="w-6" />
           </div>
