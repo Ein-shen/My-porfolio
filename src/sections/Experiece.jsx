@@ -87,8 +87,10 @@ export const Experience = () => {
             {/* Tech stack */}
                 <div className='max-w-[800px] mx-auto pt-12'>
                     <div className='flex items-center justify-between mb-4'>
-                        <span className='text-lg md:text-xl  mt-4 mb-6 animate-fade-in animation-delay-100 text-primary-foreground font-mono'>Stack</span>
-                        
+                       
+                          <h1 className="font-mono text-lg lg:text-lg font-medium tracking-tight pt-1 animate-fade-in animation-delay-400">
+                            Stack
+                          </h1>
                     </div>
 
                     <div className='flex flex-wrap gap-2 justify-center'>
