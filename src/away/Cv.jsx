@@ -13,10 +13,10 @@ export const Cv = () => {
         <div className="mb-16">
           <div className='grid grid-cols-[auto_1fr_auto] items-center mb-4'>
             <button onClick={() => navigate(-1)} aria-label="Go back">
-              <ArrowLeft size={24} className='animate-fade-in animation-delay-400'/>
+              <ArrowLeft size={24} className='animate-fade-in animation-delay-100'/>
             </button>
 
-            <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 animate-fade-in animation-delay-400 text-center">
+            <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 animate-fade-in animation-delay-100 text-center">
               Cv
             </h1>
 
@@ -24,11 +24,11 @@ export const Cv = () => {
           </div>
         </div>
 
-        <div className='w-full flex justify-center'>
+        <div className='w-full flex justify-center' >
           <img
             src="c.png"
             alt="CV"
-            className="w-full object-contain"
+            className="w-full object-contain animate-fade-in animation-delay-200"
           />
         </div>
       </div>

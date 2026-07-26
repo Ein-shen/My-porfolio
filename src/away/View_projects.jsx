@@ -37,10 +37,10 @@ export const View_projects = () => {
                                       e.preventDefault()
                                       navigate(-1)
                                     }}>
-                                  <ArrowLeft size={24}  className='animate-fade-in animation-delay-400'/>
+                                  <ArrowLeft size={24}  className='animate-fade-in animation-delay-100'/>
                               </Link>
     
-                              <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 animate-fade-in animation-delay-400 text-center">
+                              <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 animate-fade-in animation-delay-100 text-center">
                                 Projects
                             </h1>
     
@@ -54,7 +54,7 @@ export const View_projects = () => {
                                 <div
                                 key={idx}
                                 >
-                                 <div className="flex flex-col items-start gap-4 p-6 rounded-2xl  transition-all duration-500">
+                                 <div className="flex flex-col items-start gap-4 p-6 rounded-2xl  transition-all duration-500 animate-fade-in animation-delay-200">
                                     <div className="relative w-full  pt-5 items-center">
                                             <img
                                                 src={pro.image}

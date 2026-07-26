@@ -75,10 +75,10 @@ export const Toplok = () => {
         <div className="mb-16">
           <div className='grid grid-cols-[auto_1fr_auto] items-center mb-4'>
             <button onClick={() => navigate(-1)} aria-label="Go back">
-              <ArrowLeft size={24} className='animate-fade-in animation-delay-400' />
+              <ArrowLeft size={24} className='animate-fade-in animation-delay-100' />
             </button>
 
-            <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 animate-fade-in animation-delay-400 text-center">
+            <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 animate-fade-in animation-delay-100 text-center">
                 Certificates
             </h1>
 
@@ -88,7 +88,7 @@ export const Toplok = () => {
           <div className="relative">
                         {Certificate.map((cert, idx) => (
                             <div key={idx} className="pb-10">
-                                <div className="flex flex-col items-start gap-4 p-6 rounded-2xl  transition-all duration-500">
+                                <div className="flex flex-col items-start gap-4 p-6 rounded-2xl  transition-all duration-500 animate-fade-in animation-delay-200">
                                     <div className="relative w-full  pt-5 items-center">
                                             <img
                                                 src={cert.image}
