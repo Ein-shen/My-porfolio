@@ -5,8 +5,8 @@ import { View_projects } from "../away/View_projects"
 
 const projects = [
     { title: "Past-life-generator", description: "AHHAAHAHAHAHHA", image: "sv.jpg", tags: ["Python"], links: "#", github: "#" },
-    { title: "Anime", description: "HOHOHOHOHOHOH", image: "r.jpg", tags: ["JINJA"], links: "#", github: "#" },
-    { title: "SECRET", description: "EHEHEHEH", image: "q.jpg", tags: ["Python"], links: "#", github: "#" },
+    { title: "Anime", description: "HOHOHOHOHOHOH", image: "r.jpg", tags: ["JINJA"], links: "https://github.com/Ein-shen/Past-life-generator", github: "https://github.com/Ein-shen/Past-life-generator" },
+    { title: "SECRET", description: "EHEHEHEH", image: "q.jpg", tags: ["Python"], links: "#", github: "https://github.com/Ein-shen/Past-life-generator" },
     { title: "OUCH", description: "HIHIHIHIH", image: "a.jpg", tags: ["html"], links: "#", github: "#" },
 ]
 
