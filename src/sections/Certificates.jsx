@@ -39,7 +39,7 @@ export const Certificates = () => {
                             </h1>
                              <Link
                                 to="/toplok"
-                                className='font-mono font-lg  text-muted-foreground hover:text-primary-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center justify-center gap-1'
+                                className='font-mono font-lg  text-muted-foreground hover:text-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center justify-center gap-1'
                                 >
                                 view all<span className="text-[20px]">↗</span>
                             </Link>

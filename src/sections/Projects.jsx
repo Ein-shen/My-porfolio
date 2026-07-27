@@ -18,7 +18,7 @@ export const Projects = () => {
     return (
         <section id="projects" className="py-2 relative overflow-hidden scroll-mt-24">
 
-            <div className="container mx-auto px-6 md:px-12 py-10 relative z-10 animate-fade-in">
+            <div className="container mx-auto px-6 md:px-12 py-10 relative z-10 animate-fade-in ">
                 <div className="mx-auto max-w-[800px]">
 
                     {/* section header */}
@@ -30,7 +30,7 @@ export const Projects = () => {
 
                             <Link
                                 to="/view_projects"
-                                className='font-mono font-lg  text-muted-foreground hover:text-primary-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center  justify-center gap-1 '
+                                className='font-mono font-lg  text-muted-foreground hover:text-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center  justify-center gap-1 '
                                 >
                                 view all<span className="text-[20px]">↗</span>
                             </Link>
@@ -64,17 +64,17 @@ export const Projects = () => {
 
                                 <div className="p-6 space-y-4">
                                     <div className="flex items-start justify-between">
-                                        <h3 className="text-muted-foreground text-xl font-semibold group-hover:text-primary-foreground transition-colors">
+                                        <h3 className="text-muted-foreground text-xl font-semibold group-hover:text-foreground transition-colors">
                                             {project.title}
                                         </h3>
-                                        <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                                        <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                                     </div>
                                     <p className="text-muted-foreground text-xs">{project.description}</p>
                                     <div className="flex flex-wrap gap-2">
                                         {project.tags.map((tag, tagIdx) => (
                                             <span
                                                 key={tagIdx}
-                                                className="font-mono px-4 py-1.5 rounded-lg text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary-foreground/50 hover:text-primary-foreground transition-all duration-300"
+                                                className="font-mono px-4 py-1.5 rounded-lg text-xs font-medium border border-border/ text-muted-foreground hover:border-foreground hover:text-foreground transition-all duration-300"
                                             >
                                                 {tag}
                                             </span>

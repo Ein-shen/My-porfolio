@@ -67,7 +67,7 @@ export const Hero = () => {
                         <div className='flex items-center justify-center'>
                             <Link
                                 to="/cv"
-                                className='font-mono font-lg border border-white/10 text-muted-foreground hover:text-primary-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center justify-center gap-1 animate-fade-in animation-delay-1000'
+                                className='font-mono font-lg border border-white/10 text-muted-foreground hover:text-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center justify-center gap-1 animate-fade-in animation-delay-1000'
                                 >
                                 View CV <span className="text-[20px]">↗</span>
                             </Link>
