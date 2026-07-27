@@ -68,17 +68,17 @@ export const Toplok = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="container mx-auto px-6 md:px-12 py-10 relative z-10 pt-20">
+    <div className="container mx-auto px-6 md:px-12 py-10 relative z-10 pt-28 animate-fade-in">
       <div className="mx-auto max-w-[800px]">
 
         {/* Header */}
         <div className="mb-16">
           <div className='grid grid-cols-[auto_1fr_auto] items-center mb-4'>
             <button onClick={() => navigate(-1)} aria-label="Go back">
-              <ArrowLeft size={24} className='animate-fade-in animation-delay-100' />
+              <ArrowLeft size={24}  />
             </button>
 
-            <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 animate-fade-in animation-delay-100 text-center">
+            <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 text-center">
                 Certificates
             </h1>
 
@@ -88,7 +88,7 @@ export const Toplok = () => {
           <div className="relative">
                         {Certificate.map((cert, idx) => (
                             <div key={idx} className="pb-10">
-                                <div className="flex flex-col items-start gap-4 p-6 rounded-2xl  transition-all duration-500 animate-fade-in animation-delay-200">
+                                <div className="flex flex-col items-start gap-4 p-6 rounded-2xl  transition-all duration-500 ">
                                     <div className="relative w-full  pt-5 items-center">
                                             <img
                                                 src={cert.image}

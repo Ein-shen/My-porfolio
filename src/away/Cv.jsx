@@ -6,17 +6,17 @@ export const Cv = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="container mx-auto px-6 md:px-12 py-10 relative z-10 pt-20">
+    <div className="container mx-auto px-6 md:px-12 py-10 relative z-10 pt-28 animate-fade-in">
       <div className="mx-auto max-w-[800px]">
 
         {/* Header */}
         <div className="mb-16">
           <div className='grid grid-cols-[auto_1fr_auto] items-center mb-4'>
             <button onClick={() => navigate(-1)} aria-label="Go back">
-              <ArrowLeft size={24} className='animate-fade-in animation-delay-100'/>
+              <ArrowLeft size={24} />
             </button>
 
-            <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 animate-fade-in animation-delay-100 text-center">
+            <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1  text-center">
               Cv
             </h1>
 
@@ -28,7 +28,7 @@ export const Cv = () => {
           <img
             src="c.png"
             alt="CV"
-            className="w-full object-contain animate-fade-in animation-delay-200"
+            className="w-full object-contain "
           />
         </div>
       </div>

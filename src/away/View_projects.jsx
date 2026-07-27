@@ -26,7 +26,7 @@ export const View_projects = () => {
   return (
 
 
-    <div className="container mx-auto px-6 md:px-12 py-10 relative z-10 pt-20">
+    <div className="container mx-auto px-6 md:px-12 py-10 relative z-10 pt-28">
                   <div className="mx-auto max-w-[800px]">
     
                       {/* Header */}

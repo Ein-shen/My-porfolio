@@ -18,19 +18,19 @@ export const Projects = () => {
     return (
         <section id="projects" className="py-2 relative overflow-hidden scroll-mt-24">
 
-            <div className="container mx-auto px-6 md:px-12 py-10 relative z-10">
+            <div className="container mx-auto px-6 md:px-12 py-10 relative z-10 animate-fade-in">
                 <div className="mx-auto max-w-[800px]">
 
                     {/* section header */}
                     <div className="mb-16">
                         <div className='flex items-center justify-between mb-4'>
-                           <h1 className="font-mono text-xl lg:text-xl font-medium tracking-tight pt-1 animate-fade-in animation-delay-400">
+                           <h1 className="font-mono text-xl lg:text-xl font-medium tracking-tight pt-1  ">
                                Projects
                             </h1>
 
                             <Link
                                 to="/view_projects"
-                                className='font-mono font-lg  text-muted-foreground hover:text-primary-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center justify-center gap-1'
+                                className='font-mono font-lg  text-muted-foreground hover:text-primary-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center  justify-center gap-1 '
                                 >
                                 view all<span className="text-[20px]">↗</span>
                             </Link>
@@ -38,11 +38,11 @@ export const Projects = () => {
                     </div>
 
                     {/* Project grid */}
-                    <div className="grid lg:grid-cols-2 gap-8">
+                    <div className="grid lg:grid-cols-2 gap-8  ">
                         {projects.map((project, idx) => (
                             <div
                                 key={idx}
-                                className="group border border-white/10 hover:border-muted-foreground rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
+                                className="group border border-white/10 hover:border-muted-foreground rounded-2xl overflow-hidden  md:row-span-1"
                                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
                             >
                                 <div className="relative overflow-hidden aspect-video">

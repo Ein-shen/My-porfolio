@@ -27,14 +27,14 @@ export const Certificates = () => {
     return (
         <section id="certificates" className="py-2 relative overflow-hidden scroll-mt-24">
 
-            <div className="container mx-auto px-6 md:px-12 py-10 relative z-10">
+            <div className="container mx-auto px-6 md:px-12 py-10 relative z-10 animate-fade-in">
                 <div className="mx-auto max-w-[800px]">
 
                     {/* Header */}
                     <div className="mb-16">
                         
                         <div className='flex items-center justify-between mb-4'>
-                            <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 animate-fade-in animation-delay-400">
+                            <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 ">
                                Certificate
                             </h1>
                              <Link
@@ -88,7 +88,7 @@ export const Certificates = () => {
 
                         
 
-                        <h1 className="font-mono text-lg lg:text-md font-medium tracking-tight pt-1 animate-fade-in animation-delay-400">
+                        <h1 className="font-mono text-lg lg:text-md font-medium tracking-tight pt-1 ">
                             1,657 contributions Last year
                         </h1>
                         <a

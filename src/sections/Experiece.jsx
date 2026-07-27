@@ -26,7 +26,7 @@ export const Experience = () => {
     
     <section 
         id="experience"
-        className="py-2 relative overflow-hidden scroll-mt-24">
+        className="py-2 relative overflow-hidden scroll-mt-24 animate-fade-in">
             <div
                 className="container mx-auto px-6 md:px-12 py-10 relative z-10">  
             <div className="mx-auto max-w-[800px]">
@@ -35,7 +35,7 @@ export const Experience = () => {
                 {/* section header */}
                 <div className="max-w-3xl mb-16"> 
                     
-                    <h1 className="font-mono text-xl lg:text-xl font-medium tracking-tight pt-1 animate-fade-in animation-delay-400 ">
+                    <h1 className="font-mono text-xl lg:text-xl font-medium tracking-tight pt-1  ">
                             Experience
                     </h1>
 
@@ -49,7 +49,7 @@ export const Experience = () => {
                 {/* experience items */}
                 <div className="space-y-12">
                     {experiences.map((exp, idx) => (
-                        <div key={idx} className="pb-10 animate-fade-in"
+                        <div key={idx} className="pb-10  "
                             style={{animationDelay: `${(idx + 1) * 100}ms `}}
                             >
 
@@ -88,7 +88,7 @@ export const Experience = () => {
                 <div className='max-w-[800px] mx-auto pt-12'>
                     <div className='flex items-center justify-between mb-4'>
                        
-                          <h1 className="font-mono text-lg lg:text-lg font-medium tracking-tight pt-1 animate-fade-in animation-delay-400">
+                          <h1 className="font-mono text-lg lg:text-lg font-medium tracking-tight pt-1 ">
                             Stack
                           </h1>
                     </div>
