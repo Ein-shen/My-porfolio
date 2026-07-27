@@ -63,7 +63,7 @@ export const Navbar = () => {
         {/* Logo */}
         <button
           onClick={() => handleNavClick("hero")}
-          className="text-md font-mono tracking-tight text-muted-foreground hover:text-primary-foreground "
+          className="text-md font-mono tracking-tight text-muted-foreground hover:text-foreground "
         >
           Shen Sarsale
         </button>

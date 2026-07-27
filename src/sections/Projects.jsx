@@ -42,7 +42,7 @@ export const Projects = () => {
                         {projects.map((project, idx) => (
                             <div
                                 key={idx}
-                                className="group border border-white/10 hover:border-muted-foreground rounded-2xl overflow-hidden  md:row-span-1"
+                                className="group border border-foreground/10 hover:border-muted-foreground rounded-2xl overflow-hidden  md:row-span-1"
                                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
                             >
                                 <div className="relative overflow-hidden aspect-video">

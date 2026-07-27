@@ -13,7 +13,7 @@ export const Hero = () => {
             
             className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-background pt-24">
 
-            <div className="container mx-auto pt-6 md:px-12 py-10 relative z-10">
+            <div className="container mx-auto pt-6 md:px-12 py-10 relative z-10 ">
                 <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-[288px_minmax(0,480px)] gap-8 lg:justify-center mx-auto w-fit max-w-full">
 
                     {/* Left: photo */}
