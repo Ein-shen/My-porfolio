@@ -1,3 +1,5 @@
+import { useEffect } from "react"
+import { useLocation, Routes, Route } from 'react-router-dom'
 import { Experience } from "./sections/Experiece"
 import { Hero } from "./sections/Hero"
 import { Projects } from "./sections/Projects"
@@ -7,10 +9,15 @@ import { Certificates } from "./sections/Certificates"
 import { Cv } from "./away/Cv"
 import { View_projects } from "./away/View_projects"
 import { Toplok } from "./away/Toplok"
-import { Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from "./sections/ThemeContext"
 
 function App() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [pathname])
+
   return (
     <ThemeProvider>
       <div className="min-h-screen overflow-hidden px-10 md:px-40">

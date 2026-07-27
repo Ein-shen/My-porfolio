@@ -9,7 +9,7 @@ const Educ = [
 
 export const Education = () => {
     return (
-        <section id="education" className="py-2 relative overflow-hidden">
+        <section id="education" className="py-2 relative overflow-hidden scroll-mt-24">
 
             <div className="container mx-auto px-6 md:px-12 py-10 relative z-10">
                 <div className="mx-auto max-w-[800px]">

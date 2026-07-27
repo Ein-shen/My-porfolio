@@ -26,7 +26,7 @@ export const Experience = () => {
     
     <section 
         id="experience"
-        className="py-2 relative overflow-hidden">
+        className="py-2 relative overflow-hidden scroll-mt-24">
             <div
                 className="container mx-auto px-6 md:px-12 py-10 relative z-10">  
             <div className="mx-auto max-w-[800px]">
@@ -35,7 +35,7 @@ export const Experience = () => {
                 {/* section header */}
                 <div className="max-w-3xl mb-16"> 
                     
-                    <h1 className="font-mono text-xl lg:text-xl font-medium tracking-tight pt-1 animate-fade-in animation-delay-400">
+                    <h1 className="font-mono text-xl lg:text-xl font-medium tracking-tight pt-1 animate-fade-in animation-delay-400 ">
                             Experience
                     </h1>
 
