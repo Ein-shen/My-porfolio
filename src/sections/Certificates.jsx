@@ -89,7 +89,7 @@ export const Certificates = () => {
                         
 
                         <h1 className="font-mono text-lg lg:text-md font-medium tracking-tight pt-1 ">
-                            1,657 contributions Last year
+                            1,657 contributions Last 2025
                         </h1>
                         <a
                             href="https://github.com/Ein-shen?tab=overview&from=2026-07-01&to=2026-07-22"

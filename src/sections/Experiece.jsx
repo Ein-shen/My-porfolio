@@ -57,7 +57,7 @@ export const Experience = () => {
                                                 {exp.technology.map((tech, indxtech) => (
                                                     <span 
                                                         key={indxtech} 
-                                                        className="px-3 py-1 text-xs font-mono rounded-lg border border-foreground/10 text-muted-foreground"
+                                                        className="px-3 py-1 text-xs font-mono rounded-lg border border-foreground/10 text-muted-foreground text-center"
                                                     >
                                                         {tech}
                                                     </span>
