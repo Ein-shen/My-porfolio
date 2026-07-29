@@ -6,17 +6,23 @@ import { FaGithub } from "react-icons/fa"
 
 
 const projects = [
-    { title: "Past-life-generator", 
-      description: "AHHAAHAHAHAHHA", 
+     { title: "Cargo", 
+      description: "A full-stack peer-to-peer car rental mobile app", 
       image: "sv.jpg", 
-      tags: ["Python"], 
-      links: "#", 
-      github: "#" },
+      tags: ["Dart", "Flutter", "Mysql", "PHP", "Firewall"], 
+      github: "https://github.com/Syloms/Cargo" },
+
+    { title: "Laze", 
+      description: "Built a full-stack study companion web app that lets users track study sessions and manage tasks", 
+      image: "laze.png", 
+      tags: ["React", "Supabase", "TailwinCss", "Html", "Vite"], 
+      github: "https://github.com/Ein-shen/Laze"
+    },
 
 
-    { title: "Anime", description: "HOHOHOHOHOHOH", image: "r.jpg", tags: ["JINJA"], links: "#", github: "#" },
-    { title: "SECRET", description: "EHEHEHEH", image: "q.jpg", tags: ["Python"], links: "#", github: "#" },
-    { title: "OUCH", description: "HIHIHIHIH", image: "a.jpg", tags: ["html"], links: "#", github: "#" },
+   
+    { title: "SECRET", description: "EHEHEHEH", image: "q.jpg", tags: ["Python"], github: "#" },
+    { title: "OUCH", description: "HIHIHIHIH", image: "a.jpg", tags: ["html"],  github: "#" },
 ]
 
 export const View_projects = () => {
@@ -72,9 +78,16 @@ export const View_projects = () => {
                                         <p className="text-xs md:text-sm text-muted-foreground pt-3 text-center">
                                             {pro.description}
                                         </p>
-                                        <h1 className=" px-3 py-1.5 text-sm text-muted-foreground font-mono font-medium shrink-0 border border border-white/10 ">
-                                        {pro.tags}
-                                        </h1>
+                                         <div className="flex flex-wrap gap-2 justify-center">
+                                            {pro.tags.map((tag, tagIdx) => (
+                                                <span
+                                                    key={tagIdx}
+                                                    className=" font-mono px-4 py-1.5 rounded-lg text-xs font-medium border border-border/ text-muted-foreground hover:border-foreground hover:text-foreground transition-all duration-300"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
 
                                         <a href={pro.github} className="p-3 rounded-full glass hover:bg-muted-foreground hover:text-primary-foreground transition-all ">
                                             <FaGithub className="w-5 h-5" />

@@ -4,10 +4,24 @@ import { Link } from 'react-router-dom'
 import { View_projects } from "../away/View_projects"
 
 const projects = [
-    { title: "Past-life-generator", description: "AHHAAHAHAHAHHA", image: "sv.jpg", tags: ["Python"], links: "#", github: "#" },
-    { title: "Anime", description: "HOHOHOHOHOHOH", image: "r.jpg", tags: ["JINJA"], links: "https://github.com/Ein-shen/Past-life-generator", github: "https://github.com/Ein-shen/Past-life-generator" },
-    { title: "SECRET", description: "EHEHEHEH", image: "q.jpg", tags: ["Python"], links: "#", github: "https://github.com/Ein-shen/Past-life-generator" },
-    { title: "OUCH", description: "HIHIHIHIH", image: "a.jpg", tags: ["html"], links: "#", github: "#" },
+
+    { title: "Cargo", 
+      description: "A full-stack peer-to-peer car rental mobile app", 
+      image: "sv.jpg", 
+      tags: ["Dart", "Flutter", "Mysql", "PHP", "Firewall"], 
+      github: "https://github.com/Syloms/Cargo" },
+
+    { title: "Laze", 
+      description: "Built a full-stack study companion web app that lets users track study sessions and manage tasks", 
+      image: "laze.png", 
+      tags: ["React", "Supabase", "TailwinCss", "Html", "Vite"], 
+      github: "https://github.com/Ein-shen/Laze"
+    },
+
+
+
+    { title: "SECRET", description: "EHEHEHEH", image: "q.jpg", tags: ["Python"],  github: "https://github.com/Ein-shen/Past-life-generator" },
+    { title: "OUCH", description: "HIHIHIHIH", image: "a.jpg", tags: ["html"],  github: "#" },
 ]
 
 export const Projects = () => {
@@ -38,11 +52,11 @@ export const Projects = () => {
                     </div>
 
                     {/* Project grid */}
-                    <div className="grid lg:grid-cols-2 gap-8  ">
+                    <div className="grid lg:grid-cols-2 gap-8 items-start ">
                         {projects.map((project, idx) => (
                             <div
                                 key={idx}
-                                className="group border border-foreground/10 hover:border-muted-foreground rounded-2xl overflow-hidden  md:row-span-1"
+                                className="group border border-foreground/10  rounded-2xl overflow-hidden  md:row-span-1"
                                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
                             >
                                 <div className="relative overflow-hidden aspect-video">
@@ -53,9 +67,7 @@ export const Projects = () => {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60" />
                                     <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <a href={project.links} className="p-3 rounded-full glass hover:bg-muted-foreground hover:text-primary-foreground transition-all">
-                                            <ArrowRight className="w-5 h-5" />
-                                        </a>
+                                        
                                         <a href={project.github} className="p-3 rounded-full glass hover:bg-muted-foreground hover:text-primary-foreground transition-all">
                                             <FaGithub className="w-5 h-5" />
                                         </a>
@@ -70,11 +82,11 @@ export const Projects = () => {
                                         <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                                     </div>
                                     <p className="text-muted-foreground text-xs">{project.description}</p>
-                                    <div className="flex flex-wrap gap-2">
+                                    <div className="flex flex-wrap gap-2 justify-center">
                                         {project.tags.map((tag, tagIdx) => (
                                             <span
                                                 key={tagIdx}
-                                                className="font-mono px-4 py-1.5 rounded-lg text-xs font-medium border border-border/ text-muted-foreground hover:border-foreground hover:text-foreground transition-all duration-300"
+                                                className=" font-mono px-4 py-1.5 rounded-lg text-xs font-medium border border-border/ text-muted-foreground hover:border-foreground hover:text-foreground transition-all duration-300"
                                             >
                                                 {tag}
                                             </span>
