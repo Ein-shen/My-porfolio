@@ -15,7 +15,7 @@ const projects = [
       description: "Built a full-stack study companion web app that lets users track study sessions and manage tasks", 
       image: "laze.png", 
       tags: ["React", "Supabase", "TailwinCss", "Html", "Vite"], 
-      github: "https://github.com/Ein-shen/Laze"
+      github: "https://github.com/Ein-shen/CS50-Laze"
     },
 
 
