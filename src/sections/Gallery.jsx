@@ -20,7 +20,7 @@ export const Gallery = () => {
   }
 
   return (
-    <section className="py-2 relative overflow-hidden scroll-mt-24">
+    <section className="py-2 relative overflow-hidden scroll-mt-24 pb-15">
       <div className="container mx-auto px-6 md:px-12 py-10 relative z-10 animate-fade-in">
         <div className="mx-auto max-w-[800px]">
 

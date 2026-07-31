@@ -11,6 +11,7 @@ import { View_projects } from "./away/View_projects"
 import { Toplok } from "./away/Toplok"
 import { Gallery } from "./sections/Gallery"
 import { ThemeProvider } from "./sections/ThemeContext"
+import { View_gallery } from "./away/View_gallery"
 
 function App() {
   const { pathname } = useLocation()
@@ -38,6 +39,7 @@ function App() {
             
             <Route path="/cv" element={<Cv />} />
             <Route path="/view_projects" element={<View_projects />} />
+            <Route path="/view_gallery" element={<View_gallery />} />
             <Route path="/toplok" element={<Toplok />} />
           </Routes>
         </main>
