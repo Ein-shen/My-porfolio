@@ -9,7 +9,7 @@ import { Certificates } from "./sections/Certificates"
 import { Cv } from "./away/Cv"
 import { View_projects } from "./away/View_projects"
 import { Toplok } from "./away/Toplok"
-import { Outside } from "./sections/Outside"
+import { Gallery } from "./sections/Gallery"
 import { ThemeProvider } from "./sections/ThemeContext"
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
                 <Experience />
                 <Education />
                 <Certificates />
-                <Outside />
+                <Gallery />
               </>
             } />
             

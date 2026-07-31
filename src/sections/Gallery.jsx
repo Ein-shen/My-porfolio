@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const Outside = () => {
+export const Gallery = () => {
   return (
      <section className="py-2 relative overflow-hidden scroll-mt-24">
 
