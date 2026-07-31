@@ -20,7 +20,13 @@ const projects = [
 
 
 
-    { title: "SECRET", description: "EHEHEHEH", image: "q.jpg", tags: ["Python"],  github: "https://github.com/Ein-shen/Past-life-generator" },
+    { title: "Past Life Generator", 
+      description: "Built a quiz-based Python game that generates a personalized 'past life' story based on user input.", 
+      image: "past.png", tags: 
+      ["Python"],  
+      github: "https://github.com/Ein-shen/CS50-python-past-life-generator" },
+
+
     { title: "OUCH", description: "HIHIHIHIH", image: "a.jpg", tags: ["html"],  github: "#" },
 ]
 

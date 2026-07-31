@@ -10,7 +10,7 @@ export const Outside = () => {
 
                   <div className='flex items-center justify-between mb-4'>
                             <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1 ">
-                               Outside IDE
+                               Gallery
                             </h1>
                              <Link
                                 to=""
