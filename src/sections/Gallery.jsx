@@ -20,7 +20,7 @@ export const Gallery = () => {
   }
 
   return (
-    <section className="py-2 relative overflow-hidden scroll-mt-24 pb-15">
+    <section className="py-2 relative overflow-hidden scroll-mt-15 pb-15">
       <div className="container mx-auto px-6 md:px-12 py-10 relative z-10 animate-fade-in">
         <div className="mx-auto max-w-[800px]">
 
@@ -29,7 +29,7 @@ export const Gallery = () => {
               Gallery
             </h1>
             <Link
-              to=""
+              to="view_gallery"
               className='font-mono font-lg text-muted-foreground hover:text-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center justify-center gap-1'
             >
               view all<span className="text-[20px]">↗</span>
