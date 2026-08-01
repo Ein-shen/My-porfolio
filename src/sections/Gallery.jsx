@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const initialGal = [
-    { image: "sv.jpg", title: "Sunset View" },
-    { image: "z.jpg", title: "Zen Garden" },
-    { image: "s.jpg", title: "Studio Shot" },
+  { image: "13.jpg", folder: "Grad", title: "Grad" },
+  { image: "u3.jpg", folder: "Up", title: "Up" },
+  { image: "c2.jpg", folder: "Contest", title: "Contest" },
 ]
 
 export const Gallery = () => {
@@ -12,7 +12,6 @@ export const Gallery = () => {
 
   const rotateRight = () => {
     setGal((prev) => {
-      // last item wraps to the front, everything else shifts right
       const last = prev[prev.length - 1]
       const rest = prev.slice(0, prev.length - 1)
       return [last, ...rest]
@@ -46,8 +45,8 @@ export const Gallery = () => {
 
               return (
                 <img
-                  key={item.image}
-                  src={item.image}
+                  key={`${item.folder}/${item.image}`}
+                  src={`/files/${item.folder}/${item.image}`}
                   alt={item.title}
                   role="button"
                   tabIndex={0}
