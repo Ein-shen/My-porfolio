@@ -24,6 +24,35 @@ const cont = [
 
 ]
 
+
+const up = [
+
+  { image: "u1.jpg", folder: "Up", title: "up" },
+  { image: "u2.jpg", folder: "Up", title: "up" },
+  { image: "u3.jpg", folder: "Up", title: "up" },
+
+]
+
+
+const pag = [
+
+  { image: "p1.jpg", folder: "pag-asa", title: "pag" },
+  { image: "p2.jpg", folder: "pag-asa", title: "pag" },
+
+]
+
+
+const epor = [
+
+  { image: "e1.jpg", folder: "epor", title: "Epor" },
+  { image: "e2.jpg", folder: "epor", title: "Epor" },
+  { image: "e3.jpg", folder: "epor", title: "Epor" },
+  
+
+]
+
+
+
 export const View_gallery = () => {
     const navigate = useNavigate()
     const [selected, setSelected] = useState(null)
@@ -105,6 +134,93 @@ export const View_gallery = () => {
                             </div>
                         ))}
                     </div>
+
+
+                    
+                    <div className="pl-5 sm:px-6 lg:pl-8">
+                      <h1 className="font-mono pt-10 animate-fade-in">Pag-as Cebu</h1>
+                    </div>
+
+                    {/* Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-items-center gap-6">
+                        {pag.map((pro, idx) => (
+                            <div key={idx}>
+                                 <div className="flex flex-col sm:flex-row items-center gap-4 p-6 rounded-2xl transition-all duration-500 animate-fade-in animation-delay-200">
+
+                                    <div className="relative w-48 pt-5 items-center">
+                                        <img
+                                            src={`/files/${pro.folder}/${pro.image}`}
+                                            alt={pro.title}
+                                            onClick={() => setSelected(`/files/${pro.folder}/${pro.image}`)}
+                                            className="w-48 object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity"
+                                        />
+                                    </div>
+
+                                    
+
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+
+
+                    
+                    <div className="pl-5 sm:px-6 lg:pl-8">
+                      <h1 className="font-mono pt-10 animate-fade-in">UP-cebu Incubator</h1>
+                    </div>
+
+                    {/* Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-items-center gap-6">
+                        {up.map((pro, idx) => (
+                            <div key={idx}>
+                                 <div className="flex flex-col sm:flex-row items-center gap-4 p-6 rounded-2xl transition-all duration-500 animate-fade-in animation-delay-200">
+
+                                    <div className="relative w-48 pt-5 items-center">
+                                        <img
+                                            src={`/files/${pro.folder}/${pro.image}`}
+                                            alt={pro.title}
+                                            onClick={() => setSelected(`/files/${pro.folder}/${pro.image}`)}
+                                            className="w-48 object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity"
+                                        />
+                                    </div>
+
+                                    
+
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+
+
+                    
+                    <div className="pl-5 sm:px-6 lg:pl-8">
+                      <h1 className="font-mono pt-10 animate-fade-in">Epormax</h1>
+                    </div>
+
+                    {/* Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-items-center gap-6">
+                        {epor.map((pro, idx) => (
+                            <div key={idx}>
+                                 <div className="flex flex-col sm:flex-row items-center gap-4 p-6 rounded-2xl transition-all duration-500 animate-fade-in animation-delay-200">
+
+                                    <div className="relative w-48 pt-5 items-center">
+                                        <img
+                                            src={`/files/${pro.folder}/${pro.image}`}
+                                            alt={pro.title}
+                                            onClick={() => setSelected(`/files/${pro.folder}/${pro.image}`)}
+                                            className="w-48 object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity"
+                                        />
+                                    </div>
+
+                                    
+
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
                 </div>
             </div>
 
