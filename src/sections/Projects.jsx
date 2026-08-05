@@ -27,7 +27,7 @@ const projects = [
       github: "https://github.com/Ein-shen/CS50-python-past-life-generator" },
 
 
-    { title: "OUCH", description: "HIHIHIHIH", image: "a.jpg", tags: ["html"],  github: "#" },
+    { title: "Weather Web App", description: "HIHIHIHIH", image: "weather.png", tags: ["html", "Python", "Django", "tailwindCss", "SQLlite"],  github: "https://github.com/Ein-shen/weather-webApp" },
 ]
 
 export const Projects = () => {
