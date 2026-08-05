@@ -27,7 +27,7 @@ const projects = [
       github: "https://github.com/Ein-shen/CS50-python-past-life-generator" },
 
 
-    { title: "Weather Web App", description: "HIHIHIHIH", image: "weather.png", tags: ["html", "Python", "Django", "tailwindCss", "SQLlite"],  github: "https://github.com/Ein-shen/weather-webApp" },
+    { title: "Weather Web App", description: "A web app allows users to search for a city and view its current weather using the OpenWeatherMap API", image: "weather.png", tags: ["html", "Python", "Django", "tailwindCss", "SQLlite"],  github: "https://github.com/Ein-shen/weather-webApp" },
 ]
 
 export const Projects = () => {
