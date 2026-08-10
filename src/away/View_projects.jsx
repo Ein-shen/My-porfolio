@@ -104,7 +104,7 @@ const projects = [
     title: "Professor",
     description:
       "Built a random math game where it gives a math problem and you give the correct answer.",
-    image: "/pikol.png",
+    image: "",
     tags: ["Python", "Git"],
     github: "https://github.com/Ein-shen/CS50-python-past-life-generator",
   },
