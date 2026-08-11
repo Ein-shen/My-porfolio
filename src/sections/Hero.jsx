@@ -10,10 +10,9 @@ export const Hero = () => {
     return (
         <section 
             id="hero"
-            
-            className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-background pt-24">
+            className="relative flex items-center justify-center overflow-hidden bg-background pt-30 pb-16">
 
-            <div className="container mx-auto pt-6 md:px-12 py-10 relative z-10 ">
+            <div className="container mx-auto pt-6 md:px-12 pb-0 relative z-10 ">
                 <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-[288px_minmax(0,480px)] gap-8 lg:justify-center mx-auto w-fit max-w-full">
 
                     {/* Left: photo */}
@@ -33,9 +32,9 @@ export const Hero = () => {
 
                         <div className="space-y-4 text-muted-foreground max-w-md ">
                             <p className='animate-fade-in animation-delay-600'>
-                                I'm an aspiring Data Scientist and Software Engineer with a passion for
-                                building clean digital experiences and exploring what data can tell us.
-                                I'm currently growing my skills through real projects, and looking for
+                                I'm an aspiring Software Engineer with a passion 
+                                for building clean digital experiences. I'm currently 
+                                growing my skills through real projects, and looking for
                                 opportunities to contribute to a team and keep learning.
                             </p>
                             <p className='animate-fade-in animation-delay-800'>
@@ -55,28 +54,19 @@ export const Hero = () => {
                                 instagram <span className="text-[10px]">↗</span>
                             </a>
                             <a href="shensarsale25@gmail.com" className="hover:text-foreground transition-colors">
-                                email
+                                email <span className="text-[10px]">↗</span>
                             </a>
-                        </div>
-                    </div>
 
-
-                    {/* Cv */}
-
-                    <div>
-                        <div className='flex items-center justify-center'>
                             <Link
                                 to="/cv"
-                                className='font-mono font-lg border border-white/10 text-muted-foreground hover:text-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center justify-center gap-1 animate-fade-in animation-delay-1000'
+                                className='hover:text-foreground transition-colors flex items-center gap-1'
                                 >
-                                View CV <span className="text-[20px]">↗</span>
+                                Cv <span className="text-[10px]">↗</span>
                             </Link>
                         </div>
                     </div>
 
                 </div>
-
-                
             </div>
         </section>
     )

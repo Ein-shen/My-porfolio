@@ -13,8 +13,8 @@ const projects = [
 
     { title: "Laze", 
       description: "Built a full-stack study companion web app that lets users track study sessions and manage tasks", 
-      image: "laze.png", 
-      tags: ["React", "Supabase", "TailwinCss", "Html", "Vite"], 
+      image: "Lazeu.png", 
+      tags: ["React", "Supabase", "TailwinCss", "Html", "Vite", "Netlify"], 
       github: "https://github.com/Ein-shen/CS50-Laze"
     },
 
@@ -27,7 +27,12 @@ const projects = [
       github: "https://github.com/Ein-shen/CS50-python-past-life-generator" },
 
 
-    { title: "Weather Web App", description: "A web app allows users to search for a city and view its current weather using the OpenWeatherMap API", image: "weather.png", tags: ["html", "Python", "Django", "tailwindCss", "SQLlite"],  github: "https://github.com/Ein-shen/weather-webApp" },
+    { title: "Weather Web App", 
+      description: "A web app allows users to search for a city and view its current weather using the OpenWeatherMap API", 
+      image: "weather.png", 
+      tags: ["html", "Python", "Django", "tailwindCss", "SQLlite"],  
+      github: "https://github.com/Ein-shen/weather-webApp"
+     },
 ]
 
 export const Projects = () => {

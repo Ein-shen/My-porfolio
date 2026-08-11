@@ -12,16 +12,13 @@ const projects = [
       tags: ["Dart", "Flutter", "Mysql", "PHP", "Firewall"], 
       github: "https://github.com/Syloms/Cargo" },
 
-    { title: "Laze", 
+    { title: "Lazeu", 
       description: "Built a full-stack study companion web app that lets users track study sessions and manage tasks", 
-      image: "laze.png", 
-      tags: ["React", "Supabase", "TailwinCss", "Html", "Vite"], 
+      image: "Lazeu.png", 
+      tags: ["React", "Supabase", "TailwinCss", "Html", "Vite", "Netlify"], 
       github: "https://github.com/Ein-shen/CS50-Laze"
     },
 
-
-   
-    
     { title: "Past Life Generator", 
       description: "Built a quiz-based Python game that generates a personalized 'past life' story based on user input.", 
       image: "past.png", tags: 
@@ -29,7 +26,13 @@ const projects = [
       github: "https://github.com/Ein-shen/CS50-python-past-life-generator" },
 
       
-    { title: "OUCH", description: "HIHIHIHIH", image: "a.jpg", tags: ["html"],  github: "#" },
+    { title: "Weather Web App", 
+      description: "A web app allows users to search for a city and view its current weather using the OpenWeatherMap API", 
+      image: "weather.png", 
+      tags: ["html", "Python", "Django", "tailwindCss", "SQLlite"],  
+      github: "https://github.com/Ein-shen/weather-webApp"
+     },
+
 ]
 
 export const View_projects = () => {
