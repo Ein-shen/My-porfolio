@@ -36,8 +36,8 @@ export const Experience = () => {
                     <div className="relative">
                         {experiences.map((exp, idx) => (
                             <div key={idx} className="pb-10">
-                                <div className="flex flex-row items-start gap-4 p-6 rounded-2xl transition-all duration-500">
-                                    <span className="text-sm text-muted-foreground font-mono font-medium shrink-0">
+                                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-6 rounded-2xl transition-all duration-500">
+                                    <span className="text-xs sm:text-sm text-muted-foreground font-mono font-medium shrink-0 sm:w-24">
                                         {exp.period}
                                     </span>
 

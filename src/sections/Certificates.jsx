@@ -1,5 +1,9 @@
 
+
+import { useState, useEffect } from "react"
+import { createPortal } from "react-dom"
 import { Link } from "react-router-dom"
+import { X } from "lucide-react"
 import { Toplok } from "../away/Toplok"
 
 const Certificate = [
@@ -18,12 +22,19 @@ const Certificate = [
     {
         image: "/cy.jpg",
         period: "Oct-2025",
-        title: "Cyber x",
+        title: "Cyber Exellence",
         where: "Regional Contest 3rd placer",
     },
 ]
 
 export const Certificates = () => {
+    const [selected, setSelected] = useState(null)
+
+    useEffect(() => {
+        document.body.style.overflow = selected ? 'hidden' : 'auto'
+        return () => { document.body.style.overflow = 'auto' }
+    }, [selected])
+
     return (
         <section id="certificates" className="py-2 relative overflow-hidden scroll-mt-24">
 
@@ -66,7 +77,8 @@ export const Certificates = () => {
                                             <img
                                                 src={cert.image}
                                                 alt={cert.title}
-                                                className="w-full h-full object-cover rounded-md"
+                                                onClick={() => setSelected(cert.image)}
+                                                className="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity"
                                             />
                                         </div>
                                     </div>
@@ -92,6 +104,7 @@ export const Certificates = () => {
                             1,657 contributions Last 2025
                         </h1>
                         <a
+                        
                             href="https://github.com/Ein-shen?tab=overview&from=2026-07-01&to=2026-07-22"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -106,6 +119,26 @@ export const Certificates = () => {
                 </div>
             </div>
 
+            {selected && createPortal(
+                <div
+                    className="fixed inset-0 bg-black/70 flex items-center justify-center z-[9999]"
+                    onClick={() => setSelected(null)}
+                >
+                    <button
+                        className="absolute top-6 right-6 text-white z-[10000]"
+                        onClick={() => setSelected(null)}
+                    >
+                        <X size={32} />
+                    </button>
+                    <img
+                        src={selected}
+                        alt="Preview"
+                        className="max-w-[90vw] max-h-[70vh] object-contain rounded-lg"
+                        onClick={(e) => e.stopPropagation()}
+                    />
+                </div>,
+                document.body
+            )}
         </section>
     )
 }
