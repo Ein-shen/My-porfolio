@@ -6,7 +6,7 @@ import { View_projects } from "../away/View_projects"
 const projects = [
 
     { title: "Cargo", 
-      description: "A full-stack peer-to-peer car rental mobile app.", 
+      description: "Cargo is a peer-to-peer vehicle rental app built with Flutter for listing and renting cars or motorcycles.", 
       image: "cargo.jpg", 
       tags: ["Dart", "Flutter", "Mysql", "PHP", "Firewall"], 
       github: "https://github.com/Syloms/Cargo" },
@@ -20,11 +20,12 @@ const projects = [
 
 
 
-    { title: "Past Life Generator", 
-      description: "Built a quiz-based Python game that generates a personalized 'past life' story based on user input.", 
-      image: "past.png", tags: 
-      ["Python"],  
-      github: "https://github.com/Ein-shen/CS50-python-past-life-generator" },
+    { title: "Stock-Trading", 
+      description: "A web app that lets users manage a virtual stock portfolio — look up real-time stock prices",
+      image: "past.png", 
+      tags: 
+      ["Python", "Flask", "SQllite", "Jinja", "Html", "Css"],  
+      github: "https://github.com/Ein-shen/Stock-Trading" },
 
 
     { title: "Weather Web App", 

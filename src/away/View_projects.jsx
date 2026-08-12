@@ -25,6 +25,15 @@ const projects = [
       ["Python"],  
       github: "https://github.com/Ein-shen/CS50-python-past-life-generator" },
 
+
+    { title: "Stock-Trading", 
+      description: "A web app that lets users manage a virtual stock portfolio — look up real-time stock prices, 'buy' and 'sell' shares with simulated cash, and review a full history of transactions. Built with Flask and SQLite.",
+      image: "past.png", 
+      tags: 
+      ["Python", "Flask", "SQllite", "Jinja", "Html", "Css"],  
+      github: "https://github.com/Ein-shen/Stock-Trading"
+    },
+
       
     { title: "Weather Web App", 
       description: "A web app allows users to search for a city and view its current weather using the OpenWeatherMap API", 
