@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa"
 const projects = [
      { title: "Cargo", 
       description: "A full-stack peer-to-peer car rental mobile app", 
-      image: "sv.jpg", 
+      image: "cargo1.png", 
       tags: ["Dart", "Flutter", "Mysql", "PHP", "Firewall"], 
       github: "https://github.com/Syloms/Cargo" },
 

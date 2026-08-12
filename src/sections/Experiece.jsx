@@ -5,7 +5,7 @@ const experiences = [
         role: "Software Developer",
         company: "Jairosoft Inc.",
         description: "Maintained and enhanced a Learning Management System (LMS) — built new features, fixed bugs, and collaborated in Agile/Scrum sprints.",
-        technology: ["Bubble.io", "Microsoft Teams", "DevOps", "Bubble Version Control"],
+        technology: ["Bubble.io", "Microsoft Teams", "DevOps", "Bubble Version Control", "Typescript", "React"],
         current: false,
     },
 ]
