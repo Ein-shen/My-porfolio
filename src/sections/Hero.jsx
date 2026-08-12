@@ -32,7 +32,7 @@ export const Hero = () => {
 
                         <div className="space-y-4 text-muted-foreground max-w-md ">
                             <p className='animate-fade-in animation-delay-600'>
-                                I'm an aspiring Software Engineer and AI Engineer 
+                                I'm an aspiring Software Engineer 
                                 with a passion  for building clean digital experiences.  
                                 I'm currently growing my skills through real projects, and 
                                 looking for opportunities to contribute to a team and keep learning.

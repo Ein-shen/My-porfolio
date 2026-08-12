@@ -7,13 +7,13 @@ import { FaGithub } from "react-icons/fa"
 
 const projects = [
      { title: "Cargo", 
-      description: "A full-stack peer-to-peer car rental mobile app", 
+      description: "A full-stack peer-to-peer car rental mobile app,  Performed QA testing on a full-stack peer-to-peer car rental mobile app (Flutter, Dart, PHP, MySQL) as part of a capstone team project. Tested core features — including user authentication, vehicle listings, search, and booking/reservation system — identifying and reporting bugs to ensure app stability, and collaborated with developers to reproduce issues and verify fixes before submission.", 
       image: "cargo1.png", 
       tags: ["Dart", "Flutter", "Mysql", "PHP", "Firewall"], 
       github: "https://github.com/Syloms/Cargo" },
 
     { title: "Lazeu", 
-      description: "Built a full-stack study companion web app that lets users track study sessions and manage tasks", 
+      description: "Built a full-stack study companion web app that lets users track study sessions and manage tasks. Lazeu is a full-stack study app I built with React on the frontend and Supabase doing basically everything else on the backend. The idea came from just being annoyed at how studying tools usually work — you've either got a bare-bones flashcard app with zero social features, or something bloated that tries to do too much.", 
       image: "Lazeu.png", 
       tags: ["React", "Supabase", "TailwinCss", "Html", "Vite", "Netlify"], 
       github: "https://github.com/Ein-shen/CS50-Laze"

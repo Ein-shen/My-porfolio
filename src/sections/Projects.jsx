@@ -6,7 +6,7 @@ import { View_projects } from "../away/View_projects"
 const projects = [
 
     { title: "Cargo", 
-      description: "A full-stack peer-to-peer car rental mobile app", 
+      description: "A full-stack peer-to-peer car rental mobile app.", 
       image: "cargo.jpg", 
       tags: ["Dart", "Flutter", "Mysql", "PHP", "Firewall"], 
       github: "https://github.com/Syloms/Cargo" },
