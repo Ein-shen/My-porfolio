@@ -93,11 +93,11 @@ export const Projects = () => {
                                         <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                                     </div>
                                     <p className="text-muted-foreground text-xs">{project.description}</p>
-                                    <div className="flex flex-wrap gap-2 justify-center">
+                                    <div className="flex flex-wrap gap-2 justify-center max-w-md mx-auto">
                                         {project.tags.map((tag, tagIdx) => (
                                             <span
                                                 key={tagIdx}
-                                                className=" font-mono px-4 py-1.5 rounded-lg text-xs font-medium border border-border/ text-muted-foreground hover:border-foreground hover:text-foreground transition-all duration-300"
+                                                className="font-mono px-4 py-1.5 rounded-lg text-xs font-medium border border-border/50 text-muted-foreground hover:border-foreground hover:text-foreground transition-all duration-300"
                                             >
                                                 {tag}
                                             </span>
