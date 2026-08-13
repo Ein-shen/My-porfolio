@@ -18,15 +18,12 @@ const projects = [
       github: "https://github.com/Ein-shen/CS50-Laze"
     },
 
-
-
     { title: "Stock-Trading", 
       description: "A web app that lets users manage a virtual stock portfolio — look up real-time stock prices",
       image: "past.png", 
       tags: 
       ["Python", "Flask", "SQllite", "Jinja", "Html", "Css"],  
       github: "https://github.com/Ein-shen/Stock-Trading" },
-
 
     { title: "Weather Web App", 
       description: "A web app allows users to search for a city and view its current weather using the OpenWeatherMap API", 
@@ -37,9 +34,6 @@ const projects = [
 ]
 
 export const Projects = () => {
-
-
-   
 
     return (
         <section id="projects" className="py-2 relative overflow-hidden scroll-mt-24">
@@ -56,9 +50,9 @@ export const Projects = () => {
 
                             <Link
                                 to="/view_projects"
-                                className='md:text-sm  font-mono font-lg  text-muted-foreground hover:text-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center  justify-center gap-1 '
+                                className="ml-auto text-sm font-mono text-muted-foreground hover:text-foreground rounded-lg h-11 cursor-pointer flex items-center gap-1"
                                 >
-                                view all<span className="text-[20px] md:text-[10px]">↗</span>
+                                view all<span className="text-[10px]">↗</span>
                             </Link>
                         </div>
                     </div>

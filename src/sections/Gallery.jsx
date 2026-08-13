@@ -37,15 +37,15 @@ export const Gallery = () => {
         <div className="mx-auto max-w-[800px]">
 
           <div className='flex items-center justify-between mb-4'>
-            <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1">
-              Gallery
-            </h1>
-            <Link
-              to="view_gallery"
-              className='font-mono font-lg text-muted-foreground hover:text-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center justify-center gap-1'
-            >
-              view all<span className="text-[20px]">↗</span>
-            </Link>
+              <h1 className="font-mono text-xl lg:text-lg font-medium tracking-tight pt-1">
+                Gallery
+              </h1>
+              <Link
+                to="view_gallery"
+                className="ml-auto text-sm font-mono text-muted-foreground hover:text-foreground rounded-lg h-11 cursor-pointer flex items-center gap-1"
+              >
+                view all<span className="text-[10px]">↗</span>
+              </Link>
           </div>
 
           {/* Photo deck */}
