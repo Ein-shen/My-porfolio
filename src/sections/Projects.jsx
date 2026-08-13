@@ -5,32 +5,37 @@ import { View_projects } from "../away/View_projects"
 
 const projects = [
 
-    { title: "Cargo", 
-      description: "Cargo is a peer-to-peer vehicle rental app built with Flutter for listing and renting cars or motorcycles.", 
-      image: "cargo.jpg", 
-      tags: ["Dart", "Flutter", "Mysql", "PHP", "Firewall"], 
-      github: "https://github.com/Syloms/Cargo" },
+    
 
     { title: "Laze", 
       description: "Built a full-stack study companion web app that lets users track study sessions and manage tasks", 
       image: "Lazeu.png", 
-      tags: ["React", "Supabase", "TailwinCss", "Html", "Vite", "Netlify"], 
+      tags: ["React", "Supabase", "Tailwind CSS", "HTML", "Vite", "Netlify"], 
       github: "https://github.com/Ein-shen/CS50-Laze"
+    },
+
+    { title: "Weather Web App", 
+      description: "A web app allows users to search for a city and view its current weather using the OpenWeatherMap API", 
+      image: "weather.png", 
+      tags: ["HTML", "Python", "Django", "Tailwind CSS", "SQLite"],  
+      github: "https://github.com/Ein-shen/weather-webApp"
     },
 
     { title: "Stock-Trading", 
       description: "A web app that lets users manage a virtual stock portfolio — look up real-time stock prices",
       image: "past.png", 
       tags: 
-      ["Python", "Flask", "SQllite", "Jinja", "Html", "Css"],  
+      ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS"],  
       github: "https://github.com/Ein-shen/Stock-Trading" },
+      
+    { title: "Cargo", 
+      description: "Cargo is a peer-to-peer vehicle rental app built with Flutter for listing and renting cars or motorcycles.", 
+      image: "cargo.jpg", 
+      tags: ["Dart", "Flutter", "MySQL", "PHP"], 
+      github: "https://github.com/Syloms/Cargo" 
+    },
 
-    { title: "Weather Web App", 
-      description: "A web app allows users to search for a city and view its current weather using the OpenWeatherMap API", 
-      image: "weather.png", 
-      tags: ["html", "Python", "Django", "tailwindCss", "SQLlite"],  
-      github: "https://github.com/Ein-shen/weather-webApp"
-     },
+    
 ]
 
 export const Projects = () => {

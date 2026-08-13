@@ -2,19 +2,19 @@ const experiences = [
     {
         title: "On-the-Job Training (OJT)",
         period: "Dec 2025 - Feb 2026",
-        role: "Software Developer",
+        role: "Web Developer Intern",
         company: "Jairosoft Inc.",
-        description: "Maintained and enhanced a Learning Management System (LMS) — built new features, fixed bugs, and collaborated in Agile/Scrum sprints.",
-        technology: ["Bubble.io", "Microsoft Teams", "DevOps", "Bubble Version Control", "Typescript", "React"],
+        description: "Built and shipped a grading/assessment module for Jairosoft's LMS using Bubble.io, designed for both teachers and students so instructors could create and score assessments with ease.",
+        technology: ["Bubble.io", "Microsoft Teams", "DevOps", "Bubble Version Control", "TypeScript", "React"],
         current: false,
     },
 ]
 
 const tech = [
     "Bubble.io", "Microsoft Teams", "DevOps", "Bubble Version Control", "Git",
-    "Vite", "React", "Vercel", "Html", "TailwindCss", "Supabase", "Jinja", "Sql",
-    "Php", "Python", "Javascript", "C", "C++", "Mysql", "Css", "Bootstrap", "Dart",
-    "Kali-linux", "Figma", "Vercel", "Django", "Firewall"
+    "Vite", "React", "Vercel", "HTML", "Tailwind CSS", "Supabase", "Jinja", "SQL",
+    "PHP", "Python", "JavaScript", "C", "C++", "MySQL", "CSS", "Bootstrap", "Dart",
+    "Kali Linux", "Figma", "Django"
 ]
 
 export const Experience = () => {

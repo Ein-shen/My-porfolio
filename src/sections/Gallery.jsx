@@ -5,19 +5,14 @@ const initialGal = [
   { image: "13.jpg", folder: "Grad", title: "Grad" },
   { image: "u3.jpg", folder: "Up", title: "Up" },
   { image: "c2.jpg", folder: "Contest", title: "Contest" },
-  
-  { image: "c2.jpg", folder: "Contest", title: "contest" },
   { image: "c3.jpg", folder: "Contest", title: "contest" },
   { image: "c4.jpg", folder: "Contest", title: "contest" },
   { image: "c1.jpg", folder: "Contest", title: "contest" },
   { image: "u1.jpg", folder: "Up", title: "up" },
   { image: "u2.jpg", folder: "Up", title: "up" },
-  { image: "u3.jpg", folder: "Up", title: "up" },
-
   { image: "e1.jpg", folder: "epor", title: "Epor" },
   { image: "e2.jpg", folder: "epor", title: "Epor" },
   { image: "e3.jpg", folder: "epor", title: "Epor" },
-  
 ]
 
 export const Gallery = () => {
@@ -41,7 +36,7 @@ export const Gallery = () => {
                 Gallery
               </h1>
               <Link
-                to="view_gallery"
+                to="/view_gallery"
                 className="ml-auto text-sm font-mono text-muted-foreground hover:text-foreground rounded-lg h-11 cursor-pointer flex items-center gap-1"
               >
                 view all<span className="text-[10px]">↗</span>
