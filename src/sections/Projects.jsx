@@ -56,9 +56,9 @@ export const Projects = () => {
 
                             <Link
                                 to="/view_projects"
-                                className='font-mono font-lg  text-muted-foreground hover:text-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center  justify-center gap-1 '
+                                className='md:text-sm  font-mono font-lg  text-muted-foreground hover:text-foreground rounded-lg w-38 h-11 cursor-pointer flex items-center  justify-center gap-1 '
                                 >
-                                view all<span className="text-[20px]">↗</span>
+                                view all<span className="text-[20px] md:text-[10px]">↗</span>
                             </Link>
                         </div>
                     </div>

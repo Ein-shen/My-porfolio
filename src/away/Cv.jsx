@@ -36,7 +36,7 @@ export const Cv = () => {
        
         <div className='w-full flex justify-center'>
           <iframe
-            src="/files/Shen_cv.pdf"
+            src="/files/Finale.pdf"
             title="CV"
             className="w-full h-[800px] object-contain"
           />
