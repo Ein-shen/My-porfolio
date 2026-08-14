@@ -10,7 +10,7 @@ const projects = [
     { title: "Laze", 
       description: "Built a full-stack study companion web app that lets users track study sessions and manage tasks", 
       image: "Lazeu.png", 
-      tags: ["React", "Supabase", "Tailwind CSS", "HTML", "Vite", "Netlify"], 
+      tags: ["React", "Supabase", "Tailwind CSS", "HTML", "Vite", "Netlify", "Docker",], 
       github: "https://github.com/Ein-shen/CS50-Laze"
     },
 

@@ -15,7 +15,7 @@ const projects = [
     { title: "Lazeu", 
       description: "Built a full-stack study companion web app that lets users track study sessions and manage tasks. Lazeu is a full-stack study app I built with React on the frontend and Supabase doing basically everything else on the backend. The idea came from just being annoyed at how studying tools usually work — you've either got a bare-bones flashcard app with zero social features, or something bloated that tries to do too much.", 
       image: "Lazeu.png", 
-      tags: ["React", "Supabase", "TailwinCss", "Html", "Vite", "Netlify"], 
+      tags: ["React", "Supabase", "TailwinCss", "Html", "Vite", "Netlify", "Docker"], 
       github: "https://github.com/Ein-shen/CS50-Laze"
     },
 
