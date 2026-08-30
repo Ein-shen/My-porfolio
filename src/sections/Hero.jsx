@@ -2,6 +2,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
 import { PixelSwapImage } from "../components/PixelSwapImage"
 import { Cv } from "../away/Cv"
 import { Link } from 'react-router-dom'
+import { MdVerified } from "react-icons/md"
 
 
 
@@ -31,15 +32,15 @@ export const Hero = () => {
                         </h1>
 
                         <div className="space-y-4 text-muted-foreground max-w-md ">
+
+                            <h2 className='font-bold text-md animate-fade-in animation-delay-600'>
+                                Full-Stack Developer | React.js | Node.js | PostgreSQL
+                            </h2>
                             <p className='animate-fade-in animation-delay-600'>
-                                I'm an aspiring Software Engineer 
-                                with a passion  for building clean digital experiences.  
-                                I'm currently growing my skills through real projects, and 
-                                looking for opportunities to contribute to a team and keep learning.
+                                I build full-stack web applications from responsive user interfaces to APIs, databases, and deployment. I enjoy turning ideas into practical products, solving problems through code, and continuously learning new technologies.
                             </p>
                             <p className='animate-fade-in animation-delay-800'>
-                                I love turning rough ideas into things people actually use — designing
-                                interfaces and learning new tools along the way.
+                                I'm currently looking for an opportunity to contribute to a development team, build meaningful software, and grow as a Full-Stack Developer.
                             </p>
                         </div>
 
