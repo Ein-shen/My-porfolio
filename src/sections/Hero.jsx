@@ -1,13 +1,10 @@
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
+import { MdVerified } from 'react-icons/md'
 import { PixelSwapImage } from "../components/PixelSwapImage"
 import { Cv } from "../away/Cv"
 import { Link } from 'react-router-dom'
-import { MdVerified } from "react-icons/md"
-
-
 
 export const Hero = () => {
-
     return (
         <section 
             id="hero"
@@ -17,7 +14,7 @@ export const Hero = () => {
                 <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-[288px_minmax(0,480px)] gap-8 lg:justify-center mx-auto w-fit max-w-full">
 
                     {/* Left: photo */}
-                    <div className="relative mx-auto lg:mx-0 w-[288px] cursor-pointer  animate-fade-in animation-delay-200 duration-500">
+                    <div className="relative mx-auto lg:mx-0 w-[288px] cursor-pointer animate-fade-in animation-delay-200 duration-500">
                         <PixelSwapImage
                             imageA="/z.jpg"
                             imageB="/y.jpg"
@@ -26,9 +23,10 @@ export const Hero = () => {
                     </div>
 
                     {/* Right: name + bio */}
-                    <div className="space-y-6 text-center lg:text-left">
-                        <h1 className="font-mono text-4xl lg:text-5xl font-medium tracking-tight pt-1 animate-fade-in animation-delay-400">
-                            Shen Sarsale
+                   <div className="space-y-6 text-center lg:text-left">
+                        <h1 className="font-mono text-4xl lg:text-5xl font-medium tracking-tight pt-1 animate-fade-in animation-delay-400 inline-flex items-center justify-center lg:justify-start gap-2">
+                            <span>Shen Sarsale</span>
+                            <MdVerified size={25} className="text-[#1D9BF0] shrink-0 pt-2" />
                         </h1>
 
                         <div className="space-y-4 text-muted-foreground max-w-md ">
