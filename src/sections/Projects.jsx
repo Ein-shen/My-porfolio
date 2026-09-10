@@ -3,6 +3,25 @@ import { FaGithub } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
 const projects = [
+
+
+  {
+    title: "Laze",
+    description:
+      "Built a full-stack study companion web app that lets users track study sessions and manage tasks.",
+    image: "Lazeu.png",
+    tags: [
+      "React",
+      "Supabase",
+      "Tailwind CSS",
+      "HTML",
+      "Vite",
+      "Netlify",
+      "Docker",
+      "CI/CD",
+    ],
+    github: "https://github.com/Ein-shen/CS50-Laze",
+  },
   {
     title: "Expensekontrol",
     description:
@@ -23,23 +42,7 @@ const projects = [
     github: "https://github.com/Syloms/Cargo",
   },
 
-  {
-    title: "Laze",
-    description:
-      "Built a full-stack study companion web app that lets users track study sessions and manage tasks.",
-    image: "Lazeu.png",
-    tags: [
-      "React",
-      "Supabase",
-      "Tailwind CSS",
-      "HTML",
-      "Vite",
-      "Netlify",
-      "Docker",
-      "CI/CD",
-    ],
-    github: "https://github.com/Ein-shen/CS50-Laze",
-  },
+  
 
   {
     title: "Weather Web App",
