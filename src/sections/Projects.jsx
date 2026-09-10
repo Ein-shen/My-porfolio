@@ -5,6 +5,15 @@ import { View_projects } from "../away/View_projects"
 
 const projects = [
 
+
+
+    { title: "Expensekontrol", 
+      description: "A full-stack personal finance platform designed to help users take control of their spending, track expenses", 
+      image: "cargo.jpg", 
+      tags: ["Html", "Tailwind Css", "Postegsql", "React", "Nextjs", "Express", "Docker", "Render", "Neondb", "CI/CD" ], 
+      github: "https://github.com/Syloms/Cargo" 
+    },
+
     { title: "Laze", 
       description: "Built a full-stack study companion web app that lets users track study sessions and manage tasks", 
       image: "Lazeu.png", 
@@ -26,12 +35,7 @@ const projects = [
       ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS"],  
       github: "https://github.com/Ein-shen/Stock-Trading" },
       
-    { title: "Cargo", 
-      description: "Cargo is a peer-to-peer vehicle rental app built with Flutter for listing and renting cars or motorcycles.", 
-      image: "cargo.jpg", 
-      tags: ["Dart", "Flutter", "MySQL", "PHP"], 
-      github: "https://github.com/Syloms/Cargo" 
-    },
+    
 
     
 ]
