@@ -32,7 +32,7 @@ export const Hero = () => {
                         <div className="space-y-4 text-muted-foreground max-w-md ">
 
                             <h2 className='font-bold text-md animate-fade-in animation-delay-600'>
-                                Junior full-Stack Developer | React.js | Node.js | PostgreSQL
+                                Junior Full-Stack Developer | React.js | Node.js | PostgreSQL
                             </h2>
                             <p className='animate-fade-in animation-delay-600'>
                                 I build full-stack web applications from responsive user interfaces to APIs, databases, and deployment. I enjoy turning ideas into practical products, solving problems through code, and continuously learning new technologies.
