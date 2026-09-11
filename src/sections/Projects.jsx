@@ -26,7 +26,7 @@ const projects = [
     title: "Expensekontrol",
     description:
       "A full-stack personal finance platform designed to help users take control of their spending and track expenses.",
-    image: "cargo.jpg",
+    image: "exp.png",
     tags: [
       "HTML",
       "Tailwind CSS",
