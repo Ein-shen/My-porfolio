@@ -38,8 +38,9 @@ const projects = [
       "Render",
       "NeonDB",
       "CI/CD",
+      "Docker",
     ],
-    github: "https://github.com/Syloms/Cargo",
+    github: "https://github.com/Ein-shen/Finance_tracker",
   },
 
   
