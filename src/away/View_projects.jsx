@@ -6,6 +6,28 @@ import { FaGithub } from "react-icons/fa"
 
 
 const projects = [
+
+
+    {
+    title: "Expensekontrol",
+    description:
+      "A full-stack personal finance platform designed to help users take control of their spending and track expenses.",
+    image: "exp.png",
+    tags: [
+      "HTML",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "React",
+      "Next.js",
+      "Express",
+      "Docker",
+      "Render",
+      "NeonDB",
+      "CI/CD",
+      "Docker",
+    ],
+    github: "https://github.com/Ein-shen/Finance_tracker",
+  },
      { title: "Cargo", 
       description: "A full-stack peer-to-peer car rental mobile app,  Performed QA testing on a full-stack peer-to-peer car rental mobile app (Flutter, Dart, PHP, MySQL) as part of a capstone team project. Tested core features — including user authentication, vehicle listings, search, and booking/reservation system — identifying and reporting bugs to ensure app stability, and collaborated with developers to reproduce issues and verify fixes before submission.", 
       image: "cargo1.png", 
