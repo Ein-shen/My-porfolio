@@ -14,7 +14,7 @@ const tech = [
     "Bubble.io", "Microsoft Teams", "DevOps", "Bubble Version Control", "Git",
     "Vite", "React", "Vercel", "HTML", "Tailwind CSS", "Supabase", "Jinja", "SQL",
     "PHP", "Python", "JavaScript", "C", "C++", "MySQL", "CSS", "Bootstrap", "Dart",
-    "Kali Linux", "Figma", "Django", "Docker"
+    "Kali Linux", "Figma", "Django", "Docker", "CI/CD", "NeonDB", "Render"
 ]
 
 export const Experience = () => {
