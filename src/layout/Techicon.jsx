@@ -127,9 +127,20 @@ const techColors = {
   Render: "#46E3B7",
 };
 
+// Look names up case-insensitively, so "FireWall", "firewall" and "Firewall"
+// all find the same icon.
+const normalize = (s) => s.trim().toLowerCase();
+
+const byName = (obj) =>
+  Object.fromEntries(Object.entries(obj).map(([k, v]) => [normalize(k), v]));
+
+const iconsByName = byName(techIcons);
+const colorsByName = byName(techColors);
+
 export const TechIcon = ({ name, className = "h-4 w-4" }) => {
-  const Icon = techIcons[name] ?? Code; // generic fallback if a name is missing
-  const color = techColors[name];
+  const key = normalize(name);
+  const Icon = iconsByName[key] ?? Code; // generic fallback if a name is missing
+  const color = colorsByName[key];
   return (
     <Icon
       className={className}
