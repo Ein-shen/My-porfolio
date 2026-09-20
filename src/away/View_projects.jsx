@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import { TechIcon } from "../layout/Techicon";
 
 // Images are served from /public, so use root-relative paths.
 // (If they live in src/assets, import them instead and put the imports here.)
@@ -175,8 +176,9 @@ export const View_projects = () => {
                   {project.tags.map((tag) => (
                     <li
                       key={tag}
-                      className="theme-tag rounded-full border border-border px-2.5 py-1 font-mono text-xs font-medium transition-all duration-300 hover:opacity-80"
+                      className="theme-tag inline-flex items-center gap-1.5 rounded-full border border-border px-2.5 py-1 font-mono text-xs font-medium transition-all duration-300 hover:opacity-80"
                     >
+                      <TechIcon name={tag} className="h-3.5 w-3.5 shrink-0" />
                       {tag}
                     </li>
                   ))}
@@ -187,5 +189,5 @@ export const View_projects = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
