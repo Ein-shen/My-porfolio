@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { TechIcon } from "../layout/Techicon";
 
 // Images are served from /public, so use root-relative paths.
 // (If they live in src/assets, import them instead and put the imports here.)
@@ -66,7 +67,7 @@ export const Projects = () => {
       aria-labelledby="projects-heading"
       className="relative scroll-mt-24 overflow-hidden py-2"
     >
-      <div className="container relative z-10 mx-auto animate-fade-in px-6 py-10 md:px-12 ">
+      <div className="container relative z-10 mx-auto animate-fade-in px-6 py-10 md:px-12">
         <div className="mx-auto max-w-[800px]">
           {/* Section header */}
           <div className="mb-16 flex items-center justify-between">
@@ -89,7 +90,7 @@ export const Projects = () => {
           </div>
 
           {/* Project grid: items-stretch makes cards in a row the same height */}
-          <div className="grid items-stretch gap-8 lg:grid-cols-2 ">
+          <div className="grid items-stretch gap-8 lg:grid-cols-2">
             {projects.map((project, idx) => (
               <article
                 key={project.title}
@@ -165,8 +166,9 @@ export const Projects = () => {
                     {project.tags.map((tag) => (
                       <li
                         key={tag}
-                        className="theme-tag rounded-full border border-border px-2.5 py-1 font-mono text-xs font-medium transition-all duration-300 hover:opacity-80"
+                        className="theme-tag inline-flex items-center gap-1.5 rounded-full border border-border px-2.5 py-1 font-mono text-xs font-medium transition-all duration-300 hover:opacity-80"
                       >
+                        <TechIcon name={tag} className="h-3.5 w-3.5 shrink-0" />
                         {tag}
                       </li>
                     ))}
@@ -178,5 +180,5 @@ export const Projects = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
