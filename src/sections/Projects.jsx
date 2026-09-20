@@ -1,15 +1,15 @@
-import { ArrowRight } from "lucide-react"
-import { FaGithub } from "react-icons/fa"
-import { Link } from "react-router-dom"
+import { ArrowRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
+// Images are served from /public, so use root-relative paths.
+// (If they live in src/assets, import them instead and put the imports here.)
 const projects = [
-
-
   {
     title: "Laze",
     description:
       "Built a full-stack study companion web app that lets users track study sessions and manage tasks.",
-    image: "Lazeu.png",
+    image: "/Lazeu.png",
     tags: [
       "React",
       "Supabase",
@@ -26,7 +26,7 @@ const projects = [
     title: "Expensekontrol",
     description:
       "A full-stack personal finance platform designed to help users take control of their spending and track expenses.",
-    image: "exp.png",
+    image: "/exp.png",
     tags: [
       "HTML",
       "Tailwind CSS",
@@ -38,71 +38,67 @@ const projects = [
       "Render",
       "NeonDB",
       "CI/CD",
-      "Docker",
     ],
     github: "https://github.com/Ein-shen/Finance_tracker",
   },
-
-  
-
   {
     title: "Weather Web App",
     description:
       "A web app that allows users to search for a city and view its current weather using the OpenWeatherMap API.",
-    image: "weather.png",
+    image: "/weather.png",
     tags: ["HTML", "Python", "Django", "Tailwind CSS", "SQLite"],
     github: "https://github.com/Ein-shen/weather-webApp",
   },
-
   {
     title: "Stock-Trading",
     description:
       "A web app that lets users manage a virtual stock portfolio and look up real-time stock prices.",
-    image: "past.png",
+    image: "/fi.png",
     tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS"],
     github: "https://github.com/Ein-shen/Stock-Trading",
   },
-]
+];
 
 export const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden scroll-mt-24 py-2"
+      aria-labelledby="projects-heading"
+      className="relative scroll-mt-24 overflow-hidden py-2"
     >
-      <div className="container relative z-10 mx-auto animate-fade-in px-6 py-10 md:px-12">
+      <div className="container relative z-10 mx-auto animate-fade-in px-6 py-10 md:px-12 ">
         <div className="mx-auto max-w-[800px]">
-
           {/* Section header */}
-          <div className="mb-16">
-            <div className="mb-4 flex items-center justify-between">
-              <h1 className="theme-text pt-1 font-mono text-xl font-medium tracking-tight lg:text-xl">
-                Projects
-              </h1>
+          <div className="mb-16 flex items-center justify-between">
+            <h2
+              id="projects-heading"
+              className="theme-text pt-1 font-mono text-xl font-medium tracking-tight"
+            >
+              Projects
+            </h2>
 
-              <Link
-                to="/view_projects"
-                className="theme-muted hover:theme-text-hover ml-auto flex h-11 cursor-pointer items-center gap-1 rounded-lg font-mono text-sm"
-              >
-                view all
-                <span className="text-[10px]">↗</span>
-              </Link>
-            </div>
+            <Link
+              to="/view_projects"
+              className="theme-muted hover:theme-text-hover flex h-11 items-center gap-1 rounded-lg font-mono text-sm"
+            >
+              view all
+              <span className="text-[10px]" aria-hidden="true">
+                ↗
+              </span>
+            </Link>
           </div>
 
-          {/* Project grid */}
-          <div className="grid items-start gap-8 lg:grid-cols-2">
+          {/* Project grid: items-stretch makes cards in a row the same height */}
+          <div className="grid items-stretch gap-8 lg:grid-cols-2 ">
             {projects.map((project, idx) => (
-              <div
-                key={idx}
-                className="group overflow-hidden rounded-2xl border-[0.5px] border-border transition-opacity duration-300 hover:opacity-90 md:row-span-1"
-                style={{
-                  animationDelay: `${(idx + 1) * 100}ms`,
-                }}
+              <article
+                key={project.title}
+                className="group flex h-full animate-fade-in flex-col overflow-hidden rounded-2xl border-[0.5px] border-border transition-opacity duration-300 [animation-fill-mode:backwards] hover:opacity-90"
+                style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
                 {/* macOS-style title bar */}
-                <div className="theme-card-elevated flex items-center gap-2 border-[0.5px] border-border border-b px-4 py-2.5">
-                  <div className="flex gap-1.5">
+                <div className="theme-card-elevated flex items-center gap-2 border-b border-border px-4 py-2.5">
+                  <div className="flex gap-1.5" aria-hidden="true">
                     <span className="h-3 w-3 rounded-full bg-red-500" />
                     <span className="h-3 w-3 rounded-full bg-yellow-500" />
                     <span className="h-3 w-3 rounded-full bg-green-500" />
@@ -118,16 +114,20 @@ export const Projects = () => {
                   <div className="theme-card-elevated relative aspect-video overflow-hidden rounded-xl">
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={`${project.title} screenshot`}
+                      loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />
 
-                    {/* GitHub overlay */}
-                    <div className="theme-overlay absolute inset-0 flex items-center justify-center gap-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    {/* GitHub overlay: only clickable while visible,
+                        and also revealed on keyboard focus */}
+                    <div className="theme-overlay pointer-events-none absolute inset-0 flex items-center justify-center gap-3 opacity-0 transition-opacity duration-300 group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-hover:pointer-events-auto group-hover:opacity-100">
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`View ${project.title} on GitHub`}
                         className="theme-tag rounded-full p-3 transition-all hover:opacity-80"
                       >
                         <FaGithub className="theme-text h-5 w-5" />
@@ -136,38 +136,45 @@ export const Projects = () => {
                   </div>
                 </div>
 
-                {/* Project details */}
-                <div className="space-y-3 p-6">
-                  <div className="flex items-start justify-between">
-                    <h3 className="theme-text text-xl font-semibold transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                {/* Project details: flex-1 fills the card, mt-auto on the
+                    tags pins them to the bottom so all cards line up */}
+                <div className="flex flex-1 flex-col gap-3 p-6">
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="theme-text text-xl font-semibold transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
                       {project.title}
                     </h3>
 
-                    <ArrowRight
-                      className="theme-muted theme-arrow-hover mt-1 h-5 w-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                    />
+                    {/* Always-visible link, so touch devices (no hover)
+                        can still reach the repo */}
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Open ${project.title} on GitHub`}
+                      className="mt-1 shrink-0"
+                    >
+                      <ArrowRight className="theme-muted theme-arrow-hover h-5 w-5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                    </a>
                   </div>
 
                   <p className="theme-muted text-sm leading-relaxed">
                     {project.description}
                   </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 pt-1">
-                    {project.tags.map((tag, tagIdx) => (
-                      <span
-                        key={tagIdx}
-                        className="theme-tag rounded-full px-3 py-1.5 font-mono text-xs font-medium transition-all duration-300 hover:opacity-80"
+                  <ul className="mt-auto flex flex-wrap gap-2 pt-1">
+                    {project.tags.map((tag) => (
+                      <li
+                        key={tag}
+                        className="theme-tag rounded-full border border-border px-2.5 py-1 font-mono text-xs font-medium transition-all duration-300 hover:opacity-80"
                       >
                         {tag}
-                      </span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
-
         </div>
       </div>
     </section>
