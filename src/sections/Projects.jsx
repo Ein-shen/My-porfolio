@@ -166,7 +166,7 @@ export const Projects = () => {
                     {project.tags.map((tag) => (
                       <li
                         key={tag}
-                        className="theme-tag inline-flex items-center gap-1.5 rounded-full border border-border px-2.5 py-1 font-mono text-xs font-medium transition-all duration-300 hover:opacity-80"
+                        className="theme-tag inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1 font-mono text-xs font-medium transition-all duration-300 hover:opacity-80"
                       >
                         <TechIcon name={tag} className="h-3.5 w-3.5 shrink-0" />
                         {tag}
