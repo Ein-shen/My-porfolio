@@ -47,14 +47,13 @@ const stack = [
   "Bootstrap",
   "Dart",
   "Kali Linux",
+  "Firewall",
   "Figma",
   "Django",
   "Docker",
   "CI/CD",
   "NeonDB",
   "Render",
-  "PostgreSQL",
-  "FireWall",
 ];
 
 /* ------------------------------------------------------------------
@@ -82,8 +81,8 @@ export const Experience = () => {
           <div className="relative">
             {experiences.map((exp) => (
               <article key={`${exp.company}-${exp.period}`} className="pb-10">
-                <div className="flex flex-col items-center gap-4 rounded-2xl p-6 transition-all duration-500 sm:flex-row sm:items-start">
-                  <span className="theme-muted shrink-0 font-mono text-xs font-medium sm:w-24 sm:text-sm">
+                <div className="flex flex-col items-center  rounded-2xl p-6 transition-all duration-500 sm:flex-row sm:items-start">
+                  <span className="theme-muted shrink-0 font-mono text-xs font-medium sm:w-24 sm:text-sm ">
                     {exp.period}
                   </span>
 
@@ -98,7 +97,7 @@ export const Experience = () => {
                       {exp.description}
                     </p>
 
-                    <ul className="flex flex-wrap justify-center gap-2 pt-4">
+                    <ul className="flex flex-wrap justify-center gap-3 pt-4">
                       {exp.technology.map((name) => (
                         <li
                           key={name}
