@@ -100,9 +100,9 @@ export const Projects = () => {
                 {/* macOS-style title bar */}
                 <div className="theme-card-elevated flex items-center gap-2 border-b border-border px-4 py-2.5">
                   <div className="flex gap-1.5" aria-hidden="true">
-                    <span className="h-3 w-3 rounded-full bg-red-500" />
-                    <span className="h-3 w-3 rounded-full bg-yellow-500" />
-                    <span className="h-3 w-3 rounded-full bg-green-500" />
+                    <span className="h-3 w-3 rounded-full bg-red-700" />
+                    <span className="h-3 w-3 rounded-full bg-yellow-700" />
+                    <span className="h-3 w-3 rounded-full bg-green-700" />
                   </div>
 
                   <span className="theme-muted ml-2 truncate font-mono text-xs">
