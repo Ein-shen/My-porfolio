@@ -61,7 +61,7 @@ const projects = [
     title: "Stock-Trading",
     description:
       "A web app that lets users manage a virtual stock portfolio: look up real-time stock prices, 'buy' and 'sell' shares with simulated cash, and review a full history of transactions. Built with Flask and SQLite.",
-    image: "/past.png",
+    image: "/fi.png",
     tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS"],
     github: "https://github.com/Ein-shen/Stock-Trading",
   },
