@@ -64,12 +64,12 @@ export const Experience = () => {
     <section
       id="experience"
       aria-labelledby="experience-heading"
-      className="relative scroll-mt-24 overflow-hidden py-2"
+      className="relative scroll-mt-20 overflow-hidden py-2"
     >
       <div className="container relative z-10 mx-auto animate-fade-in px-6 py-10 md:px-12">
         {/* Experience */}
         <div className="mx-auto max-w-[800px]">
-          <div className="mb-16">
+          <div className="mb-10">
             <h2
               id="experience-heading"
               className="theme-text pt-1 font-mono text-xl font-medium tracking-tight"
@@ -116,8 +116,8 @@ export const Experience = () => {
         </div>
 
         {/* Stack */}
-        <div id="stack" className="mx-auto max-w-[800px] scroll-mt-24 pt-12">
-          <div className="mb-16">
+        <div id="stack" className="mx-auto max-w-[800px] scroll-mt-24 pt-7">
+          <div className="mb-10">
             <h2
               id="stack-heading"
               className="theme-text pt-1 font-mono text-lg font-medium tracking-tight"
