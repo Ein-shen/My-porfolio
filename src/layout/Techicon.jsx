@@ -33,6 +33,7 @@ import {
   SiFlutter,
   SiFlask,
   SiSqlite,
+  SiNodedotjs,
 } from "react-icons/si";
 import {
   Blocks,
@@ -57,7 +58,10 @@ const techIcons = {
   React: FaReact,
   TypeScript: SiTypescript,
   "Next.js": SiNextdotjs,
+  "Node.js": SiNodedotjs,
+  NodeJS: SiNodedotjs, // alias for the no-dot spelling
   Express: SiExpress,
+  "Express.js": SiExpress, // alias
   Vercel: SiVercel,
   Netlify: SiNetlify,
   HTML: FaHtml5,
@@ -99,6 +103,8 @@ const techColors = {
   Vite: "#8B7CFF",
   React: "#61DAFB",
   TypeScript: "#3178C6",
+  "Node.js": "#5FA04E",
+  NodeJS: "#5FA04E", // alias
   Netlify: "#00C7B7",
   HTML: "#E34F26",
   "Tailwind CSS": "#38BDF8",
