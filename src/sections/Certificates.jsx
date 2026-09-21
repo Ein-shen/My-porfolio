@@ -71,16 +71,18 @@ export const Certificates = () => {
                                         <h3 className="text-base md:text-lg font-semibold text-center">
                                             {cert.title}
                                         </h3>
-                                        <p className="text-xs md:text-sm text-muted-foreground pt-3 text-center">
-                                            {cert.where}
-                                        </p>
-                                        <div className="relative h-[140px] md:h-[184px] w-40 md:w-52 pt-5">
+                                        
+                                        <div className="relative h-[140px] md:h-[184px] w-40 md:w-52 pt-5 space-y-3">
                                             <img
                                                 src={cert.image}
                                                 alt={cert.title}
                                                 onClick={() => setSelected(cert.image)}
                                                 className="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity"
                                             />
+
+                                            <p className="text-xs md:text-sm text-muted-foreground pt-3 text-center">
+                                            {cert.where}
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
