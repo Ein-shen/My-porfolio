@@ -101,7 +101,7 @@ export const Experience = () => {
                       {exp.technology.map((name) => (
                         <li
                           key={name}
-                          className="theme-muted inline-flex items-center gap-1.5 rounded-md border border-border px-3 py-1 font-mono text-xs"
+                          className="theme-muted  inline-flex items-center gap-2 text-muted-foreground rounded-lg border border-border px-2.5 py-1.5 font-mono text-sm transition-colors hover:border-muted-foreground sm:px-3"
                         >
                           <TechIcon name={name} className="h-3.5 w-3.5 shrink-0" />
                           {name}
