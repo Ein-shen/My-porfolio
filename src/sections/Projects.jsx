@@ -41,6 +41,7 @@ const projects = [
       "NeonDB",
       "CI/CD",
       "Git",
+      "NodeJS",
     ],
     github: "https://github.com/Ein-shen/Finance_tracker",
   },
