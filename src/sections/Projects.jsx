@@ -34,7 +34,7 @@ const projects = [
       "Tailwind CSS",
       "PostgreSQL",
       "React",
-      "Next.js",
+      "Vite",
       "Express",
       "Docker",
       "Render",
@@ -168,7 +168,7 @@ export const Projects = () => {
                     {project.tags.map((tag) => (
                       <li
                         key={tag}
-                        className="theme-tag  text-muted-foreground inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1 font-mono text-xs font-medium transition-all duration-300 hover:opacity-80"
+                        className="theme-muted  inline-flex items-center gap-2 text-muted-foreground rounded-lg border border-border px-2.5 py-1.5 font-mono text-sm transition-colors hover:border-muted-foreground sm:px-3"
                       >
                         <TechIcon name={tag} className="h-3.5 w-3.5 shrink-0" />
                         {tag}
