@@ -6,6 +6,25 @@ import { TechIcon } from "../layout/Techicon";
 // Images are served from /public, so use root-relative paths.
 // (If they live in src/assets, import them instead and put the imports here.)
 const projects = [
+
+  {
+    title: "Lazeu",
+    description:
+      "A full-stack study companion web app that lets users track study sessions and manage tasks, built with React on the frontend and Supabase on the backend. The idea came from being annoyed at how studying tools usually work: either a bare-bones flashcard app with zero social features, or something bloated that tries to do too much.",
+    image: "/Lazeu.png",
+    tags: [
+      "React",
+      "Supabase",
+      "Tailwind CSS",
+      "HTML",
+      "Vite",
+      "Netlify",
+      "Docker",
+      "Git",
+      "Firewall",
+    ],
+    github: "https://github.com/Ein-shen/CS50-Laze",
+  },
   {
     title: "Expensekontrol",
     description:
@@ -27,41 +46,7 @@ const projects = [
     ],
     github: "https://github.com/Ein-shen/Finance_tracker",
   },
-  {
-    title: "Cargo",
-    description:
-      "A full-stack peer-to-peer car rental mobile app (Flutter, Dart, PHP, MySQL). As part of a capstone team project, I performed QA testing on core features including user authentication, vehicle listings, search, and the booking/reservation system. I identified and reported bugs, and worked with developers to reproduce issues and verify fixes before submission.",
-    image: "/cargo1.png",
-    tags: ["Dart", "Flutter", "MySQL", "PHP", "Firewall", "Git",],
-    github: "https://github.com/Syloms/Cargo",
-  },
-  {
-    title: "Lazeu",
-    description:
-      "A full-stack study companion web app that lets users track study sessions and manage tasks, built with React on the frontend and Supabase on the backend. The idea came from being annoyed at how studying tools usually work: either a bare-bones flashcard app with zero social features, or something bloated that tries to do too much.",
-    image: "/Lazeu.png",
-    tags: [
-      "React",
-      "Supabase",
-      "Tailwind CSS",
-      "HTML",
-      "Vite",
-      "Netlify",
-      "Docker",
-      "Git",
-      "Firewall",
-    ],
-    github: "https://github.com/Ein-shen/CS50-Laze",
-  },
-  {
-    title: "Past Life Generator",
-    description:
-      "Built a quiz-based Python game that generates a personalized 'past life' story based on user input.",
-    image: "/past.png",
-    tags: ["Python", "Git",],
-    github: "https://github.com/Ein-shen/CS50-python-past-life-generator",
-  },
-  {
+   {
     title: "Stock-Trading",
     description:
       "A web app that lets users manage a virtual stock portfolio: look up real-time stock prices, 'buy' and 'sell' shares with simulated cash, and review a full history of transactions. Built with Flask and SQLite.",
@@ -77,6 +62,24 @@ const projects = [
     tags: ["HTML", "Python", "Django", "Tailwind CSS", "SQLite", "Git", ],
     github: "https://github.com/Ein-shen/weather-webApp",
   },
+  {
+    title: "Cargo",
+    description:
+      "A full-stack peer-to-peer car rental mobile app (Flutter, Dart, PHP, MySQL). As part of a capstone team project, I performed QA testing on core features including user authentication, vehicle listings, search, and the booking/reservation system. I identified and reported bugs, and worked with developers to reproduce issues and verify fixes before submission.",
+    image: "/cargo1.png",
+    tags: ["Dart", "Flutter", "MySQL", "PHP", "Firewall", "Git",],
+    github: "https://github.com/Syloms/Cargo",
+  },
+  
+  {
+    title: "Past Life Generator",
+    description:
+      "Built a quiz-based Python game that generates a personalized 'past life' story based on user input.",
+    image: "/past.png",
+    tags: ["Python", "Git",],
+    github: "https://github.com/Ein-shen/CS50-python-past-life-generator",
+  },
+ 
 ];
 
 export const View_projects = () => {
