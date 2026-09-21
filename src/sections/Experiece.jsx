@@ -82,7 +82,7 @@ export const Experience = () => {
             {experiences.map((exp) => (
               <article key={`${exp.company}-${exp.period}`} className="pb-10">
                 <div className="flex flex-col items-center  rounded-2xl p-6 transition-all duration-500 sm:flex-row sm:items-start">
-                  <span className="theme-muted shrink-0 font-mono text-xs font-medium sm:w-24 sm:text-sm ">
+                  <span className="theme-muted shrink-0 text-muted-foreground font-mono text-xs font-medium sm:w-24 sm:text-sm ">
                     {exp.period}
                   </span>
 
@@ -90,14 +90,14 @@ export const Experience = () => {
                     <h3 className="theme-text text-center text-xl font-semibold">
                       {exp.role}
                     </h3>
-                    <p className="theme-muted pt-3 text-center text-xs">
+                    <p className="theme-muted pt-3 text-center text-xs text-muted-foreground">
                       {exp.company}
                     </p>
-                    <p className="theme-muted max-w-sm pt-3 text-center text-sm leading-relaxed">
+                    <p className="theme-muted max-w-sm pt-3 text-center text-sm leading-relaxed text-muted-foreground">
                       {exp.description}
                     </p>
 
-                    <ul className="flex flex-wrap justify-center gap-3 pt-4">
+                    <ul className="flex flex-wrap justify-center gap-3 pt-4 text-muted-foreground">
                       {exp.technology.map((name) => (
                         <li
                           key={name}
