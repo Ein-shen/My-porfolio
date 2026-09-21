@@ -133,7 +133,7 @@ export const Experience = () => {
             {stack.map((name) => (
               <li
                 key={name}
-                className="theme-muted inline-flex items-center gap-2 rounded-lg border border-border px-2.5 py-1.5 font-mono text-sm transition-colors hover:border-muted-foreground sm:px-3"
+                className="theme-muted  inline-flex items-center gap-2 text-muted-foreground rounded-lg border border-border px-2.5 py-1.5 font-mono text-sm transition-colors hover:border-muted-foreground sm:px-3"
               >
                 <TechIcon name={name} className="h-4 w-4 shrink-0" />
                 {name}
