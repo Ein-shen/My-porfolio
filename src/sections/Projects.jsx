@@ -55,7 +55,7 @@ const projects = [
   {
     title: "Stock-Trading",
     description:
-      "A web app that lets users manage a virtual stock portfolio and look up real-time stock prices.",
+      "A full-stack web app that lets users manage a virtual stock portfolio and look up real-time stock prices.",
     image: "/fi.png",
     tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS", "Git",],
     github: "https://github.com/Ein-shen/Stock-Trading",
