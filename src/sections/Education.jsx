@@ -24,8 +24,8 @@ export const Education = () => {
                     <div className="relative">
                         {Educ.map((edu, idx) => (
                             <div key={idx} className="pb-10">
-                                <div className="flex flex-row items-start gap-4  p-6 rounded-2xl transition-all duration-500">
-                                    <span className="text-sm text-muted-foreground font-mono font-medium shrink-0">
+                                <div className="flex flex-col items-center  rounded-2xl p-6 transition-all duration-500 sm:flex-row sm:items-start ">
+                                    <span className="theme-muted shrink-0 text-muted-foreground font-mono text-xs font-medium sm:w-24 sm:text-sm ">
                                         {edu.period}
                                     </span>
 
