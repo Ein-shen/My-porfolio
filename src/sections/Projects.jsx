@@ -20,6 +20,7 @@ const projects = [
       "Netlify",
       "Docker",
       "CI/CD",
+      "Git",
     ],
     github: "https://github.com/Ein-shen/CS50-Laze",
   },
@@ -39,6 +40,7 @@ const projects = [
       "Render",
       "NeonDB",
       "CI/CD",
+      "Git",
     ],
     github: "https://github.com/Ein-shen/Finance_tracker",
   },
@@ -47,7 +49,7 @@ const projects = [
     description:
       "A web app that allows users to search for a city and view its current weather using the OpenWeatherMap API.",
     image: "/weather.png",
-    tags: ["HTML", "Python", "Django", "Tailwind CSS", "SQLite"],
+    tags: ["HTML", "Python", "Django", "Tailwind CSS", "SQLite", "Git",],
     github: "https://github.com/Ein-shen/weather-webApp",
   },
   {
@@ -55,7 +57,7 @@ const projects = [
     description:
       "A web app that lets users manage a virtual stock portfolio and look up real-time stock prices.",
     image: "/fi.png",
-    tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS"],
+    tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS", "Git",],
     github: "https://github.com/Ein-shen/Stock-Trading",
   },
 ];
