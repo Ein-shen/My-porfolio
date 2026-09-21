@@ -82,7 +82,7 @@ export const Projects = () => {
 
             <Link
               to="/view_projects"
-              className="theme-muted hover:theme-text-hover flex h-11 items-center gap-1 rounded-lg font-mono text-sm"
+              className="theme-muted hover:theme-text-hover flex h-11 items-center gap-1 rounded-lg font-mono text-sm text-muted-foreground"
             >
               view all
               <span className="text-[10px]" aria-hidden="true">
@@ -107,7 +107,7 @@ export const Projects = () => {
                     <span className="h-3 w-3 rounded-full bg-green-700" />
                   </div>
 
-                  <span className="theme-muted ml-2 truncate font-mono text-xs">
+                  <span className="theme-muted ml-2 truncate font-mono text-xs  text-muted-foreground">
                     {project.title}
                   </span>
                 </div>
@@ -156,11 +156,11 @@ export const Projects = () => {
                       aria-label={`Open ${project.title} on GitHub`}
                       className="mt-1 shrink-0"
                     >
-                      <ArrowRight className="theme-muted theme-arrow-hover h-5 w-5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                      <ArrowRight className="theme-muted  text-muted-foreground theme-arrow-hover h-5 w-5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
                     </a>
                   </div>
 
-                  <p className="theme-muted text-sm leading-relaxed">
+                  <p className="theme-muted text-sm leading-relaxed  text-muted-foreground">
                     {project.description}
                   </p>
 
@@ -168,7 +168,7 @@ export const Projects = () => {
                     {project.tags.map((tag) => (
                       <li
                         key={tag}
-                        className="theme-tag inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1 font-mono text-xs font-medium transition-all duration-300 hover:opacity-80"
+                        className="theme-tag  text-muted-foreground inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1 font-mono text-xs font-medium transition-all duration-300 hover:opacity-80"
                       >
                         <TechIcon name={tag} className="h-3.5 w-3.5 shrink-0" />
                         {tag}
