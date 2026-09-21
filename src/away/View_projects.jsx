@@ -22,6 +22,8 @@ const projects = [
       "Render",
       "NeonDB",
       "CI/CD",
+      "Git",
+      "Firewall"
     ],
     github: "https://github.com/Ein-shen/Finance_tracker",
   },
@@ -30,7 +32,7 @@ const projects = [
     description:
       "A full-stack peer-to-peer car rental mobile app (Flutter, Dart, PHP, MySQL). As part of a capstone team project, I performed QA testing on core features including user authentication, vehicle listings, search, and the booking/reservation system. I identified and reported bugs, and worked with developers to reproduce issues and verify fixes before submission.",
     image: "/cargo1.png",
-    tags: ["Dart", "Flutter", "MySQL", "PHP", "Firewall"],
+    tags: ["Dart", "Flutter", "MySQL", "PHP", "Firewall", "Git",],
     github: "https://github.com/Syloms/Cargo",
   },
   {
@@ -46,6 +48,8 @@ const projects = [
       "Vite",
       "Netlify",
       "Docker",
+      "Git",
+      "Firewall",
     ],
     github: "https://github.com/Ein-shen/CS50-Laze",
   },
@@ -54,7 +58,7 @@ const projects = [
     description:
       "Built a quiz-based Python game that generates a personalized 'past life' story based on user input.",
     image: "/past.png",
-    tags: ["Python"],
+    tags: ["Python", "Git",],
     github: "https://github.com/Ein-shen/CS50-python-past-life-generator",
   },
   {
@@ -62,7 +66,7 @@ const projects = [
     description:
       "A web app that lets users manage a virtual stock portfolio: look up real-time stock prices, 'buy' and 'sell' shares with simulated cash, and review a full history of transactions. Built with Flask and SQLite.",
     image: "/fi.png",
-    tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS"],
+    tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS", "Git",],
     github: "https://github.com/Ein-shen/Stock-Trading",
   },
   {
@@ -70,7 +74,7 @@ const projects = [
     description:
       "A web app that allows users to search for a city and view its current weather using the OpenWeatherMap API.",
     image: "/weather.png",
-    tags: ["HTML", "Python", "Django", "Tailwind CSS", "SQLite"],
+    tags: ["HTML", "Python", "Django", "Tailwind CSS", "SQLite", "Git", ],
     github: "https://github.com/Ein-shen/weather-webApp",
   },
 ];
