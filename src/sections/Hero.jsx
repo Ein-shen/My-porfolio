@@ -28,6 +28,8 @@ export const Hero = () => {
                             <span>Shen Sarsale</span>
                             <MdVerified size={25} className="text-[#1D9BF0] shrink-0 pt-2" />
                         </h1>
+                        
+                        
 
                         <div className="space-y-4 text-muted-foreground max-w-md ">
 
@@ -46,7 +48,7 @@ export const Hero = () => {
                             <a href="https://github.com/Ein-shen" className="hover:text-foreground transition-colors flex items-center gap-1">
                                 github <span className="text-[10px]">↗</span>
                             </a>
-                            <a href="#" className="hover:text-foreground transition-colors flex items-center gap-1">
+                            <a href="https://www.linkedin.com/in/" className="hover:text-foreground transition-colors flex items-center gap-1">
                                 linkedin <span className="text-[10px]">↗</span>
                             </a>
                             <a href="https://www.instagram.com/shinxtony/" className="hover:text-foreground transition-colors flex items-center gap-1">
@@ -55,7 +57,6 @@ export const Hero = () => {
                             <a href="mailto:shensarsale25@gmail.com" className="hover:text-foreground transition-colors flex items-center gap-1">
                                 email <span className="text-[10px]">↗</span>
                             </a>
-
                             <Link
                                 to="/cv"
                                 className='hover:text-foreground transition-colors flex items-center gap-1'
