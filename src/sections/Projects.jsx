@@ -98,7 +98,7 @@ export const Projects = () => {
             {projects.map((project, idx) => (
               <article
                 key={project.title}
-                className="group flex h-full animate-fade-in flex-col overflow-hidden rounded-2xl border-[0.5px] border-border transition-opacity duration-300 [animation-fill-mode:backwards] hover:opacity-90"
+                className="group flex h-full animate-fade-in flex-col overflow-hidden border-[0.5px] border-border transition-opacity duration-300 [animation-fill-mode:backwards] hover:opacity-90"
                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
                 {/* macOS-style title bar */}
@@ -116,7 +116,7 @@ export const Projects = () => {
 
                 {/* Project image */}
                 <div className="p-4 pb-0">
-                  <div className="theme-card-elevated relative aspect-video overflow-hidden rounded-xl">
+                  <div className="theme-card-elevated relative aspect-video overflow-hidden ">
                     <img
                       src={project.image}
                       alt={`${project.title} screenshot`}
