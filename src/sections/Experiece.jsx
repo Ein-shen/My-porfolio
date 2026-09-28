@@ -9,8 +9,7 @@ const experiences = [
     period: "Dec 2025 - Feb 2026",
     role: "Web Developer Intern",
     company: "Jairosoft Inc.",
-    description:
-      "Built and shipped a grading/assessment module for Jairosoft's LMS using Bubble.io, designed for both teachers and students so instructors could create and score assessments with ease.",
+   
     technology: [
       "Bubble.io",
       "Microsoft Teams",
@@ -81,34 +80,35 @@ export const Experience = () => {
           <div className="relative">
             {experiences.map((exp) => (
               <article key={`${exp.company}-${exp.period}`} className="pb-10 ">
-                <div className="flex flex-col items-center space-y-4 rounded-2xl  transition-all duration-500 sm:flex-row sm:items-start">
-                  <span className="theme-muted shrink-0 text-muted-foreground font-mono text-xs font-medium sm:w-24 sm:text-sm ">
+                <div className="flex flex-col items-center space-x-20 rounded-2xl  transition-all duration-500 sm:flex-row sm:items-start">
+                  <span className="theme-muted shrink-0 whitespace-nowrap text-muted-foreground font-mono text-xs font-medium sm:w-auto sm:text-sm">
                     {exp.period}
                   </span>
 
-                  <div className="flex w-full flex-col items-center">
-                    <h3 className="theme-text text-center text-xl font-semibold">
+                  <div className="flex w-full flex-col ">
+                    <h3 className="theme-text  text-xl font-mono">
                       {exp.role}
                     </h3>
-                    <p className="theme-muted pt-3 text-center text-xs text-muted-foreground">
+
+                    <p className="theme-muted font-bold pt-3 text-md text-muted-foreground">
                       {exp.company}
                     </p>
-                    <p className="theme-muted max-w-sm pt-3 text-center text-sm leading-relaxed text-muted-foreground">
-                      {exp.description}
-                    </p>
-
+                    
+                    
                     {/* Icon-only tech stack: title attr keeps names accessible via tooltip */}
-                    <ul className="flex flex-wrap justify-center gap-2 pt-4 text-muted-foreground">
+                    <ul className="flex flex-wrap  gap-2 pt-2 text-muted-foreground">
                       {exp.technology.map((name) => (
                         <li
                           key={name}
                           title={name}
-                          className="theme-muted inline-flex items-center justify-center text-muted-foreground rounded-full p-2 transition-colors hover:border-muted-foreground hover:bg-muted"
+                          className="theme-muted inline-flex pt-2 text-muted-foreground rounded-full  transition-colors hover:border-muted-foreground hover:bg-muted"
                         >
                           <TechIcon name={name} className="h-4 w-4 shrink-0" />
                         </li>
                       ))}
                     </ul>
+
+                    
                   </div>
                 </div>
               </article>
@@ -116,10 +116,9 @@ export const Experience = () => {
           </div>
         </div>
 
-
         {/* Stack */}
         <div id="stack" className="mx-auto max-w-[800px] scroll-mt-24 pt-7">
-          <div className="mb-10">
+          <div className="mb-10 ">
             <h2
               id="stack-heading"
               className="theme-text pt-1 font-mono text-lg font-medium tracking-tight"
@@ -130,12 +129,12 @@ export const Experience = () => {
 
           <ul
             aria-labelledby="stack-heading"
-            className="flex flex-wrap  gap-2"
+            className="flex flex-wrap justify-center gap-2"
           >
             {stack.map((name) => (
               <li
                 key={name}
-                className="theme-muted  inline-flex items-center gap-2 text-muted-foreground rounded-lg border border-border px-2.5 py-1.5 font-mono text-sm transition-colors hover:border-muted-foreground sm:px-3"
+                className="theme-muted inline-flex items-center gap-2 text-muted-foreground rounded-lg border border-border px-2.5 py-1.5 font-mono text-sm transition-colors hover:border-muted-foreground sm:px-3"
               >
                 <TechIcon name={name} className="h-4 w-4 shrink-0" />
                 {name}
