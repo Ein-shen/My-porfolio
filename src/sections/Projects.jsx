@@ -109,7 +109,7 @@ export const Projects = () => {
                     <span className="h-3 w-3 rounded-full bg-green-700" />
                   </div>
 
-                  <span className="theme-muted ml-2 truncate font-mono text-xs text-muted-foreground">
+                  <span className="theme-muted ml-2 truncate font-mono text-md text-muted-foreground">
                     {project.title}
                   </span>
                 </div>
@@ -142,22 +142,7 @@ export const Projects = () => {
 
                 {/* Project details */}
                 <div className="flex flex-1 flex-col gap-3 p-6">
-                  <div className="flex items-start justify-between gap-4">
-                    <h3 className="theme-text text-xl font-semibold transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
-                      {project.title}
-                    </h3>
-
-                    {/* Always-visible GitHub link */}
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Open ${project.title} on GitHub`}
-                      className="mt-1 shrink-0"
-                    >
-                      <ArrowRight className="theme-muted theme-arrow-hover h-5 w-5 text-muted-foreground transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
-                    </a>
-                  </div>
+                  
 
                   <p className="theme-muted text-sm leading-relaxed text-muted-foreground">
                     {project.description}
