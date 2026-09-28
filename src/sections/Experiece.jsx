@@ -97,14 +97,15 @@ export const Experience = () => {
                       {exp.description}
                     </p>
 
-                    <ul className="flex flex-wrap justify-center gap-3 pt-4 text-muted-foreground">
+                    {/* Icon-only tech stack: title attr keeps names accessible via tooltip */}
+                    <ul className="flex flex-wrap justify-center gap-2 pt-4 text-muted-foreground">
                       {exp.technology.map((name) => (
                         <li
                           key={name}
-                          className="theme-muted  inline-flex items-center gap-2 text-muted-foreground rounded-lg border border-border px-2.5 py-1.5 font-mono text-sm transition-colors hover:border-muted-foreground sm:px-3"
+                          title={name}
+                          className="theme-muted inline-flex items-center justify-center text-muted-foreground rounded-full p-2 transition-colors hover:border-muted-foreground hover:bg-muted"
                         >
-                          <TechIcon name={name} className="h-3.5 w-3.5 shrink-0" />
-                          {name}
+                          <TechIcon name={name} className="h-4 w-4 shrink-0" />
                         </li>
                       ))}
                     </ul>
@@ -114,6 +115,7 @@ export const Experience = () => {
             ))}
           </div>
         </div>
+
 
         {/* Stack */}
         <div id="stack" className="mx-auto max-w-[800px] scroll-mt-24 pt-7">
