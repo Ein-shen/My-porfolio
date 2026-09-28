@@ -1,10 +1,10 @@
+
 import { ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { TechIcon } from "../layout/Techicon";
 
 // Images are served from /public, so use root-relative paths.
-// (If they live in src/assets, import them instead and put the imports here.)
 const projects = [
   {
     title: "Laze",
@@ -50,7 +50,7 @@ const projects = [
     description:
       "A web app that allows users to search for a city and view its current weather using the OpenWeatherMap API.",
     image: "/weather.png",
-    tags: ["HTML", "Python", "Django", "Tailwind CSS", "SQLite", "Git",],
+    tags: ["HTML", "Python", "Django", "Tailwind CSS", "SQLite", "Git"],
     github: "https://github.com/Ein-shen/weather-webApp",
   },
   {
@@ -58,7 +58,7 @@ const projects = [
     description:
       "A full-stack web app that lets users manage a virtual stock portfolio and look up real-time stock prices.",
     image: "/fi.png",
-    tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS", "Git",],
+    tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS", "Git"],
     github: "https://github.com/Ein-shen/Stock-Trading",
   },
 ];
@@ -72,6 +72,7 @@ export const Projects = () => {
     >
       <div className="container relative z-10 mx-auto animate-fade-in px-6 py-10 md:px-12">
         <div className="mx-auto max-w-[800px]">
+
           {/* Section header */}
           <div className="mb-16 flex items-center justify-between">
             <h2
@@ -92,7 +93,7 @@ export const Projects = () => {
             </Link>
           </div>
 
-          {/* Project grid: items-stretch makes cards in a row the same height */}
+          {/* Project grid */}
           <div className="grid items-stretch gap-8 lg:grid-cols-2">
             {projects.map((project, idx) => (
               <article
@@ -108,7 +109,7 @@ export const Projects = () => {
                     <span className="h-3 w-3 rounded-full bg-green-700" />
                   </div>
 
-                  <span className="theme-muted ml-2 truncate font-mono text-xs  text-muted-foreground">
+                  <span className="theme-muted ml-2 truncate font-mono text-xs text-muted-foreground">
                     {project.title}
                   </span>
                 </div>
@@ -124,8 +125,7 @@ export const Projects = () => {
                       className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />
 
-                    {/* GitHub overlay: only clickable while visible,
-                        and also revealed on keyboard focus */}
+                    {/* GitHub overlay */}
                     <div className="theme-overlay pointer-events-none absolute inset-0 flex items-center justify-center gap-3 opacity-0 transition-opacity duration-300 group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-hover:pointer-events-auto group-hover:opacity-100">
                       <a
                         href={project.github}
@@ -140,16 +140,14 @@ export const Projects = () => {
                   </div>
                 </div>
 
-                {/* Project details: flex-1 fills the card, mt-auto on the
-                    tags pins them to the bottom so all cards line up */}
+                {/* Project details */}
                 <div className="flex flex-1 flex-col gap-3 p-6">
                   <div className="flex items-start justify-between gap-4">
                     <h3 className="theme-text text-xl font-semibold transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
                       {project.title}
                     </h3>
 
-                    {/* Always-visible link, so touch devices (no hover)
-                        can still reach the repo */}
+                    {/* Always-visible GitHub link */}
                     <a
                       href={project.github}
                       target="_blank"
@@ -157,22 +155,26 @@ export const Projects = () => {
                       aria-label={`Open ${project.title} on GitHub`}
                       className="mt-1 shrink-0"
                     >
-                      <ArrowRight className="theme-muted  text-muted-foreground theme-arrow-hover h-5 w-5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                      <ArrowRight className="theme-muted theme-arrow-hover h-5 w-5 text-muted-foreground transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
                     </a>
                   </div>
 
-                  <p className="theme-muted text-sm leading-relaxed  text-muted-foreground">
+                  <p className="theme-muted text-sm leading-relaxed text-muted-foreground">
                     {project.description}
                   </p>
 
+                  {/* Icon-only tech stack */}
                   <ul className="mt-auto flex flex-wrap gap-2 pt-1">
                     {project.tags.map((tag) => (
                       <li
                         key={tag}
-                        className="theme-muted  inline-flex items-center gap-2 text-muted-foreground rounded-lg border border-border px-2.5 py-1.5 font-mono text-sm transition-colors hover:border-muted-foreground sm:px-3"
+                        title={tag}
+                        className="theme-muted inline-flex items-center justify-center rounded-full p-2 text-muted-foreground transition-colors hover:border-muted-foreground hover:bg-muted"
                       >
-                        <TechIcon name={tag} className="h-3.5 w-3.5 shrink-0" />
-                        {tag}
+                        <TechIcon
+                          name={tag}
+                          className="h-4 w-4 shrink-0"
+                        />
                       </li>
                     ))}
                   </ul>
@@ -185,3 +187,4 @@ export const Projects = () => {
     </section>
   );
 };
+
