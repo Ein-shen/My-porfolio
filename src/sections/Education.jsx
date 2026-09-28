@@ -24,15 +24,15 @@ export const Education = () => {
                     <div className="relative  ">
                         {Educ.map((edu, idx) => (
                             <div key={idx} className="pb-10 ">
-                                <div className="flex flex-col items-center space-y-4    rounded-2xl  transition-all duration-500 sm:flex-row sm:items-start ">
-                                    <span className="theme-muted shrink-0 text-muted-foreground font-mono text-xs font-medium sm:w-24 sm:text-sm ">
+                                <div className="flex flex-col  space-x-15  rounded-2xl  transition-all duration-500 sm:flex-row sm:items-start ">
+                                    <span className="theme-muted shrink-0 text-muted-foreground font-mono text-xs font-medium  sm:text-sm ">
                                         {edu.period}
                                     </span>
 
-                                    <div className="flex flex-col items-center w-full">
-                                        <h3 className="text-xl font-semibold text-center">{edu.course}</h3>
-                                        <p className="text-xs text-muted-foreground pt-4 text-center">{edu.school}</p>
-                                        <p className="text-md text-muted-foreground pt-4 text-center">{edu.award}</p>
+                                    <div className="flex flex-col  w-full">
+                                        <h3 className="text-xl font-mono ">{edu.course}</h3>
+                                        <p className="text-xs font-bold text-muted-foreground pt-4 ">{edu.school}</p>
+                                        <p className="text-md font-bold text-muted-foreground pt-4 ">{edu.award}</p>
                                     </div>
                                 </div>
                             </div>
