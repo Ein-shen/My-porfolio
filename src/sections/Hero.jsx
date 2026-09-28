@@ -14,7 +14,7 @@ export const Hero = () => {
                 <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-[288px_minmax(0,480px)] gap-8 lg:justify-center mx-auto w-fit max-w-full">
 
                     {/* Left: photo */}
-                    <div className="relative mx-auto lg:mx-0 w-[288px] cursor-pointer animate-fade-in animation-delay-200 duration-500">
+                    <div className="relative  mx-auto lg:mx-0 w-[288px] cursor-pointer animate-fade-in animation-delay-200 duration-500">
                         <PixelSwapImage
                             imageA="/z.jpg"
                             imageB="/y.jpg"
