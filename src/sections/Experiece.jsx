@@ -80,7 +80,7 @@ export const Experience = () => {
           <div className="relative">
             {experiences.map((exp) => (
               <article key={`${exp.company}-${exp.period}`} className="pb-10 ">
-                <div className="flex flex-col items-center space-x-20 rounded-2xl  transition-all duration-500 sm:flex-row sm:items-start">
+                <div className="flex flex-col items-center space-x-15 rounded-2xl  transition-all duration-500 sm:flex-row sm:items-start">
                   <span className="theme-muted shrink-0 whitespace-nowrap text-muted-foreground font-mono text-xs font-medium sm:w-auto sm:text-sm">
                     {exp.period}
                   </span>
