@@ -62,13 +62,13 @@ export const Certificates = () => {
                     <div className="relative">
                         {Certificate.map((cert, idx) => (
                             <div key={idx} className="pb-10">
-                               <div className="flex flex-col items-center space-y-4  pb-4  rounded-2xl  transition-all duration-500 sm:flex-row sm:items-start ">
-                                    <span className="theme-muted shrink-0 text-muted-foreground font-mono text-xs font-medium sm:w-24 sm:text-sm ">
+                               <div className="flex flex-col items-center space-x-15 pb-4  rounded-2xl  transition-all duration-500 sm:flex-row sm:items-start ">
+                                    <span className="theme-muted shrink-0 text-muted-foreground font-mono text-xs font-medium sm:text-sm ">
                                         {cert.period}
                                     </span>
 
-                                    <div className="flex flex-col items-center w-full">
-                                        <h3 className="text-base md:text-lg font-semibold text-center">
+                                    <div className="flex flex-col pb-4 w-full">
+                                        <h3 className="text-base md:text-lg font-mono ">
                                             {cert.title}
                                         </h3>
                                         
@@ -80,7 +80,7 @@ export const Certificates = () => {
                                                 className="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity"
                                             />
 
-                                            <p className="text-xs md:text-sm text-muted-foreground pt-3 text-center">
+                                            <p className="text-xs md:text-sm text-muted-foreground pt-3 ">
                                             {cert.where}
                                             </p>
                                         </div>
