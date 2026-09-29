@@ -65,10 +65,10 @@ export const Experience = () => {
       aria-labelledby="experience-heading"
       className="relative scroll-mt-20 overflow-hidden py-2"
     >
-      <div className="container relative z-10 mx-auto animate-fade-in px-6 py-10 md:px-12">
+      <div className="container relative z-10 mx-auto animate-fade-in px-4 py-10 sm:px-6 md:px-12">
         {/* Experience */}
-        <div className="mx-auto max-w-[800px]">
-          <div className="mb-10">
+        <div className="mx-auto w-full max-w-[800px]">
+          <div className="mb-8 sm:mb-10">
             <h2
               id="experience-heading"
               className="theme-text pt-1 font-mono text-xl font-medium tracking-tight"
@@ -79,36 +79,33 @@ export const Experience = () => {
 
           <div className="relative">
             {experiences.map((exp) => (
-              <article key={`${exp.company}-${exp.period}`} className="pb-10 ">
-                <div className="flex flex-col items-center space-x-25 rounded-2xl  transition-all duration-500 sm:flex-row sm:items-start">
-                  <span className="theme-muted shrink-0 whitespace-nowrap text-muted-foreground font-mono text-xs font-medium sm:w-auto sm:text-sm">
+              <article key={`${exp.company}-${exp.period}`} className="pb-10">
+                <div className="flex flex-col gap-3 rounded-2xl transition-all duration-500 sm:flex-row sm:items-start sm:gap-x-8 lg:gap-x-16 xl:gap-x-24">
+                  <span className="theme-muted shrink-0 whitespace-nowrap text-muted-foreground font-mono text-xs font-medium sm:text-sm">
                     {exp.period}
                   </span>
 
-                  <div className="flex w-full flex-col ">
-                    <h3 className="theme-text  text-xl font-mono">
+                  <div className="flex w-full min-w-0 flex-col">
+                    <h3 className="theme-text text-lg sm:text-xl font-mono break-words">
                       {exp.role}
                     </h3>
 
-                    <p className="theme-muted font-bold pt-3 text-md text-muted-foreground">
+                    <p className="theme-muted font-bold pt-3 text-sm sm:text-base text-muted-foreground">
                       {exp.company}
                     </p>
-                    
-                    
+
                     {/* Icon-only tech stack: title attr keeps names accessible via tooltip */}
-                    <ul className="flex flex-wrap  gap-2 pt-2 text-muted-foreground">
+                    <ul className="flex flex-wrap gap-2 pt-2 text-muted-foreground">
                       {exp.technology.map((name) => (
                         <li
                           key={name}
                           title={name}
-                          className="theme-muted inline-flex pt-2 text-muted-foreground rounded-full  transition-colors hover:border-muted-foreground hover:bg-muted"
+                          className="theme-muted inline-flex pt-2 text-muted-foreground rounded-full transition-colors hover:border-muted-foreground hover:bg-muted"
                         >
                           <TechIcon name={name} className="h-4 w-4 shrink-0" />
                         </li>
                       ))}
                     </ul>
-
-                    
                   </div>
                 </div>
               </article>
