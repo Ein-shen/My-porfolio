@@ -99,7 +99,7 @@ export const Navbar = () => {
               <button
                 onClick={toggleTheme}
                 aria-label="Toggle theme"
-                className="cursor-pointer text-xs font-mono text-muted-foreground hover:text-foreground transition-colors duration-300"
+                className="cursor-pointer text-md font-mono text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
                 {theme === "dark" ? "☀️ " : "🌙 "}
               </button>
@@ -138,9 +138,9 @@ export const Navbar = () => {
             <div className="pb-6 px-6">
               <button
                 onClick={toggleTheme}
-                className="cursor-pointer text-xs font-mono text-muted-foreground hover:text-foreground transition-colors duration-300"
+                className="cursor-pointer text-md font-mono text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
-                {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
+                {theme === "dark" ? "☀️ " : "🌙 "}
               </button>
             </div>
           </div>
