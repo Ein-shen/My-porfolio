@@ -1,4 +1,12 @@
-import { createContext, useContext, useEffect, useState } from "react";
+
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  useCallback,
+  useMemo,
+} from "react";
 
 const ThemeContext = createContext(null);
 
@@ -8,49 +16,62 @@ export function ThemeProvider({ children }) {
   );
 
   useEffect(() => {
-    document.documentElement.classList.toggle("light", theme === "light");
+    document.documentElement.classList.toggle(
+      "light",
+      theme === "light"
+    );
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     const nextTheme = theme === "dark" ? "light" : "dark";
 
-    // Fallback for browsers without View Transitions API
-    if (!document.startViewTransition) {
+    if (
+      !document.startViewTransition ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
       setTheme(nextTheme);
       return;
     }
 
-    // Start animation from the TOP-RIGHT corner
     const x = window.innerWidth;
     const y = 0;
-
-    // Radius large enough to cover the entire screen
-    const endRadius = Math.hypot(window.innerWidth, window.innerHeight);
+    const radius = Math.hypot(x, window.innerHeight);
 
     const transition = document.startViewTransition(() => {
+      document.documentElement.classList.toggle(
+        "light",
+        nextTheme === "light"
+      );
       setTheme(nextTheme);
     });
 
-    transition.ready.then(() => {
-      document.documentElement.animate(
-        {
-          clipPath: [
-            `circle(0px at ${x}px ${y}px)`,
-            `circle(${endRadius}px at ${x}px ${y}px)`,
-          ],
-        },
-        {
-          duration: 700,
-          easing: "ease-in-out",
-          pseudoElement: "::view-transition-new(root)",
-        }
-      );
-    });
-  };
+    transition.ready
+      .then(() => {
+        document.documentElement.animate(
+          {
+            clipPath: [
+              `circle(0px at ${x}px ${y}px)`,
+              `circle(${radius}px at ${x}px ${y}px)`,
+            ],
+          },
+          {
+            duration: 350,
+            easing: "ease-out",
+            pseudoElement: "::view-transition-new(root)",
+          }
+        );
+      })
+      .catch(() => {});
+  }, [theme]);
+
+  const value = useMemo(
+    () => ({ theme, toggleTheme }),
+    [theme, toggleTheme]
+  );
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
   );
