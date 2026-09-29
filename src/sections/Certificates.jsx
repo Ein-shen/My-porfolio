@@ -59,7 +59,7 @@ export const Certificates = () => {
                     <div className="relative">
                         {Certificate.map((cert, idx) => (
                             <div key={idx} className="pb-10">
-                               <div className="flex flex-col items-center gap-3 pb-4 rounded-2xl transition-all duration-500 sm:flex-row sm:items-start sm:gap-x-8 lg:gap-x-20 xl:gap-x-40">
+                               <div className="flex flex-col gap-3 pb-4 rounded-2xl transition-all duration-500 sm:flex-row sm:items-start sm:gap-x-8 lg:gap-x-20 xl:gap-x-40">
                                     <span className="theme-muted shrink-0 text-muted-foreground font-mono text-xs font-medium sm:text-sm">
                                         {cert.period}
                                     </span>
