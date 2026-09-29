@@ -104,7 +104,19 @@ export const Navbar = () => {
                 aria-label="Toggle theme"
                 className="cursor-pointer text-md font-mono text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
-                {theme === "dark" ? "☀️ " : "🌙 "}
+                {theme === "dark" ? (
+                  <img
+                    src={sun}
+                    alt="Switch to light mode"
+                    className="w-7 h-5 object-contain"
+                  />
+                ) : (
+                  <img
+                    src={night}
+                    alt="Switch to dark mode"
+                    className="w-5 h-4 object-contain"
+                  />
+                )}
               </button>
             </div>
           </div>
