@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useTheme } from "../sections/ThemeContext";
+import sun from "../assets/sun (1).png"
+import night from "../assets/night.png"
+
 
 const navLinks = [
   { id: "projects", label: "Projects" },
@@ -138,9 +141,22 @@ export const Navbar = () => {
             <div className="pb-6 px-6">
               <button
                 onClick={toggleTheme}
-                className="cursor-pointer text-md font-mono text-muted-foreground hover:text-foreground transition-colors duration-300"
+                className="cursor-pointer transition-transform duration-200 hover:scale-110"
+                aria-label="Toggle theme"
               >
-                {theme === "dark" ? "☀️ " : "🌙 "}
+                {theme === "dark" ? (
+                  <img
+                    src={sun}
+                    alt="Switch to light mode"
+                    className="w-7 h-5 object-contain"
+                  />
+                ) : (
+                  <img
+                    src={night}
+                    alt="Switch to dark mode"
+                    className="w-5 h-4 object-contain"
+                  />
+                )}
               </button>
             </div>
           </div>
