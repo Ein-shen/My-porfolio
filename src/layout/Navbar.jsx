@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useTheme } from "../sections/ThemeContext";
 import sun from "../assets/sun (1).png"
-import night from "../assets/night.png"
+import cloudy from "../assets/cloudy.png"
 
 
 const navLinks = [
@@ -112,7 +112,7 @@ export const Navbar = () => {
                   />
                 ) : (
                   <img
-                    src={night}
+                    src={cloudy}
                     alt="Switch to dark mode"
                     className="w-5 h-4 object-contain"
                   />
@@ -164,7 +164,7 @@ export const Navbar = () => {
                   />
                 ) : (
                   <img
-                    src={night}
+                    src={cloudy}
                     alt="Switch to dark mode"
                     className="w-5 h-4 object-contain"
                   />
