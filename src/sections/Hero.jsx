@@ -14,7 +14,7 @@ export const Hero = () => {
                 <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-[288px_minmax(0,480px)] gap-8 lg:justify-center mx-auto w-fit max-w-full">
 
                     {/* Left: photo */}
-                    <div className="relative  mx-auto lg:mx-0 w-[288px] cursor-pointer animate-fade-in animation-delay-200 duration-500">
+                    <div className="relative shrink-0 mx-auto lg:mx-0 w-[288px] cursor-pointer animate-fade-in animation-delay-200 duration-500">
                         <PixelSwapImage
                             imageA="/z.jpg"
                             imageB="/y.jpg"
@@ -22,29 +22,33 @@ export const Hero = () => {
                         />
                     </div>
 
-                    {/* Right: name + bio */}
-                   <div className="space-y-6 text-center lg:text-left">
-                        <h1 className="font-mono text-4xl lg:text-5xl font-medium tracking-tight pt-1 animate-fade-in animation-delay-400 inline-flex items-center justify-center lg:justify-start gap-2">
+                    {/* Right: name + bio (animated ONCE as a block instead of 7 separate times) */}
+                    <div className="space-y-4 text-center lg:text-left animate-fade-in animation-delay-200">
+
+                        <h1 className="font-mono text-4xl lg:text-5xl font-medium tracking-tight leading-none flex items-center justify-center lg:justify-start gap-2 lg:-mt-3">
                             <span>Shen Sarsale</span>
-                            <MdVerified size={25} className="text-[#1D9BF0] shrink-0 pt-2" />
+                            <MdVerified size={16} className="text-[#1D9BF0] shrink-0" />
                         </h1>
+                                                                    
+                       
+                        
                         
                         
 
                         <div className="space-y-4 text-muted-foreground max-w-md ">
 
-                            <h2 className='font-bold text-md animate-fade-in animation-delay-600'>
+                            <h2 className='font-bold text-md'>
                                 Junior Full-Stack Developer | React.js | Node.js | PostgreSQL
                             </h2>
-                            <p className='animate-fade-in animation-delay-600'>
+                            <p>
                                 I build full-stack web applications from responsive user interfaces to APIs, databases, and deployment. I enjoy turning ideas into practical products, solving problems through code, and continuously learning new technologies.
                             </p>
-                            <p className='animate-fade-in animation-delay-800'>
+                            <p>
                                 I'm currently looking for an opportunity to contribute to a development team, build meaningful software, and grow as a Full-Stack Developer.
                             </p>
                         </div>
 
-                        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2 sm:gap-x-6 text-xs font-mono text-muted-foreground pt-2 animate-fade-in animation-delay-900">
+                        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2 sm:gap-x-6 text-xs font-mono text-muted-foreground pt-2">
                             <a href="https://github.com/Ein-shen" className="hover:text-foreground transition-colors flex items-center gap-1">
                                 github <span className="text-[10px]">↗</span>
                             </a>
