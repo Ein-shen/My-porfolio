@@ -59,7 +59,7 @@ const projects = [
 const VISIBLE_TAGS = 5;
 const LONG_DESCRIPTION = 180;
 
-const ProjectCard = ({ project, idx }) => {
+const ProjectCard = ({ project,  idx }) => {
   const [expanded, setExpanded] = useState(false);
   const isLong = project.description.length > LONG_DESCRIPTION;
   const hiddenTags = project.tags.length - VISIBLE_TAGS;
