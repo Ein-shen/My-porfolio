@@ -5,6 +5,27 @@
     <link rel="icon" type="image/svg+xml" href="v.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shensarsale</title>
+
+    <!-- apply theme BEFORE first paint, so there is nothing to animate on reload -->
+    <script>
+      (function () {
+        try {
+          var root = document.documentElement;
+          if (localStorage.getItem("theme") === "light") {
+            root.classList.add("light");
+          }
+          // block CSS transitions during the first load
+          root.classList.add("theme-switching");
+          window.addEventListener("load", function () {
+            requestAnimationFrame(function () {
+              requestAnimationFrame(function () {
+                root.classList.remove("theme-switching");
+              });
+            });
+          });
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
