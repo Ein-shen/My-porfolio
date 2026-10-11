@@ -111,16 +111,15 @@
 }
 
 @layer utilities {
+  /* FIX: removed filter: blur() (very expensive to animate) and reduced movement */
   @keyframes fade-in {
     from {
       opacity: 0;
-      transform: translateY(20px);
-      filter: blur(10px);
+      transform: translate3d(0, 8px, 0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
-      filter: blur(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
