@@ -1,7 +1,8 @@
 import { useMemo } from "react"
 
-export const PixelSwapImage = ({ imageA, imageB, alt = "", size = 288, grid = 8 }) => {
-    const tileSize = size / grid
+export const PixelSwapImage = ({ imageA, imageB, alt = "", size = 288, height = size, grid = 8 }) => {
+    const tileW = size / grid
+    const tileH = height / grid
 
     // random stagger order so tiles don't appear in a boring left-to-right sweep
     const delays = useMemo(() => {
@@ -20,7 +21,7 @@ export const PixelSwapImage = ({ imageA, imageB, alt = "", size = 288, grid = 8 
     return (
         <div
             className="group relative rounded-xl overflow-hidden"
-            style={{ width: size, height: size }}
+            style={{ width: size, height: height }}
         >
             {/* base/default photo */}
             <img
@@ -38,18 +39,29 @@ export const PixelSwapImage = ({ imageA, imageB, alt = "", size = 288, grid = 8 
                     return (
                         <div
                             key={i}
-                            className="absolute opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 ease-out"
+                            className="absolute overflow-hidden opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 ease-out"
                             style={{
-                                width: tileSize,
-                                height: tileSize,
-                                top: row * tileSize,
-                                left: col * tileSize,
-                                backgroundImage: `url(${imageB})`,
-                                backgroundSize: `${size}px ${size}px`,
-                                backgroundPosition: `-${col * tileSize}px -${row * tileSize}px`,
+                                width: tileW,
+                                height: tileH,
+                                top: row * tileH,
+                                left: col * tileW,
                                 transitionDelay: `${delays[i]}ms`,
                             }}
-                        />
+                        >
+                            {/* full-size photo, shifted so this tile shows its own slice */}
+                            <img
+                                src={imageB}
+                                alt=""
+                                draggable="false"
+                                className="absolute max-w-none object-cover select-none"
+                                style={{
+                                    width: size,
+                                    height: height,
+                                    left: -col * tileW,
+                                    top: -row * tileH,
+                                }}
+                            />
+                        </div>
                     )
                 })}
             </div>
