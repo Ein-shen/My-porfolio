@@ -26,7 +26,8 @@ export const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // CHANGE 2: passive listener, so scrolling is never blocked
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -62,7 +63,8 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      // CHANGE 1: transition-all -> only background-color and padding (no blur animation)
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,padding] duration-300 ${
         isScrolled
           ? "bg-background/80 backdrop-blur-md py-3"
           : "bg-transparent py-3 sm:py-4"
@@ -135,7 +137,8 @@ export const Navbar = () => {
        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           /* ADJUSTMENT 1: Added mx-10 sm:mx-6 to match logo/icon margins */
-          <div className="lg:hidden mx-10 sm:mx-6 mt-2 bg-background/95 backdrop-blur-md border border-border/40 rounded-2xl transition-colors duration-500 max-h-[calc(100dvh-4rem)] overflow-y-auto">
+          /* CHANGE 3: removed transition-colors duration-500 */
+          <div className="lg:hidden mx-10 sm:mx-6 mt-2 bg-background/95 backdrop-blur-md border border-border/40 rounded-2xl max-h-[calc(100dvh-4rem)] overflow-y-auto">
             
             {/* ADJUSTMENT 2: Fixed invalid px-100 to px-6 */}
             <div className="w-full py-4 px-6 flex flex-col gap-2">
