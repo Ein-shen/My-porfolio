@@ -22,6 +22,15 @@ const projects = [
     tags: ["HTML", "Tailwind CSS", "PostgreSQL", "React", "Next.js", "Express", "Docker", "Render", "NeonDB", "CI/CD", "Git", "Firewall"],
     github: "https://github.com/Ein-shen/Finance_tracker",
   },
+
+  {
+    title: "Pikol League",
+    description:
+      "Built a Management System of how to handle tournaments like Open Play, Single Elimination, Quadro Elimination.",
+    image: "/pik.png",
+    tags: ["PostgresSql", "Git", "Html", "Css", "Docker", "React", "Express", "Node.js", ],
+    github: "https://github.com/Ein-shen/Pikol",
+  },
   {
     title: "Stock-Trading",
     description:
@@ -50,7 +59,7 @@ const projects = [
     title: "Past Life Generator",
     description:
       "Built a quiz-based Python game that generates a personalized 'past life' story based on user input.",
-    image: "/past.png",
+    image: "/pikol.png",
     tags: ["Python", "Git"],
     github: "https://github.com/Ein-shen/CS50-python-past-life-generator",
   },
