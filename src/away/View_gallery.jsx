@@ -130,7 +130,7 @@ export const View_gallery = () => {
 
   return (
     <div className="container mx-auto px-6 md:px-12 py-10 relative z-10 pt-28">
-      <div className="mx-auto max-w-[900px]">
+      <div className="mx-auto max-w-[800px]">
         {/* Header */}
         <div className="grid grid-cols-[auto_1fr_auto] items-center mb-12 animate-fade-in animation-delay-100">
           <button
