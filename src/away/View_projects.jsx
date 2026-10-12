@@ -76,7 +76,7 @@ const ProjectCard = ({ project,  idx }) => {
 
   return (
     <article
-      className="group flex animate-fade-in flex-col overflow-hidden  border-[0.5px] border-border transition-shadow duration-300 [animation-fill-mode:backwards] hover:shadow-lg"
+      className="group flex animate-fade-in flex-col overflow-hidden  border-[0.5px] border-border rounded-md transition-shadow duration-300 [animation-fill-mode:backwards] hover:shadow-lg"
       style={{ animationDelay: `${Math.min(idx, 4) * 100}ms` }}
     >
       {/* Window title bar */}
