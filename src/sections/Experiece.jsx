@@ -100,9 +100,9 @@ export const Experience = () => {
                         <li
                           key={name}
                           title={name}
-                          className="theme-muted inline-flex pt-2 text-muted-foreground rounded-full transition-colors hover:border-muted-foreground hover:bg-muted"
+                          className="theme-muted inline-flex text-muted-foreground rounded-full transition-colors p-2 hover:border-muted-foreground hover:bg-muted"
                         >
-                          <TechIcon name={name} className="h-4 w-4 shrink-0" />
+                          <TechIcon name={name} className="h-4 w-4  shrink-0" />
                         </li>
                       ))}
                     </ul>
