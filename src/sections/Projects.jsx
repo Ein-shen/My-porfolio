@@ -98,7 +98,7 @@ export const Projects = () => {
             {projects.map((project, idx) => (
               <article
                 key={project.title}
-                className="group flex h-full animate-fade-in flex-col overflow-hidden border-[0.5px] border-border transition-opacity duration-300 [animation-fill-mode:backwards] hover:opacity-90"
+                className="group flex h-full animate-fade-in flex-col overflow-hidden border-[0.5px] border-border rounded-md transition-opacity duration-300 [animation-fill-mode:backwards] hover:opacity-90"
                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
                 {/* macOS-style title bar */}
