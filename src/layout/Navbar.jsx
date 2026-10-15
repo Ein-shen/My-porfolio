@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { useTheme } from "../sections/ThemeContext";
-import sun from "../assets/sun (1).png"
-import cloudy from "../assets/cloudy.png"
 
+import { ThemeToggle } from "../sections/ThemeContext";
 
 const navLinks = [
   { id: "projects", label: "Projects" },
@@ -19,14 +17,12 @@ export const Navbar = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    // CHANGE 2: passive listener, so scrolling is never blocked
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -63,23 +59,18 @@ export const Navbar = () => {
 
   return (
     <header
-      // CHANGE 1: transition-all -> only background-color and padding (no blur animation)
       className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,padding] duration-300 ${
         isScrolled
           ? "bg-background/80 backdrop-blur-md py-3"
           : "bg-transparent py-3 sm:py-4"
       }`}
     >
-      {/* 
-        Match this outer container's width/padding exactly to App.jsx or your main layout container.
-        px-0 removes inner navbar inset so text lines up with the main content edges.
-      */}
-      <div className="w-full  max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6">
         <nav className="w-full flex items-center justify-between gap-2 px-2 sm:px-5">
-          {/* Logo - -ml-2 cancels out internal button padding so the text starts right on the edge */}
+          {/* Logo */}
           <button
             onClick={() => handleNavClick("hero")}
-            className=" px-7 sm:px-0 py-1 text-sm sm:text-base font-mono tracking-tight text-muted-foreground hover:text-foreground whitespace-nowrap"
+            className="px-7 sm:px-0 py-1 text-sm sm:text-base font-mono tracking-tight text-muted-foreground hover:text-foreground whitespace-nowrap"
           >
             Shen Sarsale
           </button>
@@ -100,32 +91,13 @@ export const Navbar = () => {
 
             <div className="flex items-center gap-2 xl:gap-4">
               <span className="text-muted-foreground">|</span>
-
-              <button
-                onClick={toggleTheme}
-                aria-label="Toggle theme"
-                className="cursor-pointer text-md font-mono text-muted-foreground hover:text-foreground transition-colors duration-300"
-              >
-                {theme === "dark" ? (
-                  <img
-                    src={sun}
-                    alt="Switch to light mode"
-                    className="w-7 h-5 object-contain"
-                  />
-                ) : (
-                  <img
-                    src={cloudy}
-                    alt="Switch to dark mode"
-                    className="w-5 h-4 object-contain"
-                  />
-                )}
-              </button>
+              <ThemeToggle />
             </div>
           </div>
 
-          {/* Mobile Menu Button - -mr-2 lines up icon right edge with the box corner */}
+          {/* Mobile Menu Button */}
           <button
-            className=" lg:hidden pr-7 p-2 shrink-0 text-foreground cursor-pointer "
+            className="lg:hidden pr-7 p-2 shrink-0 text-foreground cursor-pointer"
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMobileMenuOpen}
@@ -134,13 +106,9 @@ export const Navbar = () => {
           </button>
         </nav>
 
-       {/* Mobile Menu */}
+        {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          /* ADJUSTMENT 1: Added mx-10 sm:mx-6 to match logo/icon margins */
-          /* CHANGE 3: removed transition-colors duration-500 */
           <div className="lg:hidden mx-10 sm:mx-6 mt-2 bg-background/95 backdrop-blur-md border border-border/40 rounded-2xl max-h-[calc(100dvh-4rem)] overflow-y-auto">
-            
-            {/* ADJUSTMENT 2: Fixed invalid px-100 to px-6 */}
             <div className="w-full py-4 px-6 flex flex-col gap-2">
               {navLinks.map((link) => (
                 <button
@@ -154,29 +122,11 @@ export const Navbar = () => {
             </div>
 
             <div className="pb-6 px-6">
-              <button
-                onClick={toggleTheme}
-                className="cursor-pointer transition-transform duration-200 hover:scale-110"
-                aria-label="Toggle theme"
-              >
-                {theme === "dark" ? (
-                  <img
-                    src={sun}
-                    alt="Switch to light mode"
-                    className="w-7 h-5 object-contain"
-                  />
-                ) : (
-                  <img
-                    src={cloudy}
-                    alt="Switch to dark mode"
-                    className="w-5 h-4 object-contain"
-                  />
-                )}
-              </button>
+              <ThemeToggle />
             </div>
           </div>
         )}
-      </div >
+      </div>
     </header>
   );
 };
