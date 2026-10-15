@@ -77,12 +77,12 @@ export const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1 shrink-0">
-            <div className="rounded-xl px-2 py-1 flex items-center gap-1">
+            <div className="rounded-xl px-2 py-1 flex  items-center gap-1">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className="font-mono px-2 xl:px-4 py-2 text-xs xl:text-sm whitespace-nowrap text-muted-foreground hover:text-foreground rounded-full hover:bg-surface transition-colors"
+                  className="font-mono px-2 xl:px-4 py-2 text-[10px] xl:text-sm whitespace-nowrap text-muted-foreground hover:text-foreground rounded-full hover:bg-surface transition-colors"
                 >
                   {link.label}
                 </button>
