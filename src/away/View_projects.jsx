@@ -63,6 +63,14 @@ const projects = [
     tags: ["Python", "Git"],
     github: "https://github.com/Ein-shen/CS50-python-past-life-generator",
   },
+   {
+    title: "Professor",
+    description:
+      "Built a random math game where it give a math problem and you give the correct asnwer",
+    image: "/pikol.png",
+    tags: ["Python", "Git"],
+    github: "https://github.com/Ein-shen/CS50-python-past-life-generator",
+  },
 ];
 
 const VISIBLE_TAGS = 5;
