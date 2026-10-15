@@ -10,6 +10,7 @@ import { Cv } from "./away/Cv"
 import { View_projects } from "./away/View_projects"
 import { Toplok } from "./away/Toplok"
 import { Gallery } from "./sections/Gallery"
+// src/App.jsx
 import { ThemeProvider } from "./sections/ThemeContext"
 import { View_gallery } from "./away/View_gallery"
 
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen overflow-hidden px-10 md:px-40">
+      <div className="min-h-screen overflow-x-hidden px-10 md:px-40">
         <Navbar />
         <main>
           <Routes>
@@ -36,7 +37,6 @@ function App() {
                 <Gallery />
               </>
             } />
-            
             <Route path="/cv" element={<Cv />} />
             <Route path="/view_projects" element={<View_projects />} />
             <Route path="/view_gallery" element={<View_gallery />} />
