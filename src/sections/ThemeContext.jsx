@@ -1,92 +1,59 @@
-import {
-  createContext,
-  useContext,
-  useLayoutEffect,
-  useState,
-  useCallback,
-  useMemo,
-} from "react";
-import { flushSync } from "react-dom";
+import React, { createContext, useContext, useLayoutEffect, useState } from 'react'
+import { Sun, Moon } from 'lucide-react'
 
-const ThemeContext = createContext(null);
+const ThemeContext = createContext(null)
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(() => {
-    try {
-      return localStorage.getItem("theme") || "dark";
-    } catch {
-      return "dark";
-    }
-  });
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem('theme') || 'dark'
+  )
 
-  // The ONLY place the "light" class is applied.
-  // useLayoutEffect runs synchronously on commit, so the DOM is
-  // updated before the view transition captures the new snapshot.
   useLayoutEffect(() => {
-    document.documentElement.classList.toggle("light", theme === "light");
-    try {
-      localStorage.setItem("theme", theme);
-    } catch {
-      /* ignore storage errors */
-    }
-  }, [theme]);
+    document.documentElement.classList.toggle('light', theme === 'light')
+    localStorage.setItem('theme', theme)
+  }, [theme])
 
-  const toggleTheme = useCallback(() => {
-    const nextTheme = theme === "dark" ? "light" : "dark";
-    const root = document.documentElement;
-
-    // Fallback: no View Transitions API or reduced motion
-    if (
-      !document.startViewTransition ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
-      setTheme(nextTheme);
-      return;
-    }
-
-    // Circle expands from the top-right corner
-    const x = window.innerWidth;
-    const y = 0;
-    const radius = Math.hypot(x, window.innerHeight);
-
-    const transition = document.startViewTransition(() => {
-      // Stop CSS transitions so nothing is captured half-faded
-      root.classList.add("theme-switching");
-      // Force React to commit the new theme before this callback returns
-      flushSync(() => setTheme(nextTheme));
-    });
-
-    transition.ready
-      .then(() => {
-        root.animate(
-          {
-            clipPath: [
-              `circle(0px at ${x}px ${y}px)`,
-              `circle(${radius}px at ${x}px ${y}px)`,
-            ],
-          },
-          {
-            duration: 350,
-            easing: "ease-out",
-            pseudoElement: "::view-transition-new(root)",
-          }
-        );
-      })
-      .catch(() => {});
-
-    // Re-enable normal CSS transitions once the swap is done
-    transition.finished.finally(() => {
-      root.classList.remove("theme-switching");
-    });
-  }, [theme]);
-
-  const value = useMemo(() => ({ theme, toggleTheme }), [theme, toggleTheme]);
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
+  }
 
   return (
-    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
-  );
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  )
 }
 
 export function useTheme() {
-  return useContext(ThemeContext);
+  return useContext(ThemeContext)
+}
+
+export const ThemeToggle = () => {
+  const { theme, toggleTheme } = useTheme()
+  const isDark = theme === 'dark'
+
+  return (
+    <button
+      type="button"
+      role="switch"
+      aria-checked={isDark}
+      aria-label="Toggle theme"
+      onClick={toggleTheme}
+      className={`relative inline-flex h-5 w-8 shrink-0 cursor-pointer items-center rounded-full ring-1 ring-white/10 transition-all duration-300 active:scale-90 ${
+        isDark ? 'bg-slate-700' : 'bg-yellow-400'
+      }`}
+    >
+      <span
+        className={`absolute left-0.5 top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-white shadow transition-transform duration-300 ${
+          isDark ? 'translate-x-3' : 'translate-x-0'
+        }`}
+      >
+        {isDark ? (
+          <Moon key="moon" size={14} className="animate-spin-once text-slate-700" />
+        ) : (
+          <Sun key="sun" size={14} className="animate-spin-once text-yellow-500" />
+        )}
+      </span>
+    </button>
+  )
 }
