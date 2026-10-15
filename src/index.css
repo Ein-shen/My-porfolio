@@ -32,47 +32,13 @@
   --color-surface: #e6e6e6;
 }
 
-/* ---------- View Transition (theme switch) ---------- */
-
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none;
-  mix-blend-mode: normal;
-}
-
-::view-transition-old(root) {
-  z-index: 1;
-}
-
-::view-transition-new(root) {
-  z-index: 9999;
-}
-
-/* Disable all CSS transitions while the theme is swapping.
-   Added/removed by ThemeProvider. Kept outside @layer so it wins. */
-.theme-switching *,
-.theme-switching *::before,
-.theme-switching *::after {
-  transition: none !important;
-}
-
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
-  /* Smooth color transitions for normal interactions,
-     but NOT during a theme switch */
-  html:not(.theme-switching) *,
-  html:not(.theme-switching) *::before,
-  html:not(.theme-switching) *::after {
-    transition:
-      background-color 0.5s ease,
-      color 0.5s ease,
-      border-color 0.5s ease,
-      fill 0.5s ease,
-      stroke 0.5s ease;
-  }
+  /* The slow 0.5s color-fade block was removed from here.
+     That was what made the page change later than the knob. */
 
   body {
     background-color: var(--color-background);
@@ -111,7 +77,6 @@
 }
 
 @layer utilities {
-  /* FIX: removed filter: blur() (very expensive to animate) and reduced movement */
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -210,4 +175,14 @@
       0 0 40px color-mix(in srgb, var(--color-primary) 35%, transparent),
       0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
   }
+}
+
+/* Icon spin-in for the theme toggle */
+@keyframes spin-once {
+  from { transform: rotate(-90deg) scale(0.5); opacity: 0; }
+  to   { transform: rotate(0) scale(1); opacity: 1; }
+}
+
+.animate-spin-once {
+  animation: spin-once 0.35s ease-out;
 }
