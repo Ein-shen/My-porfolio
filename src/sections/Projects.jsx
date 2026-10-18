@@ -1,5 +1,4 @@
 
-import { ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { TechIcon } from "../layout/Techicon";
@@ -23,6 +22,7 @@ const projects = [
       "Git",
     ],
     github: "https://github.com/Ein-shen/CS50-Laze",
+    live: "https://lazeu.netlify.app/",
   },
   {
     title: "Expensekontrol",
@@ -44,6 +44,7 @@ const projects = [
       "NodeJS",
     ],
     github: "https://github.com/Ein-shen/Finance_tracker",
+    live: "https://expensekontrol.onrender.com/",
   },
   {
     title: "Weather Web App",
@@ -72,7 +73,6 @@ export const Projects = () => {
     >
       <div className="container relative z-10 mx-auto animate-fade-in px-6 py-10 md:px-12">
         <div className="mx-auto max-w-[800px]">
-
           {/* Section header */}
           <div className="mb-16 flex items-center justify-between">
             <h2
@@ -98,7 +98,7 @@ export const Projects = () => {
             {projects.map((project, idx) => (
               <article
                 key={project.title}
-                className="group flex h-full animate-fade-in flex-col overflow-hidden border-[0.5px] border-border rounded-md transition-opacity duration-300 [animation-fill-mode:backwards] hover:opacity-90"
+                className="group flex h-full animate-fade-in flex-col overflow-hidden rounded-md border-[0.5px] border-border transition-opacity duration-300 hover:opacity-90 [animation-fill-mode:backwards]"
                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
                 {/* macOS-style title bar */}
@@ -116,7 +116,7 @@ export const Projects = () => {
 
                 {/* Project image */}
                 <div className="p-4 pb-0">
-                  <div className="theme-card-elevated relative aspect-video overflow-hidden ">
+                  <div className="theme-card-elevated relative aspect-video overflow-hidden">
                     <img
                       src={project.image}
                       alt={`${project.title} screenshot`}
@@ -142,11 +142,11 @@ export const Projects = () => {
 
                 {/* Project details */}
                 <div className="flex flex-1 flex-col gap-3 p-6">
-                  
-
                   <p className="theme-muted text-sm leading-relaxed text-muted-foreground">
                     {project.description}
                   </p>
+
+                  
 
                   {/* Icon-only tech stack */}
                   <ul className="mt-auto flex flex-wrap gap-2 pt-1">
@@ -163,6 +163,18 @@ export const Projects = () => {
                       </li>
                     ))}
                   </ul>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex w-fit items-center gap-2 rounded-md border border-border px-3 py-1 text-sm transition-colors hover:bg-muted"
+                    >
+                      Live
+                      <span className="rounded-md border border-black/80 bg-green-300 px-1 py-1 transition-colors group-hover:bg-green-500"></span>
+                    </a>
+                  )}
+                    
                 </div>
               </article>
             ))}
@@ -172,4 +184,3 @@ export const Projects = () => {
     </section>
   );
 };
-
