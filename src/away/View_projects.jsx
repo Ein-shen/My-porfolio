@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ArrowUpRight, ChevronDown } from "lucide-react";
@@ -11,25 +12,59 @@ const projects = [
     description:
       "A full-stack study companion web app that lets users track study sessions and manage tasks, built with React on the frontend and Supabase on the backend. The idea came from being annoyed at how studying tools usually work: either a bare-bones flashcard app with zero social features, or something bloated that tries to do too much.",
     image: "/zzzz.png",
-    tags: ["React", "Supabase", "Tailwind CSS", "HTML", "Vite", "Netlify", "Docker", "Git", "Firewall"],
+    tags: [
+      "React",
+      "Supabase",
+      "Tailwind CSS",
+      "HTML",
+      "Vite",
+      "Netlify",
+      "Docker",
+      "Git",
+      "Firewall",
+    ],
     github: "https://github.com/Ein-shen/CS50-Laze",
+    // live: "YOUR_LAZEU_DEPLOYED_URL",
   },
   {
     title: "Expensekontrol",
     description:
       "A full-stack personal finance platform designed to help users take control of their spending and track expenses.",
     image: "/exp.png",
-    tags: ["HTML", "Tailwind CSS", "PostgreSQL", "React", "Next.js", "Express", "Docker", "Render", "NeonDB", "CI/CD", "Git", "Firewall"],
+    tags: [
+      "HTML",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "React",
+      "Next.js",
+      "Express",
+      "Docker",
+      "Render",
+      "NeonDB",
+      "CI/CD",
+      "Git",
+      "Firewall",
+    ],
     github: "https://github.com/Ein-shen/Finance_tracker",
+    live: "https://expensekontrol.onrender.com",
   },
-
   {
     title: "Pikol League",
     description:
       "Built a Management System of how to handle tournaments like Open Play, Single Elimination, Quadro Elimination.",
     image: "/pik.png",
-    tags: ["PostgreSQL", "Git", "Html", "Css", "Docker", "React", "Express", "Node.js", ],
+    tags: [
+      "PostgreSQL",
+      "Git",
+      "Html",
+      "Css",
+      "Docker",
+      "React",
+      "Express",
+      "Node.js",
+    ],
     github: "https://github.com/Ein-shen/Pikol",
+    // live: "YOUR_PIKOL_DEPLOYED_URL",
   },
   {
     title: "Stock-Trading",
@@ -38,6 +73,7 @@ const projects = [
     image: "/fi.png",
     tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS", "Git"],
     github: "https://github.com/Ein-shen/Stock-Trading",
+    // live: "YOUR_STOCK_TRADING_DEPLOYED_URL",
   },
   {
     title: "Weather Web App",
@@ -46,6 +82,7 @@ const projects = [
     image: "/weather.png",
     tags: ["HTML", "Python", "Django", "Tailwind CSS", "SQLite", "Git"],
     github: "https://github.com/Ein-shen/weather-webApp",
+    // live: "YOUR_WEATHER_DEPLOYED_URL",
   },
   {
     title: "Cargo",
@@ -54,6 +91,7 @@ const projects = [
     image: "/cargo1.png",
     tags: ["Dart", "Flutter", "MySQL", "PHP", "Firewall", "Git"],
     github: "https://github.com/Syloms/Cargo",
+    // live: "YOUR_CARGO_DEPLOYED_URL",
   },
   {
     title: "Past Life Generator",
@@ -63,10 +101,10 @@ const projects = [
     tags: ["Python", "Git"],
     github: "https://github.com/Ein-shen/CS50-python-past-life-generator",
   },
-   {
+  {
     title: "Professor",
     description:
-      "Built a random math game where it give a math problem and you give the correct asnwer",
+      "Built a random math game where it gives a math problem and you give the correct answer.",
     image: "/pikol.png",
     tags: ["Python", "Git"],
     github: "https://github.com/Ein-shen/CS50-python-past-life-generator",
@@ -76,15 +114,17 @@ const projects = [
 const VISIBLE_TAGS = 5;
 const LONG_DESCRIPTION = 180;
 
-const ProjectCard = ({ project,  idx }) => {
+const ProjectCard = ({ project, idx }) => {
   const [expanded, setExpanded] = useState(false);
   const isLong = project.description.length > LONG_DESCRIPTION;
   const hiddenTags = project.tags.length - VISIBLE_TAGS;
-  const tags = expanded ? project.tags : project.tags.slice(0, VISIBLE_TAGS);
+  const tags = expanded
+    ? project.tags
+    : project.tags.slice(0, VISIBLE_TAGS);
 
   return (
     <article
-      className="group flex animate-fade-in flex-col overflow-hidden  border-[0.5px] border-border rounded-md transition-shadow duration-300 [animation-fill-mode:backwards] hover:shadow-lg"
+      className="group flex animate-fade-in flex-col overflow-hidden border-[0.5px] border-border rounded-md transition-shadow duration-300 [animation-fill-mode:backwards] hover:shadow-lg"
       style={{ animationDelay: `${Math.min(idx, 4) * 100}ms` }}
     >
       {/* Window title bar */}
@@ -94,10 +134,12 @@ const ProjectCard = ({ project,  idx }) => {
           <span className="h-3 w-3 rounded-full bg-yellow-700" />
           <span className="h-3 w-3 rounded-full bg-green-700" />
         </div>
-        <span className="theme-muted ml-2 truncate font-mono text-xs">{project.title}</span>
+        <span className="theme-muted ml-2 truncate font-mono text-xs">
+          {project.title}
+        </span>
       </div>
 
-      {/* Screenshot: the whole image is the link, so it works on touch too */}
+      {/* Screenshot: links to GitHub */}
       <div className="p-4 pb-0">
         <a
           href={project.github}
@@ -125,22 +167,48 @@ const ProjectCard = ({ project,  idx }) => {
       {/* Details */}
       <div className="flex flex-col gap-4 p-6">
         <div className="flex items-center justify-between gap-4">
-          <h2 className="theme-text text-xl font-semibold">{project.title}</h2>
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="theme-muted inline-flex shrink-0 items-center gap-1 font-mono text-xs transition-opacity hover:opacity-70"
-          >
-            GitHub
-            <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-          </a>
+          <h2 className="theme-text text-xl font-semibold">
+            {project.title}
+          </h2>
+
+          {/* Live and GitHub links */}
+          <div className="flex shrink-0 items-center gap-3">
+            {project.live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View live ${project.title} project`}
+                className="group/live inline-flex items-center gap-1 rounded-md border border-border px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
+              >
+                Live
+                <span className="h-2 w-2 rounded-full border border-green-700 bg-green-300 transition-colors group-hover/live:border-green-500 group-hover/live:bg-green-500" />
+                <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover/live:-translate-y-0.5 group-hover/live:translate-x-0.5" />
+              </a>
+            )}
+
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="theme-muted inline-flex items-center gap-1 font-mono text-xs transition-opacity hover:opacity-70"
+            >
+              GitHub
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </a>
+          </div>
         </div>
 
+        {/* Description */}
         <div>
-          <p className={`theme-muted text-sm leading-relaxed ${!expanded && isLong ? "line-clamp-3" : ""}`}>
+          <p
+            className={`theme-muted text-sm leading-relaxed ${
+              !expanded && isLong ? "line-clamp-3" : ""
+            }`}
+          >
             {project.description}
           </p>
+
           {isLong && (
             <button
               type="button"
@@ -149,21 +217,30 @@ const ProjectCard = ({ project,  idx }) => {
               className="theme-text mt-2 inline-flex items-center gap-1 font-mono text-xs transition-opacity hover:opacity-70"
             >
               {expanded ? "Show less" : "Read more"}
-              <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ${expanded ? "rotate-180" : ""}`} />
+              <ChevronDown
+                className={`h-3.5 w-3.5 transition-transform duration-300 ${
+                  expanded ? "rotate-180" : ""
+                }`}
+              />
             </button>
           )}
         </div>
 
+        {/* Technologies */}
         <ul className="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <li
               key={tag}
               className="theme-tag inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1 font-mono text-xs font-medium"
             >
-              <TechIcon name={tag} className="h-3.5 w-3.5 shrink-0" />
+              <TechIcon
+                name={tag}
+                className="h-3.5 w-3.5 shrink-0"
+              />
               {tag}
             </li>
           ))}
+
           {!expanded && hiddenTags > 0 && (
             <li>
               <button
@@ -198,15 +275,22 @@ export const View_projects = () => {
           >
             <ArrowLeft size={24} />
           </button>
+
           <h1 className="theme-text animate-fade-in pt-1 text-center font-mono text-xl font-medium tracking-tight animation-delay-100">
             Projects
           </h1>
+
           <div className="w-11" aria-hidden="true" />
         </div>
 
+        {/* Project cards */}
         <div className="grid grid-cols-1 gap-8">
           {projects.map((project, idx) => (
-            <ProjectCard key={project.title} project={project} idx={idx} />
+            <ProjectCard
+              key={project.title}
+              project={project}
+              idx={idx}
+            />
           ))}
         </div>
       </div>
