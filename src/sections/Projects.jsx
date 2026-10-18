@@ -168,10 +168,10 @@ export const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex w-fit items-center gap-2 rounded-md border border-border px-3 py-1 text-sm transition-colors hover:bg-muted"
+                      className="group inline-flex w-fit items-center gap-2 rounded-md border border-border px-3 py-1 text-xs transition-colors hover:bg-muted"
                     >
                       Live
-                      <span className="rounded-md border border-black/80 bg-green-300 px-1 py-1 transition-colors group-hover:bg-green-500"></span>
+                      <span className="rounded-md border border-black/80 bg-green-500 px-1 py-1 transition-colors group-hover:bg-green-300"></span>
                     </a>
                   )}
                     
