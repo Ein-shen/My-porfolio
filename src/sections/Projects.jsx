@@ -9,7 +9,7 @@ const projects = [
     title: "Laze",
     description:
       "Built a full-stack study companion web app that lets users track study sessions and manage tasks.",
-    image: "/zzzz.png",
+    image: "/green.png",
     tags: [
       "React",
       "Supabase",
@@ -61,6 +61,23 @@ const projects = [
     image: "/fi.png",
     tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS", "Git"],
     github: "https://github.com/Ein-shen/Stock-Trading",
+  },
+  {
+    title: "Pikol League",
+    description:
+      "Built a Management System of how to handle tournaments like Open Play, Single Elimination, Quadro Elimination.",
+    image: "/pik.png",
+    tags: [
+      "PostgreSQL",
+      "Git",
+      "Html",
+      "Css",
+      "Docker",
+      "React",
+      "Express",
+      "Node.js",
+    ],
+    github: "https://github.com/Ein-shen/Pikol",
   },
 ];
 
