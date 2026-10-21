@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ArrowUpRight, ChevronDown } from "lucide-react";
@@ -24,7 +23,7 @@ const projects = [
       "Firewall",
     ],
     github: "https://github.com/Ein-shen/CS50-Laze",
-    // live: "YOUR_LAZEU_DEPLOYED_URL",
+    live: "https://lazeu.netlify.app/",
   },
   {
     title: "Expensekontrol",
@@ -56,8 +55,8 @@ const projects = [
     tags: [
       "PostgreSQL",
       "Git",
-      "Html",
-      "Css",
+      "HTML",
+      "CSS",
       "Docker",
       "React",
       "Express",
@@ -124,7 +123,7 @@ const ProjectCard = ({ project, idx }) => {
 
   return (
     <article
-      className="group flex animate-fade-in flex-col overflow-hidden border-[0.5px] border-border rounded-md transition-shadow duration-300 [animation-fill-mode:backwards] hover:shadow-lg"
+      className="group flex animate-fade-in flex-col overflow-hidden rounded-md border-[0.5px] border-border transition-shadow duration-300 [animation-fill-mode:backwards] hover:shadow-lg"
       style={{ animationDelay: `${Math.min(idx, 4) * 100}ms` }}
     >
       {/* Window title bar */}
@@ -155,7 +154,7 @@ const ProjectCard = ({ project, idx }) => {
             decoding="async"
             className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
           />
-          <span className="theme-overlay pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100">
+          <span className="theme-overlay pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-focus-within:opacity-100 group-hover:opacity-100">
             <span className="theme-tag flex items-center gap-2 rounded-full px-4 py-2 font-mono text-xs">
               <FaGithub className="theme-text h-4 w-4" />
               <span className="theme-text">View code</span>
@@ -166,38 +165,7 @@ const ProjectCard = ({ project, idx }) => {
 
       {/* Details */}
       <div className="flex flex-col gap-4 p-6">
-        <div className="flex items-center justify-between gap-4">
-          <h2 className="theme-text text-xl font-semibold">
-            {project.title}
-          </h2>
-
-          {/* Live and GitHub links */}
-          <div className="flex shrink-0 items-center gap-3">
-            {project.live && (
-              <a
-                href={project.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`View live ${project.title} project`}
-                className="group/live inline-flex items-center gap-1 rounded-md border border-border px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
-              >
-                Live
-                <span className="h-2 w-2 rounded-full border border-green-700 bg-green-300 transition-colors group-hover/live:border-green-500 group-hover/live:bg-green-500" />
-                <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover/live:-translate-y-0.5 group-hover/live:translate-x-0.5" />
-              </a>
-            )}
-
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="theme-muted inline-flex items-center gap-1 font-mono text-xs transition-opacity hover:opacity-70"
-            >
-              GitHub
-              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-            </a>
-          </div>
-        </div>
+        <h2 className="theme-text text-xl font-semibold">{project.title}</h2>
 
         {/* Description */}
         <div>
@@ -233,10 +201,7 @@ const ProjectCard = ({ project, idx }) => {
               key={tag}
               className="theme-tag inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1 font-mono text-xs font-medium"
             >
-              <TechIcon
-                name={tag}
-                className="h-3.5 w-3.5 shrink-0"
-              />
+              <TechIcon name={tag} className="h-3.5 w-3.5 shrink-0" />
               {tag}
             </li>
           ))}
@@ -254,6 +219,37 @@ const ProjectCard = ({ project, idx }) => {
             </li>
           )}
         </ul>
+
+        {/* Deployment and GitHub buttons */}
+        <div className="flex items-center justify-end gap-3">
+          {project.live && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View live ${project.title} project`}
+              className="group/live inline-flex items-center gap-1 rounded-md border border-border px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
+            >
+              Deployment
+              <span
+                aria-hidden="true"
+                className="h-2 w-2 rounded-full border border-green-700 bg-green-300 transition-colors group-hover/live:border-green-500 group-hover/live:bg-green-500"
+              />
+              <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover/live:-translate-y-0.5 group-hover/live:translate-x-0.5" />
+            </a>
+          )}
+
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View ${project.title} on GitHub`}
+            className="group/gh inline-flex items-center gap-1 rounded-md border border-border px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
+          >
+            GitHub
+            <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover/gh:-translate-y-0.5 group-hover/gh:translate-x-0.5" />
+          </a>
+        </div>
       </div>
     </article>
   );
