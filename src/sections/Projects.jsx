@@ -47,22 +47,6 @@ const projects = [
     live: "https://expensekontrol.onrender.com/",
   },
   {
-    title: "Weather Web App",
-    description:
-      "A web app that allows users to search for a city and view its current weather using the OpenWeatherMap API.",
-    image: "/weather.png",
-    tags: ["HTML", "Python", "Django", "Tailwind CSS", "SQLite", "Git"],
-    github: "https://github.com/Ein-shen/weather-webApp",
-  },
-  {
-    title: "Stock-Trading",
-    description:
-      "A full-stack web app that lets users manage a virtual stock portfolio and look up real-time stock prices.",
-    image: "/fi.png",
-    tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS", "Git"],
-    github: "https://github.com/Ein-shen/Stock-Trading",
-  },
-  {
     title: "Pikol League",
     description:
       "Built a Management System of how to handle tournaments like Open Play, Single Elimination, Quadro Elimination.",
@@ -79,6 +63,16 @@ const projects = [
     ],
     github: "https://github.com/Ein-shen/Pikol",
   },
+  
+  {
+    title: "Stock-Trading",
+    description:
+      "A full-stack web app that lets users manage a virtual stock portfolio and look up real-time stock prices.",
+    image: "/fi.png",
+    tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS", "Git"],
+    github: "https://github.com/Ein-shen/Stock-Trading",
+  },
+  
 ];
 
 export const Projects = () => {
