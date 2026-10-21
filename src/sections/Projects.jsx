@@ -1,4 +1,4 @@
-
+import { ArrowUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { TechIcon } from "../layout/Techicon";
@@ -54,8 +54,8 @@ const projects = [
     tags: [
       "PostgreSQL",
       "Git",
-      "Html",
-      "Css",
+      "HTML",
+      "CSS",
       "Docker",
       "React",
       "Express",
@@ -63,7 +63,6 @@ const projects = [
     ],
     github: "https://github.com/Ein-shen/Pikol",
   },
-  
   {
     title: "Stock-Trading",
     description:
@@ -72,7 +71,6 @@ const projects = [
     tags: ["Python", "Flask", "SQLite", "Jinja", "HTML", "CSS", "Git"],
     github: "https://github.com/Ein-shen/Stock-Trading",
   },
-  
 ];
 
 export const Projects = () => {
@@ -120,7 +118,7 @@ export const Projects = () => {
                     <span className="h-3 w-3 rounded-full bg-green-700" />
                   </div>
 
-                  <span className="theme-muted ml-2 truncate font-mono text-md text-muted-foreground">
+                  <span className="theme-muted ml-2 truncate font-mono text-base text-muted-foreground">
                     {project.title}
                   </span>
                 </div>
@@ -136,7 +134,7 @@ export const Projects = () => {
                       className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />
 
-                    {/* GitHub overlay */}
+                    {/* GitHub overlay (hover/focus only) */}
                     <div className="theme-overlay pointer-events-none absolute inset-0 flex items-center justify-center gap-3 opacity-0 transition-opacity duration-300 group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-hover:pointer-events-auto group-hover:opacity-100">
                       <a
                         href={project.github}
@@ -157,8 +155,6 @@ export const Projects = () => {
                     {project.description}
                   </p>
 
-                  
-
                   {/* Icon-only tech stack */}
                   <ul className="mt-auto flex flex-wrap gap-2 pt-1">
                     {project.tags.map((tag) => (
@@ -167,25 +163,41 @@ export const Projects = () => {
                         title={tag}
                         className="theme-muted inline-flex items-center justify-center rounded-full p-2 text-muted-foreground transition-colors hover:border-muted-foreground hover:bg-muted"
                       >
-                        <TechIcon
-                          name={tag}
-                          className="h-4 w-4 shrink-0"
-                        />
+                        <TechIcon name={tag} className="h-4 w-4 shrink-0" />
                       </li>
                     ))}
                   </ul>
-                  {project.live && (
+
+                  {/* Deployment and GitHub buttons */}
+                  <div className="flex items-center justify-end gap-3">
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`View live ${project.title} project`}
+                        className="group/live inline-flex items-center gap-1 rounded-md  px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
+                      >
+                        Deployment
+                        <span
+                          aria-hidden="true"
+                          className="h-2 w-2 rounded-full   bg-green-300 transition-colors group-hover/live:border-green-500 group-hover/live:bg-green-500"
+                        />
+                        <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover/live:-translate-y-0.5 group-hover/live:translate-x-0.5" />
+                      </a>
+                    )}
+
                     <a
-                      href={project.live}
+                      href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex w-fit items-center gap-2 rounded-md  px-3 py-1 text-xs transition-colors hover:bg-muted"
+                      aria-label={`View ${project.title} on GitHub`}
+                      className="group/gh inline-flex items-center gap-1 rounded-md  px-2.5 py-1 font-mono text-xs transition-colors hover:bg-muted"
                     >
-                      Deployment
-                      <span className="rounded-md border border-black/80 bg-green-500 px-1 py-1 transition-colors group-hover:bg-green-600"></span>
+                      GitHub
+                      <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover/gh:-translate-y-0.5 group-hover/gh:translate-x-0.5" />
                     </a>
-                  )}
-                    
+                  </div>
                 </div>
               </article>
             ))}
