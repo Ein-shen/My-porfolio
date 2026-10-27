@@ -96,7 +96,7 @@ const projects = [
     title: "Past Life Generator",
     description:
       "Built a quiz-based Python game that generates a personalized 'past life' story based on user input.",
-    image: "/pikol.png",
+    image: "/past.png",
     tags: ["Python", "Git"],
     github: "https://github.com/Ein-shen/CS50-python-past-life-generator",
   },
