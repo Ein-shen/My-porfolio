@@ -18,7 +18,7 @@ const Certificate = [
         where: "CS50 Harvard",
     },
     {
-        image: "/cy.jpg",
+        image: "/happy.jpg",
         period: "Oct-2025",
         title: "Cyber Exellence",
         where: "Regional Contest 3rd placer",
