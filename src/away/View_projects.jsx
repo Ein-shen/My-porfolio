@@ -19,6 +19,7 @@ const projects = [
       "Vite",
       "Netlify",
       "Docker",
+      "CI/CD",
       "Git",
       "Firewall",
     ],
