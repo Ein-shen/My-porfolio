@@ -59,6 +59,7 @@ const projects = [
       "React",
       "Express",
       "Node.js",
+      "CI/CD",
       "Render",
       "NeonDB"
     ],
