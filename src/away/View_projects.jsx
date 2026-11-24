@@ -61,6 +61,8 @@ const projects = [
       "React",
       "Express",
       "Node.js",
+      "Render",
+      "NeonDB"
     ],
     github: "https://github.com/Ein-shen/Pikol",
     live: "https://pikol-league-ph.onrender.com/",
