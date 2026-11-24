@@ -61,6 +61,7 @@ const projects = [
       "Node.js",
     ],
     github: "https://github.com/Ein-shen/Pikol",
+    live: "https://pikol-league-ph.onrender.com/",
   },
   {
     title: "Stock-Trading",
